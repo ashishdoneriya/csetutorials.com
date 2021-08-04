@@ -11,7 +11,7 @@ tags:
   - dynamic-programming
 ---
 
-1. [0-1 Knapsack (6)](/dynamic-programming-zero-one-knapsack-problem/html)
+1. [0-1 Knapsack (6)](/dynamic-programming-zero-one-knapsack-problem.html)
 2. [Unbounded Knapsack (6)](/dynamic-programming-unbounded-knapsack.html)
 3. Fibonacci (7)
 4. [LCS (5)](/dynamic-programming-longest-common-subsequence.html)

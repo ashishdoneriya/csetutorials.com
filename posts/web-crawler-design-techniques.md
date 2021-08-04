@@ -67,8 +67,6 @@ This component extracts links from the web pages. Relative urls will be converte
 ### URL Seen
 This component checks whether the extracted url is already processed or not. If it is not processed then the crawler will add the url to the URL Frontier. We can also take help of bloom filter here.
 
-### URL Storage
-
 
 ## Things to consider
 

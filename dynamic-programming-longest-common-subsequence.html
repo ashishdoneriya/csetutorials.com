@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="en-GB">
+ <head> 
+  <!-- Title --> 
+  <title>Longest Common Subsequence</title> 
+  <link rel="canonical" href="https://csetutorials.com/dynamic-programming-longest-common-subsequence.html"> 
+  <meta name="description" content="Longest Common Subsequence problem types"> 
+  <meta property="og:description" content="Longest Common Subsequence problem types"> 
+  <meta name="twitter:description" content="Longest Common Subsequence problem types"> 
+  <meta name="author" content="Ashish Doneriya"> 
+  <meta name="robots" content="index, follow"> 
+  <meta property="og:type" content="article"> 
+  <meta property="og:title" content="Longest Common Subsequence"> 
+  <meta property="og:url" content="https://csetutorials.com/dynamic-programming-longest-common-subsequence.html"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:site_name" content="Cse Tutorials"> 
+  <meta property="og:updated_time" content="2021-08-01T06:51:21Z"> 
+  <meta property="article:author" content="https://www.facebook.com/ashishdoneriya"> 
+  <meta property="article:modified_time" content="2021-08-01T06:51:21Z"> 
+  <meta property="article:published_time" content="2021-08-01T06:51:21Z"> 
+  <meta property="article:publisher" content="https://www.facebook.com/ashishdoneriya"> 
+  <meta property="article:section" content="Data Structures And Algorithms"> 
+  <meta property="article:tag" content="Dynamic-Programming"> 
+  <meta name="twitter:title" content="Longest Common Subsequence"> 
+  <meta name="twitter:card" content="summary"> 
+  <meta name="twitter:creator" content="@ashishdoneriya"> 
+  <meta name="twitter:site" content="@ashishdoneriya"> 
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Person",
+        "Organization"
+      ],
+      "@id": "https://csetutorials.com/#/schema/person/ashishdoneriya",
+      "name": "Ashish Doneriya",
+      "sameAs": [
+        "https://www.facebook.com/ashishdoneriya",
+        "https://twitter.com/ashishdoneriya",
+        "https://www.linkedin.com/in/ashishdoneriya/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://csetutorials.com/#website",
+      "url": "https://csetutorials.com",
+      "name": "Cse Tutorials",
+      "description": "Tutorials about WebApps, Web Designing, Java \u0026 Ubuntu",
+      "publisher": {
+        "@id": "https://csetutorials.com/#/schema/person/ashishdoneriya"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://csetutorials.com/dynamic-programming-longest-common-subsequence.html#webpage",
+      "url": "https://csetutorials.com/dynamic-programming-longest-common-subsequence.html",
+      "isPartOf": {
+        "@id": "https://csetutorials.com/#website"
+      },
+      "datePublished": "2021-08-01T06:51:21Z",
+      "dateModified": "2021-08-01T06:51:21Z",
+      "description": "Longest Common Subsequence problem types",
+      "inLanguage": "en-US",
+      "potentialAction": [
+        {
+          "@type": "ReadAction",
+          "target": [
+            "https://csetutorials.com/dynamic-programming-longest-common-subsequence.html"
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://csetutorials.com/dynamic-programming-longest-common-subsequence.html#article",
+      "isPartOf": {
+        "@id": "https://csetutorials.com/dynamic-programming-longest-common-subsequence.html#webpage"
+      },
+      "author": {
+        "@id": "https://csetutorials.com/#/schema/person/ashishdoneriya"
+      },
+      "headline": "Longest Common Subsequence",
+      "datePublished": "2021-08-01T06:51:21Z",
+      "dateModified": "2021-08-01T06:51:21Z",
+      "mainEntityOfPage": {
+        "@id": "https://csetutorials.com/dynamic-programming-longest-common-subsequence.html#webpage"
+      },
+      "publisher": {
+        "@id": "https://csetutorials.com/#/schema/person/ashishdoneriya"
+      },
+      "keywords": "dynamic-programming",
+      "articleSection": "data-structures-and-algorithms",
+      "inLanguage": "en-US"
+    }
+  ]
+}</script> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="msapplication-TileColor" content="#ffffff"> 
+  <meta name="msapplication-TileImage" content="{{ '/assets/favicon.png' | prepend: site.baseurl }}"> 
+  <meta name="theme-color" content="#143d52"> 
+  <meta name="msapplication-navbutton-color" content="#810088"> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="#810088"> 
+  <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAAAdUlEQVR4Ae3MIRJAUBCH8e81R3AO53AmvIQmu5MzqE8iKoZAEdZYZhT7/cuGnR9/yeEJrDcW8DjEKlbFasQmFTQitj+cK2TqO8ggg2LceygiZ6YjeQel9Me10NI8ghR7DhlkkEFBxQTEShVUcVHGcAsZ8PylDecfc51kCzSlAAAAAElFTkSuQmCC" type="image/x-icon"> 
+  <link rel="dns-prefetch" href="//fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"> 
+  <link defer href="/assets/theme/css/style.original.css" rel="stylesheet" type="text/css"> 
+ </head> 
+ <body> 
+  <div> 
+   <header id="typology-header" class="typology-header" style="position: absolute"> 
+    <div class="container"> 
+     <div class="slot-l"> 
+      <div class="typology-site-branding"> 
+       <p class="site-title h4"> <a href="/">Cse Tutorials</a> </p> 
+      </div> 
+     </div> 
+     <div class="slot-r"> 
+      <ul class="typology-nav typology-main-navigation"> 
+       <li class="xcurrent-menu-item"> <a href="/">Home</a> </li> 
+       <li class="xcurrent-menu-item"> <a href="/my-ubuntu-notes">My Ubuntu Notes</a> </li> 
+       <li> <a href="/">Topics
+         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 320 512" style="vertical-align: middle; margin-left: 5px" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"> <path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"> 
+          </path> 
+         </svg></a> 
+        <ul class="sub-menu"> 
+         <li> <a href="/topics/android" rel="noindex nofollow">Android</a> </li> 
+         <li> <a href="/topics/big-data" rel="noindex nofollow">Big Data</a> </li> 
+         <li> <a href="/topics/data-structures-and-algorithms" rel="noindex nofollow">Data Structures And Algorithms</a> </li> 
+         <li> <a href="/topics/database" rel="noindex nofollow">Database</a> </li> 
+         <li> <a href="/topics/ide" rel="noindex nofollow">Ide</a> </li> 
+         <li> <a href="/topics/internet" rel="noindex nofollow">Internet</a> </li> 
+         <li> <a href="/topics/java" rel="noindex nofollow">Java</a> </li> 
+         <li> <a href="/topics/system-design" rel="noindex nofollow">System Design</a> </li> 
+         <li> <a href="/topics/ubuntu" rel="noindex nofollow">Ubuntu</a> </li> 
+         <li> <a href="/topics/web-development" rel="noindex nofollow">Web Development</a> </li> 
+         <li> <a href="/topics/wordpress" rel="noindex nofollow">Wordpress</a> </li> 
+        </ul> </li> 
+      </ul> 
+      <ul class="typology-nav typology-actions-list"> 
+       <li class="typology-actions-button typology-action-search"> <span class="icon">
+         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"> <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"> 
+          </path> 
+         </svg></span> 
+        <ul class="sub-menu typology-rev"> 
+         <li> 
+          <form class="typology-search-form" action="https://www.google.com/search" method="get"> 
+           <input name="sitesearch" type="hidden" value="csetutorials.com"> <label style="display: none" for="query_header">Search</label>
+           <input type="text" name="q" id="query_header" autocomplete="off" value="" placeholder="Type here to search.." class=""><button type="submit" class="typology-button typology-button-search typology-icon-button"> Search</button><textarea name="" style="display: none"></textarea> 
+          </form> </li> 
+        </ul> </li> 
+       <li class="typology-action-button typology-action-sidebar typology-mobile-visible"> <span class="icon">
+         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"> <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"> 
+          </path> 
+         </svg> </span> </li> 
+      </ul> 
+     </div> 
+    </div> 
+   </header> 
+   <div class="typology-cover typology-cover-empty"></div> 
+   <div class="typology-fake-bg"> 
+    <div class="typology-section"> 
+     <div class="section-content"> 
+      <article class="typology-post typology-single-post"> 
+       <header class="entry-header clearfix"> 
+        <h1 class="entry-title entry-title-cover-empty h2">Longest Common Subsequence</h1> 
+        <div class="entry-meta"> 
+         <div class="meta-item meta-author" style="vertical-align: middle">
+           By <span class="vcard author"><span class="fn"> <a href="/author/ashishdoneriya">Ashish Doneriya</a> </span></span> 
+         </div> 
+         <div class="meta-item meta-date" style="vertical-align: middle"> <span class="updated">Last Updated on Aug 01, 2021 </span> 
+         </div> 
+        </div> 
+        <div class="post-letter">
+          L 
+        </div> 
+       </header> 
+       <div class="entry-content clearfix"> 
+        <div style="margin-top:10px;margin-bottom:20px"> 
+         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+         <!-- Display Ad --> 
+         <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3068137040930830" data-ad-slot="1668882656" data-ad-format="auto" data-full-width-responsive="true"></ins> 
+         <script>
+							(adsbygoogle = window.adsbygoogle || []).push({});
+						</script> 
+        </div>    
+        <p><a href="https://www.youtube.com/watch?v=4dMlCZTONj8&amp;list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&amp;index=18" target="_blank" rel="noopener nofollow">https://www.youtube.com/watch?v=4dMlCZTONj8&amp;list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&amp;index=18</a></p> 
+        <h2 id="problems">Problems</h2> 
+        <ol> 
+         <li>Longest Common Substring (not subsequence)</li> 
+         <li>Print LCS</li> 
+         <li>Shortest Common Super Sequence</li> 
+         <li>Print SCS</li> 
+         <li>Min no. of insertion and deletion</li> 
+         <li>Longest Repeating subsequence</li> 
+         <li>Length of largest subsequence of which is a substring</li> 
+         <li>Subsequence pattern matching</li> 
+         <li>Count how many time a appear as subsequence in b</li> 
+         <li>Largest Palindrome subsequence</li> 
+         <li>Largest Palindrome substring</li> 
+         <li>Count of Palindrome Substring</li> 
+         <li>Min no. of deletions in a string to make it a Palindrome</li> 
+         <li>Min no. of insertions in a string to make it a Palindrome</li> 
+        </ol> 
+        <p>Given two strings <code>text1</code> and <code>text2</code>, return <em>the length of their longest <strong>common subsequence</strong>.</em> If there is no <strong>common subsequence</strong>, return <code>0</code>.</p> 
+        <p>A <strong>subsequence</strong> of a string is a new string generated from the original string with some characters (can be none) deleted without changing the relative order of the remaining characters.</p> 
+        <ul> 
+         <li>For example, <code>"ace"</code> is a subsequence of <code>"abcde"</code>.</li> 
+        </ul> 
+        <p>A <strong>common subsequence</strong> of two strings is a subsequence that is common to both strings.</p> 
+        <p>Eg. LCS for input Sequences “ABCDGH” and “AEDFHR” is “ADH” of length 3. LCS for input Sequences “AGGTAB” and “GXTXAYB” is “GTAB” of length 4.</p> 
+        <p>https://leetcode.com/problems/longest-common-subsequence/</p> 
+        <h3 id="recursive-approach">Recursive Approach</h3> 
+        <p>For writing recursive code, 3 things are required -</p> 
+        <ul> 
+         <li>Inputs</li> 
+         <li>How to make input small in recursive call (or branch condition)</li> 
+         <li>Base condition</li> 
+        </ul> 
+        <p>In this case the inputs are the 2 strings and their length, which has to be decreased in recursive call. In the recursive method we will check the last characters of the two strings. After that during recursive call we can either decrease first string length or second string length (but not both because it will be covered in these two scenarios) and we will take the max of these two.</p> 
+        <pre><code class="language-java">class Solution {
+    public int longestCommonSubsequence(String text1, String text2) {
+        return lcs(text1.toCharArray(), text2.toCharArray(), 0, 0);
+    }
+    
+    private int lcs(char[] arr1, char[] arr2, int i1, int i2) {
+        if (i1 == arr1.length || i2 == arr2.length) {
+            return 0;
+        }
+        if (arr1[i1] == arr2[i2]) {
+            return 1 + lcs(arr1, arr2, i1 + 1, i2 + 1);
+        } else {
+             return Math.max(lcs(arr1, arr2, i1 + 1, i2), lcs(arr1,arr2,i1,i2 + 1));
+        }
+    }
+}
+</code></pre> 
+        <h3 id="memoization-approach">Memoization Approach</h3> 
+        <pre><code class="language-java">class Solution {
+	public int longestCommonSubsequence(String text1, String text2) {
+		char[] arr1 = text1.toCharArray();
+		char[] arr2 = text2.toCharArray();
+		return lcs(arr1, arr2, 0, 0, new Integer[arr1.length + 1][arr2.length + 1]);
+	}
+
+	private int lcs(char[] arr1, char[] arr2, int i1, int i2, Integer[][] dd) {
+		if (i1 == arr1.length || i2 == arr2.length) {
+			return 0;
+		}
+		if (dd[i1][i2] != null) {
+			return dd[i1][i2];
+		}
+		if (arr1[i1] == arr2[i2]) {
+			dd[i1][i2] = 1 + lcs(arr1, arr2, i1 + 1, i2 + 1, dd);
+		} else {
+			dd[i1][i2] = Math.max(lcs(arr1, arr2, i1 + 1, i2, dd), lcs(arr1, arr2, i1, i2 + 1, dd));
+		}
+		return dd[i1][i2];
+	}
+}
+</code></pre> 
+        <h3 id="top-down-approach">Top Down Approach</h3> 
+        <pre><code class="language-java">class Solution {
+	public int longestCommonSubsequence(String text1, String text2) {
+		char[] arr1 = text1.toCharArray();
+		char[] arr2 = text2.toCharArray();
+		int[][] dd = new int[arr1.length + 1][arr2.length + 1];
+		for (int i = 0; i &lt;= arr1.length; i++) {
+            for (int j = 0; j &lt;= arr2.length;j++) {
+              	if (i == 0 || j == 0) {
+                  dd[i][j] = 0;
+                  continue;
+                }
+                if (arr1[i - 1] == arr2[j - 1]) {
+                    dd[i][j] = dd[i - 1][j - 1] + 1;
+                } else {
+                    dd[i][j] = Math.max(dd[i - 1][j], dd[i][j - 1]);
+                }
+            }
+        }
+        return dd[arr1.length][arr2.length];
+	}
+}
+</code></pre> 
+        <h2 id="2-largest-common-substring">2. <a href="https://www.youtube.com/watch?v=HrybPYpOvz0&amp;list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&amp;index=23" target="_blank" rel="noopener nofollow">Largest Common Substring</a></h2> 
+        <p>https://leetcode.com/problems/maximum-length-of-repeated-subarray/</p> 
+        <p>[1,2,3,2,1] [3,2,1,4,7]</p> 
+        <table> 
+         <thead> 
+          <tr> 
+           <th></th> 
+           <th>0</th> 
+           <th>3</th> 
+           <th>2</th> 
+           <th>1</th> 
+           <th>4</th> 
+           <th>7</th> 
+          </tr> 
+         </thead> 
+         <tbody> 
+          <tr> 
+           <td><strong>0</strong></td> 
+           <td>0</td> 
+           <td>0</td> 
+           <td>0</td> 
+           <td>0</td> 
+           <td>0</td> 
+           <td>0</td> 
+          </tr> 
+          <tr> 
+           <td><strong>1</strong></td> 
+           <td>0</td> 
+           <td>0</td> 
+           <td>0</td> 
+           <td>1</td> 
+           <td>0</td> 
+           <td>0</td> 
+          </tr> 
+          <tr> 
+           <td><strong>2</strong></td> 
+           <td>0</td> 
+           <td>0</td> 
+           <td>1</td> 
+           <td>0</td> 
+           <td>0</td> 
+           <td>0</td> 
+          </tr> 
+          <tr> 
+           <td><strong>3</strong></td> 
+           <td>0</td> 
+           <td>1</td> 
+           <td>0</td> 
+           <td>0</td> 
+           <td>0</td> 
+           <td>0</td> 
+          </tr> 
+          <tr> 
+           <td><strong>2</strong></td> 
+           <td>0</td> 
+           <td>0</td> 
+           <td>2</td> 
+           <td>0</td> 
+           <td>0</td> 
+           <td>0</td> 
+          </tr> 
+          <tr> 
+           <td><strong>1</strong></td> 
+           <td>0</td> 
+           <td>0</td> 
+           <td>0</td> 
+           <td>3</td> 
+           <td>0</td> 
+           <td>0</td> 
+          </tr> 
+         </tbody> 
+        </table> 
+        <pre><code class="language-java">class Solution {
+    public int findLength(int[] nums1, int[] nums2) {
+		int[][] dd = new int[nums1.length + 1][nums2.length + 1];
+        for (int i = 0; i &lt;= nums1.length; i++) {
+              dd[i][0] = 0;
+        }
+         for (int j = 0; j &lt;= nums2.length; j++) {
+              dd[0][j] = 0;
+        }
+        int max = 0;
+		for (int i = 1; i &lt;= nums1.length; i++) {
+            for (int j = 1; j &lt;= nums2.length;j++) {
+                if (nums1[i - 1] == nums2[j - 1]) {
+                    dd[i][j] = dd[i - 1][j - 1] + 1;
+                } else {
+                    dd[i][j] = 0;
+                }
+                 max = Math.max(max, dd[i][j]);
+            }
+        }
+        return max;
+    }
+}
+</code></pre> 
+        <h2 id="3-print-lcs-longest-common-subsequence-string">3. <a href="https://www.youtube.com/watch?v=x5hQvnUcjiM&amp;list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&amp;index=23" target="_blank" rel="noopener nofollow">Print LCS</a> (Longest Common Subsequence string)</h2> 
+        <pre><code class="language-java">class Solution {
+	public static void main(String[] args) {
+		System.out.println(longestCommonSubsequence("acdaf", "acbcf"));
+	}
+	public static String longestCommonSubsequence(String text1, String text2) {
+		char[] arr1 = text1.toCharArray();
+		char[] arr2 = text2.toCharArray();
+		int[][] dd = new int[arr1.length + 1][arr2.length + 1];
+		for (int i = 0; i &lt;= arr1.length; i++) {
+			for (int j = 0; j &lt;= arr2.length; j++) {
+				if (i == 0 || j == 0) {
+					dd[i][j] = 0;
+					continue;
+				}
+				if (arr1[i - 1] == arr2[j - 1]) {
+					dd[i][j] = dd[i - 1][j - 1] + 1;
+				} else {
+					dd[i][j] = Math.max(dd[i - 1][j], dd[i][j - 1]);
+				}
+			}
+		}
+		int maxLength = dd[arr1.length][arr2.length];
+		if (maxLength == 0) {
+			return "";
+		}
+		char[] subsequence = new char[maxLength];
+		int i = arr1.length, j = arr2.length, currentIndex = maxLength - 1;
+		while (i &gt; 0 &amp;&amp; j &gt; 0 &amp;&amp; currentIndex &gt;= 0) {
+			if (arr1[i - 1] == arr2[j - 1]) {
+				subsequence[currentIndex--] = arr1[i - 1];
+				i--;
+				j--;
+				continue;
+			}
+			if (dd[i - 1][j] &gt; dd[i][j - 1]) {
+				i--;
+			} else {
+				j--;
+			}
+		}
+		return new String(subsequence);
+	}
+}
+</code></pre> 
+        <h2 id="3-shortest-common-super-sequence">3. <a href="https://www.youtube.com/watch?v=823Grn4_dCQ&amp;list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&amp;index=24" target="_blank" rel="noopener nofollow">Shortest Common Super Sequence</a></h2> 
+        <p><a href="https://leetcode.com/problems/shortest-common-supersequence/" target="_blank" rel="noopener nofollow">https://leetcode.com/problems/shortest-common-supersequence/</a></p> 
+        <p>Given two strings <code>str1</code> and <code>str2</code>, return the shortest string that has both <code>str1</code> and <code>str2</code> as subsequences</p> 
+        <p>Eg.</p> 
+        <pre><code>Input: str1 = "abac", str2 = "cab"
+Output: "cabac"
+Explanation: 
+str1 = "abac" is a subsequence of "cabac" because we can delete the first "c".
+str2 = "cab" is a subsequence of "cabac" because we can delete the last "ac".
+The answer provided is the shortest such string that satisfies these properties.
+</code></pre> 
+        <p><strong>Solution :</strong> To find the length of the shortest common supersequence among two strings.</p> 
+        <ol> 
+         <li>Find the common sequence among the two strings.</li> 
+         <li>Lets say length of first string is <code>s1</code>, second is <code>s2</code> and the common sequence is <code>l</code>. So the length of the shortest common super sequence is <code>l + (s1 - l) + (s2 - l)</code></li> 
+        </ol> 
+        <h2 id="4-print-shortest-common-super-sequence">4. <a href="https://www.youtube.com/watch?v=VDhRg-ZJTuc&amp;list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&amp;index=29" target="_blank" rel="noopener nofollow">Print Shortest Common Super Sequence</a></h2> 
+        <p><a href="https://leetcode.com/problems/shortest-common-supersequence/submissions/" target="_blank" rel="noopener nofollow">https://leetcode.com/problems/shortest-common-supersequence/submissions/</a></p> 
+        <pre><code class="language-java">class Solution {
+	public static void main(String[] args) {
+		System.out.println(shortestCommonSupersequence("acdcfcq", "acbcfwq")); //acdbcfcwq
+	}
+	public static String shortestCommonSupersequence(String text1, String text2) {
+		char[] arr1 = text1.toCharArray();
+		char[] arr2 = text2.toCharArray();
+		int[][] dd = new int[arr1.length + 1][arr2.length + 1];
+		for (int i = 0; i &lt;= arr1.length; i++) {
+			for (int j = 0; j &lt;= arr2.length; j++) {
+				if (i == 0 || j == 0) {
+					dd[i][j] = 0;
+					continue;
+				}
+				if (arr1[i - 1] == arr2[j - 1]) {
+					dd[i][j] = dd[i - 1][j - 1] + 1;
+				} else {
+					dd[i][j] = Math.max(dd[i - 1][j], dd[i][j - 1]);
+				}
+			}
+		}
+		// longest common subsequence
+		int lcsLength = dd[arr1.length][arr2.length];
+		// shortest common super sequence
+		int scsLength = lcsLength + (arr1.length - lcsLength) + (arr2.length - lcsLength);
+		char[] subsequence = new char[scsLength];
+		int i = arr1.length, j = arr2.length, currentIndex = scsLength - 1;
+		while (i &gt; 0 &amp;&amp; j &gt; 0 &amp;&amp; currentIndex &gt;= 0) {
+			if (arr1[i - 1] == arr2[j - 1]) {
+				subsequence[currentIndex--] = arr1[i - 1];
+				i--;
+				j--;
+				continue;
+			}
+			if (dd[i - 1][j] &gt; dd[i][j - 1]) {
+				subsequence[currentIndex--] = arr1[i - 1];
+				i--;
+			} else {
+				subsequence[currentIndex--] = arr2[j - 1];
+				j--;
+			}
+		}
+		while (i &gt; 0) {
+			subsequence[currentIndex--] = arr1[i - 1];
+			i--;
+		}
+		while (j &gt; 0) {
+			subsequence[currentIndex--] = arr2[j - 1];
+			j--;
+		}
+		return new String(subsequence);
+	}
+}
+</code></pre> 
+        <h2 id="5-min-no-of-insertion-and-deletion">5. <a href="https://www.youtube.com/watch?v=-fx6aDxcWyg&amp;list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&amp;index=25" target="_blank" rel="noopener nofollow">Min no. of insertion and deletion</a></h2> 
+        <p>Lets say we have to convert string a to string b. We have to find minimum number of insertions and deletions in the string a so that it could be converted to string b.</p> 
+        <p><strong>Solution :</strong></p> 
+        <p>min no. of insertions = length(lcs of a &amp; b) + length(b) - length(lcs of a &amp; b)</p> 
+        <p>min no. of deletions = length(lcs of a &amp; b) + length(a) - length(lcs of a &amp; b)</p> 
+        <h2 id="6-longest-repeating-subsequence">6. <a href="https://www.youtube.com/watch?v=hbTaCmQGqLg&amp;list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&amp;index=30" target="_blank" rel="noopener nofollow">Longest Repeating subsequence</a></h2> 
+        <pre><code class="language-java">class Solution {
+    public int findLength(int[] nums1) {
+    int[] nums2 = nums1.clone();
+		int[][] dd = new int[nums1.length + 1][nums2.length + 1];
+        for (int i = 0; i &lt;= nums1.length; i++) {
+              dd[i][0] = 0;
+        }
+         for (int j = 0; j &lt;= nums2.length; j++) {
+              dd[0][j] = 0;
+        }
+        int max = 0;
+		for (int i = 1; i &lt;= nums1.length; i++) {
+            for (int j = 1; j &lt;= nums2.length;j++) {
+                if (nums1[i - 1] == nums2[j - 1] &amp;&amp; i != j) {
+                    dd[i][j] = dd[i - 1][j - 1] + 1;
+                } else {
+                    dd[i][j] = 0;
+                }
+                 max = Math.max(max, dd[i][j]);
+            }
+        }
+        return max;
+    }
+}
+</code></pre> 
+        <h2 id="8-subsequence-pattern-matching">8. <a href="https://www.youtube.com/watch?v=QVntmksK2es&amp;list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&amp;index=31" target="_blank" rel="noopener nofollow">Subsequence pattern matching</a></h2> 
+        <p>Check whether string a is present as a subsequence in string b.</p> 
+        <p>It can be solved using 2 pointers. DP not necessary</p> 
+        <h2 id="10-largest-palindrome-subsequence">10. <a href="https://www.youtube.com/watch?v=wuOOOATz_IA&amp;list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&amp;index=26" target="_blank" rel="noopener nofollow">Largest Palindrome subsequence</a></h2> 
+        <p><a href="https://leetcode.com/problems/longest-palindromic-subsequence/" target="_blank" rel="noopener nofollow">https://leetcode.com/problems/longest-palindromic-subsequence/</a></p> 
+        <p>Given a string <code>s</code>, find <em>the longest palindromic <strong>subsequence</strong>'s length in</em> <code>s</code>.</p> 
+        <p>A <strong>subsequence</strong> is a sequence that can be derived from another sequence by deleting some or no elements without changing the order of the remaining elements.</p> 
+        <p>Example:</p> 
+        <pre><code>Input: s = "bbbab"
+Output: 4
+Explanation: One possible longest palindromic subsequence is "bbbb".
+</code></pre> 
+        <p><strong>Solution :</strong> Create reverse of the given string and find the longest common subsequence between the string and its reverse.</p> 
+        <h2 id="13-min-no-of-deletions-in-a-string-to-make-it-a-palindrome">13. <a href="https://www.youtube.com/watch?v=CFwCCNbRuLY&amp;list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&amp;index=28" target="_blank" rel="noopener nofollow">Min no. of deletions in a string to make it a Palindrome</a></h2> 
+        <p><strong>Solution :</strong> Create reverse of the given string and find the longest common subsequence between them.</p> 
+        <p>Min no. deletions = length(string) - length(Largest Palindrome subsequence)</p> 
+        <h2 id="14-min-no-of-insertions-in-a-string-to-make-it-a-palindrome">14. <a href="https://www.youtube.com/watch?v=AEcRW4ylm_c&amp;list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&amp;index=32" target="_blank" rel="noopener nofollow">Min no. of insertions in a string to make it a Palindrome</a></h2> 
+        <p>Create reverse of the given string, find the length of shortest super sequence.</p> 
+        <p>Min no. of Insertions = length(shortest super sequence) - length(string)</p> 
+        <p><strong>OR</strong></p> 
+        <p>Min no. of Insertions = Min no. deletions</p>   
+        <div style="margin-top:10px;margin-bottom:20px"> 
+         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+         <!-- Display Ad --> 
+         <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3068137040930830" data-ad-slot="7956133725" data-ad-format="auto" data-full-width-responsive="true"></ins> 
+         <script>
+							(adsbygoogle = window.adsbygoogle || []).push({});
+						</script> 
+        </div> 
+        <div class="clearfix entry-actions"> <span>Published in: </span> <span> <a style="
+										padding: 0 5px 5px;
+										text-decoration: none;
+										border-bottom: 4px solid yellow;
+									" href="/topics/data-structures-and-algorithms">Data Structures And Algorithms</a> </span> 
+        </div> 
+       </div> 
+       <div class="clearfix entry-actions"> <span>Originally Published On </span><span> : </span><span>Aug 01, 2021</span> 
+       </div> 
+      </article> 
+     </div> 
+    </div> 
+    <footer class="typology-footer"> 
+     <div class="container"> 
+      <div class="col-lg-4"> 
+       <div class="widget clearfix widget_text"> 
+        <p class="widget-title h5">Overview</p> 
+        <div class="textwidget"> 
+         <div class="textwidget"> 
+          <p> Cse Tutorials contains Tutorials about WebApps, Web Designing, Java and Ubuntu </p> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="col-lg-4"> 
+       <div class="widget clearfix widget_recent_entries"> 
+        <p class="widget-title h5">Resources</p> 
+        <ul> 
+         <li> <a href="/about">About us</a> </li> 
+         <li> <a href="/contact">Contact us</a> </li> 
+         <li> <a href="/privacy-policy">Privacy Policy</a> </li> 
+         <li> <a href="/tos">Terms and Conditions</a> </li> 
+         <li> <a href="/sitemap_index.xml">SiteMap</a> </li> 
+        </ul> 
+       </div> 
+      </div> 
+      <div class="col-lg-4"> 
+       <div class="widget clearfix widget_text"> 
+        <p class="widget-title h5">Contact</p> 
+        <div class="textwidget"> 
+         <p> <span>Ashish Doneriya<br>email: <a style="color:#333" href="mailto:ashishdoneriya@gmail.com">ashishdoneriya@gmail.com</a></span> <span class="Social__Span-sc-12mxrss-1 iBOFdG"><a class="Social__Icon-sc-12mxrss-0 gUYDTw" target="_blank" rel="noopener noreferrer" href="https://twitter.com/ashishdoneriya" style="color: #00aced" title="Follow me on Twitter">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"> <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"> 
+             </path> 
+            </svg></a><a class="Social__Icon-sc-12mxrss-0 gUYDTw" target="_blank" rel="noopener noreferrer" href="https://github.com/ashishdoneriya" style="color: #666666" title="Open Source on Github">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 496 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"> <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"> 
+             </path> 
+            </svg> </a> </span> </p> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </footer> 
+   </div> 
+  </div> 
+  <script>
+		(function (d) {
+			var x = d.createElement("link");
+			var y = d.getElementsByTagName("script")[0];
+			x.rel = "stylesheet";
+			x.href = "https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Ubuntu+Mono:ital@0;1&family=Ubuntu:wght@400;500;700&display=swap";
+			y.parentNode.insertBefore(x, y);
+		})(document);
+	</script> 
+  <link defer href="/assets/theme/prism/prism.css" rel="stylesheet" type="text/css"> 
+  <script src="/assets/theme/prism/prism.js"></script> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-60245752-3"></script> 
+  <script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-60245752-3');
+</script>  
+ </body>
+</html>

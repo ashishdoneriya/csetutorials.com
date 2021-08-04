@@ -1,6 +1,101 @@
 <!doctype html>
 <html lang="en-GB">
  <head> 
+  <!-- Title --> 
+  <title>Dynamic Programming on Trees</title> 
+  <link rel="canonical" href="https://csetutorials.com/dynamic-programming-on-trees.html"> 
+  <meta name="description" content="Dynamic Programming on Trees"> 
+  <meta property="og:description" content="Dynamic Programming on Trees"> 
+  <meta name="twitter:description" content="Dynamic Programming on Trees"> 
+  <meta name="author" content="Ashish Doneriya"> 
+  <meta name="robots" content="index, follow"> 
+  <meta property="og:type" content="article"> 
+  <meta property="og:title" content="Dynamic Programming on Trees"> 
+  <meta property="og:url" content="https://csetutorials.com/dynamic-programming-on-trees.html"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:site_name" content="Cse Tutorials"> 
+  <meta property="og:updated_time" content="2021-08-01T06:51:21Z"> 
+  <meta property="article:author" content="https://www.facebook.com/ashishdoneriya"> 
+  <meta property="article:modified_time" content="2021-08-01T06:51:21Z"> 
+  <meta property="article:published_time" content="2021-08-01T06:51:21Z"> 
+  <meta property="article:publisher" content="https://www.facebook.com/ashishdoneriya"> 
+  <meta property="article:section" content="Data Structures And Algorithms"> 
+  <meta property="article:tag" content="Dynamic-Programming"> 
+  <meta name="twitter:title" content="Dynamic Programming on Trees"> 
+  <meta name="twitter:card" content="summary"> 
+  <meta name="twitter:creator" content="@ashishdoneriya"> 
+  <meta name="twitter:site" content="@ashishdoneriya"> 
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Person",
+        "Organization"
+      ],
+      "@id": "https://csetutorials.com/#/schema/person/ashishdoneriya",
+      "name": "Ashish Doneriya",
+      "sameAs": [
+        "https://www.facebook.com/ashishdoneriya",
+        "https://twitter.com/ashishdoneriya",
+        "https://www.linkedin.com/in/ashishdoneriya/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://csetutorials.com/#website",
+      "url": "https://csetutorials.com",
+      "name": "Cse Tutorials",
+      "description": "Tutorials about WebApps, Web Designing, Java \u0026 Ubuntu",
+      "publisher": {
+        "@id": "https://csetutorials.com/#/schema/person/ashishdoneriya"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://csetutorials.com/dynamic-programming-on-trees.html#webpage",
+      "url": "https://csetutorials.com/dynamic-programming-on-trees.html",
+      "isPartOf": {
+        "@id": "https://csetutorials.com/#website"
+      },
+      "datePublished": "2021-08-01T06:51:21Z",
+      "dateModified": "2021-08-01T06:51:21Z",
+      "description": "Dynamic Programming on Trees",
+      "inLanguage": "en-US",
+      "potentialAction": [
+        {
+          "@type": "ReadAction",
+          "target": [
+            "https://csetutorials.com/dynamic-programming-on-trees.html"
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://csetutorials.com/dynamic-programming-on-trees.html#article",
+      "isPartOf": {
+        "@id": "https://csetutorials.com/dynamic-programming-on-trees.html#webpage"
+      },
+      "author": {
+        "@id": "https://csetutorials.com/#/schema/person/ashishdoneriya"
+      },
+      "headline": "Dynamic Programming on Trees",
+      "datePublished": "2021-08-01T06:51:21Z",
+      "dateModified": "2021-08-01T06:51:21Z",
+      "mainEntityOfPage": {
+        "@id": "https://csetutorials.com/dynamic-programming-on-trees.html#webpage"
+      },
+      "publisher": {
+        "@id": "https://csetutorials.com/#/schema/person/ashishdoneriya"
+      },
+      "keywords": "dynamic-programming",
+      "articleSection": "data-structures-and-algorithms",
+      "inLanguage": "en-US"
+    }
+  ]
+}</script> 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
   <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
@@ -68,33 +163,112 @@
    <div class="typology-cover typology-cover-empty"></div> 
    <div class="typology-fake-bg"> 
     <div class="typology-section"> 
-     <div class="section-content home"> 
-      <header class="entry-header clearfix"> 
-       <p class="entry-title entry-title-cover-empty h2"> Data Structures And Algorithms </p> 
-       <div class="post-letter">
-        D
+     <div class="section-content"> 
+      <article class="typology-post typology-single-post"> 
+       <header class="entry-header clearfix"> 
+        <h1 class="entry-title entry-title-cover-empty h2">Dynamic Programming on Trees</h1> 
+        <div class="entry-meta"> 
+         <div class="meta-item meta-author" style="vertical-align: middle">
+           By <span class="vcard author"><span class="fn"> <a href="/author/ashishdoneriya">Ashish Doneriya</a> </span></span> 
+         </div> 
+         <div class="meta-item meta-date" style="vertical-align: middle"> <span class="updated">Last Updated on Aug 01, 2021 </span> 
+         </div> 
+        </div> 
+        <div class="post-letter">
+          D 
+        </div> 
+       </header> 
+       <div class="entry-content clearfix"> 
+        <div style="margin-top:10px;margin-bottom:20px"> 
+         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+         <!-- Display Ad --> 
+         <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3068137040930830" data-ad-slot="1668882656" data-ad-format="auto" data-full-width-responsive="true"></ins> 
+         <script>
+							(adsbygoogle = window.adsbygoogle || []).push({});
+						</script> 
+        </div>    
+        <p><a href="https://www.youtube.com/watch?v=qZ5zayHSH2g&amp;list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&amp;index=47" target="_blank" rel="noopener nofollow">https://www.youtube.com/watch?v=qZ5zayHSH2g&amp;list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&amp;index=47</a></p> 
+        <h2 id="problems">Problems</h2> 
+        <ol> 
+         <li>Diameter of a Binary Tree</li> 
+         <li>Maximum path sum from any node to any node</li> 
+         <li>Maximum path sum from leaf to leaf</li> 
+         <li>Diameter of N-array tree</li> 
+        </ol> 
+        <h3 id="1-diameter-of-a-binary-tree">1. Diameter of a Binary Tree</h3> 
+        <p><a href="https://leetcode.com/problems/diameter-of-binary-tree/submissions/" target="_blank" rel="noopener nofollow">https://leetcode.com/problems/diameter-of-binary-tree/submissions/</a></p> 
+        <pre><code class="language-java">class Solution {
+    public int diameterOfBinaryTree(TreeNode root) {
+        return getMaxHeightAndDiameter(root)[1];
+    }
+    
+    /**
+    *   returns int[] 0th index-&gt; maxHeight, 1st index-&gt; max diameter
+    */
+    public int[] getMaxHeightAndDiameter(TreeNode node) {
+        if (node == null) {
+            return new int[]{0, 0};
+        }
+        int[] leftSubTreeInfo = getMaxHeightAndDiameter(node.left);
+        int[] rightSubTreeInfo = getMaxHeightAndDiameter(node.right);
+        int[] response = new int[2];
+        response[0] = leftSubTreeInfo[0] &gt; rightSubTreeInfo[0] ? leftSubTreeInfo[0] : rightSubTreeInfo[0];
+        response[0]++;
+        response[1]  = leftSubTreeInfo[0] + rightSubTreeInfo[0];
+        if (response[1] &lt; leftSubTreeInfo[1]) {
+            response[1] = leftSubTreeInfo[1];
+        }
+        if (response[1] &lt; rightSubTreeInfo[1]) {
+            response[1] = rightSubTreeInfo[1];
+        }
+        return response;
+    }
+}
+</code></pre> 
+        <h3 id="2-maximum-path-sum-from-any-node-to-any-node">2. Maximum path sum from any node to any node</h3> 
+        <p><a href="https://leetcode.com/problems/binary-tree-maximum-path-sum/" target="_blank" rel="noopener nofollow">https://leetcode.com/problems/binary-tree-maximum-path-sum/</a></p> 
+        <pre><code class="language-java">class Solution {
+    
+    int maxPathSum = Integer.MIN_VALUE;
+    
+    public int maxPathSum(TreeNode root) {
+        getMaxHeight(root);
+        return maxPathSum;
+    }
+    
+    private int getMaxHeight(TreeNode node) {
+        if (node == null) {
+            return 0;
+        }
+        int maxLeftPathSum = getMaxHeight(node.left);
+        int maxRightPathSum = getMaxHeight(node.right);
+        int temp = Math.max(node.val, node.val + Math.max(maxLeftPathSum, maxRightPathSum));
+        int currentPathSum = Math.max(node.val + maxLeftPathSum + maxRightPathSum, temp );
+        maxPathSum = Math.max(maxPathSum, currentPathSum);
+        return temp;
+    }
+    
+}
+</code></pre> 
+        <h3 id="3-maximum-path-sum-from-leaf-to-leaf">3. Maximum path sum from leaf to leaf</h3>   
+        <div style="margin-top:10px;margin-bottom:20px"> 
+         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+         <!-- Display Ad --> 
+         <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3068137040930830" data-ad-slot="7956133725" data-ad-format="auto" data-full-width-responsive="true"></ins> 
+         <script>
+							(adsbygoogle = window.adsbygoogle || []).push({});
+						</script> 
+        </div> 
+        <div class="clearfix entry-actions"> <span>Published in: </span> <span> <a style="
+										padding: 0 5px 5px;
+										text-decoration: none;
+										border-bottom: 4px solid yellow;
+									" href="/topics/data-structures-and-algorithms">Data Structures And Algorithms</a> </span> 
+        </div> 
        </div> 
-      </header> 
-      <ul class="wp-block-rss is-grid columns-2 columns-2" style="list-style: none"> 
-       <li class="wp-block-rss__item"> 
-        <div class="wp-block-rss__item-title" style="line-height: 1.4"> <a class="h5" style="color: rgba(0, 0, 0, 0.8)" href="/dynamic-programming-matrix-chain-multiplication.html">Matrix Chain Multiplication</a> 
-        </div> <span class="wp-block-rss__item-author" style="margin-top: 8px"> <span>In </span> <span> <a href="/topics/data-structures-and-algorithms">Data Structures And Algorithms</a> </span> <span> - Aug 01, 2021</span> </span> </li> 
-       <li class="wp-block-rss__item"> 
-        <div class="wp-block-rss__item-title" style="line-height: 1.4"> <a class="h5" style="color: rgba(0, 0, 0, 0.8)" href="/dynamic-programming-zero-one-knapsack-problem.html">0-1 Knapsack Problem</a> 
-        </div> <span class="wp-block-rss__item-author" style="margin-top: 8px"> <span>In </span> <span> <a href="/topics/data-structures-and-algorithms">Data Structures And Algorithms</a> </span> <span> - Aug 01, 2021</span> </span> </li> 
-       <li class="wp-block-rss__item"> 
-        <div class="wp-block-rss__item-title" style="line-height: 1.4"> <a class="h5" style="color: rgba(0, 0, 0, 0.8)" href="/dynamic-programming-on-trees.html">Dynamic Programming on Trees</a> 
-        </div> <span class="wp-block-rss__item-author" style="margin-top: 8px"> <span>In </span> <span> <a href="/topics/data-structures-and-algorithms">Data Structures And Algorithms</a> </span> <span> - Aug 01, 2021</span> </span> </li> 
-       <li class="wp-block-rss__item"> 
-        <div class="wp-block-rss__item-title" style="line-height: 1.4"> <a class="h5" style="color: rgba(0, 0, 0, 0.8)" href="/dynamic-programming-longest-common-subsequence.html">Longest Common Subsequence</a> 
-        </div> <span class="wp-block-rss__item-author" style="margin-top: 8px"> <span>In </span> <span> <a href="/topics/data-structures-and-algorithms">Data Structures And Algorithms</a> </span> <span> - Aug 01, 2021</span> </span> </li> 
-       <li class="wp-block-rss__item"> 
-        <div class="wp-block-rss__item-title" style="line-height: 1.4"> <a class="h5" style="color: rgba(0, 0, 0, 0.8)" href="/dynamic-programming-unbounded-knapsack.html">Unbounded Knapsack</a> 
-        </div> <span class="wp-block-rss__item-author" style="margin-top: 8px"> <span>In </span> <span> <a href="/topics/data-structures-and-algorithms">Data Structures And Algorithms</a> </span> <span> - Aug 01, 2021</span> </span> </li> 
-       <li class="wp-block-rss__item"> 
-        <div class="wp-block-rss__item-title" style="line-height: 1.4"> <a class="h5" style="color: rgba(0, 0, 0, 0.8)" href="/dynamic-programming-problem-types.html">Dynamic Programming Syllabus</a> 
-        </div> <span class="wp-block-rss__item-author" style="margin-top: 8px"> <span>In </span> <span> <a href="/topics/data-structures-and-algorithms">Data Structures And Algorithms</a> </span> <span> - Aug 01, 2021</span> </span> </li> 
-      </ul> 
+       <div class="clearfix entry-actions"> <span>Originally Published On </span><span> : </span><span>Aug 01, 2021</span> 
+       </div> 
+      </article> 
      </div> 
     </div> 
     <footer class="typology-footer"> 

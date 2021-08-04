@@ -2,16 +2,16 @@
 <html lang="en-GB">
  <head> 
   <!-- Title --> 
-  <title>Dynamic Programming Syllabus</title> 
-  <link rel="canonical" href="https://csetutorials.com/dynamic-programming-problem-types.html"> 
-  <meta name="description" content="Dynamic programming problem types"> 
-  <meta property="og:description" content="Dynamic programming problem types"> 
-  <meta name="twitter:description" content="Dynamic programming problem types"> 
+  <title>Unbounded Knapsack</title> 
+  <link rel="canonical" href="https://csetutorials.com/dynamic-programming-unbounded-knapsack.html"> 
+  <meta name="description" content="Unbounded Knapsack problem types"> 
+  <meta property="og:description" content="Unbounded Knapsack problem types"> 
+  <meta name="twitter:description" content="Unbounded Knapsack problem types"> 
   <meta name="author" content="Ashish Doneriya"> 
   <meta name="robots" content="index, follow"> 
   <meta property="og:type" content="article"> 
-  <meta property="og:title" content="Dynamic Programming Syllabus"> 
-  <meta property="og:url" content="https://csetutorials.com/dynamic-programming-problem-types.html"> 
+  <meta property="og:title" content="Unbounded Knapsack"> 
+  <meta property="og:url" content="https://csetutorials.com/dynamic-programming-unbounded-knapsack.html"> 
   <meta property="og:locale" content="en_US"> 
   <meta property="og:site_name" content="Cse Tutorials"> 
   <meta property="og:updated_time" content="2021-08-01T06:51:21Z"> 
@@ -21,7 +21,7 @@
   <meta property="article:publisher" content="https://www.facebook.com/ashishdoneriya"> 
   <meta property="article:section" content="Data Structures And Algorithms"> 
   <meta property="article:tag" content="Dynamic-Programming"> 
-  <meta name="twitter:title" content="Dynamic Programming Syllabus"> 
+  <meta name="twitter:title" content="Unbounded Knapsack"> 
   <meta name="twitter:card" content="summary"> 
   <meta name="twitter:creator" content="@ashishdoneriya"> 
   <meta name="twitter:site" content="@ashishdoneriya"> 
@@ -54,38 +54,38 @@
     },
     {
       "@type": "WebPage",
-      "@id": "https://csetutorials.com/dynamic-programming-problem-types.html#webpage",
-      "url": "https://csetutorials.com/dynamic-programming-problem-types.html",
+      "@id": "https://csetutorials.com/dynamic-programming-unbounded-knapsack.html#webpage",
+      "url": "https://csetutorials.com/dynamic-programming-unbounded-knapsack.html",
       "isPartOf": {
         "@id": "https://csetutorials.com/#website"
       },
       "datePublished": "2021-08-01T06:51:21Z",
       "dateModified": "2021-08-01T06:51:21Z",
-      "description": "Dynamic programming problem types",
+      "description": "Unbounded Knapsack problem types",
       "inLanguage": "en-US",
       "potentialAction": [
         {
           "@type": "ReadAction",
           "target": [
-            "https://csetutorials.com/dynamic-programming-problem-types.html"
+            "https://csetutorials.com/dynamic-programming-unbounded-knapsack.html"
           ]
         }
       ]
     },
     {
       "@type": "Article",
-      "@id": "https://csetutorials.com/dynamic-programming-problem-types.html#article",
+      "@id": "https://csetutorials.com/dynamic-programming-unbounded-knapsack.html#article",
       "isPartOf": {
-        "@id": "https://csetutorials.com/dynamic-programming-problem-types.html#webpage"
+        "@id": "https://csetutorials.com/dynamic-programming-unbounded-knapsack.html#webpage"
       },
       "author": {
         "@id": "https://csetutorials.com/#/schema/person/ashishdoneriya"
       },
-      "headline": "Dynamic Programming Syllabus",
+      "headline": "Unbounded Knapsack",
       "datePublished": "2021-08-01T06:51:21Z",
       "dateModified": "2021-08-01T06:51:21Z",
       "mainEntityOfPage": {
-        "@id": "https://csetutorials.com/dynamic-programming-problem-types.html#webpage"
+        "@id": "https://csetutorials.com/dynamic-programming-unbounded-knapsack.html#webpage"
       },
       "publisher": {
         "@id": "https://csetutorials.com/#/schema/person/ashishdoneriya"
@@ -166,7 +166,7 @@
      <div class="section-content"> 
       <article class="typology-post typology-single-post"> 
        <header class="entry-header clearfix"> 
-        <h1 class="entry-title entry-title-cover-empty h2">Dynamic Programming Syllabus</h1> 
+        <h1 class="entry-title entry-title-cover-empty h2">Unbounded Knapsack</h1> 
         <div class="entry-meta"> 
          <div class="meta-item meta-author" style="vertical-align: middle">
            By <span class="vcard author"><span class="fn"> <a href="/author/ashishdoneriya">Ashish Doneriya</a> </span></span> 
@@ -175,7 +175,7 @@
          </div> 
         </div> 
         <div class="post-letter">
-          D 
+          U 
         </div> 
        </header> 
        <div class="entry-content clearfix"> 
@@ -187,19 +187,109 @@
 							(adsbygoogle = window.adsbygoogle || []).push({});
 						</script> 
         </div>    
+        <p><a href="https://www.youtube.com/watch?v=aycn9KO8_Ls&amp;list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&amp;index=13" target="_blank" rel="noopener nofollow">https://www.youtube.com/watch?v=aycn9KO8_Ls&amp;list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&amp;index=13</a></p> 
+        <p>In 0/1 knapsack problem there was a condition that if you select an iteam then you won't be able to select it again. But in unbounded knapsack there is no such condition. It means we could select an iteam again and again. If an item gives max profit then we should take as many as same items.</p> 
+        <p><strong>Formula</strong></p> 
+        <pre><code class="language-java">t[i][j] = max(val[i - 1] + t[i][j - wt[i - 1]]), t[i - 1][j])
+</code></pre> 
+        <h2 id="unbounded-knapsack-problems">Unbounded Knapsack problems</h2> 
         <ol> 
-         <li><a href="/dynamic-programming-zero-one-knapsack-problem/html">0-1 Knapsack (6)</a></li> 
-         <li><a href="/dynamic-programming-unbounded-knapsack.html">Unbounded Knapsack (6)</a></li> 
-         <li>Fibonacci (7)</li> 
-         <li>LCS (5)</li> 
-         <li>LIS (10)</li> 
-         <li>Kadane's Algorithm (6)</li> 
-         <li>Matrix Chain Multiplication (7)</li> 
-         <li>DP on Trees (4)</li> 
-         <li>DP on Grid(14)</li> 
-         <li>Others (6)</li> 
+         <li>Rod Cutting</li> 
+         <li>Coin Change I</li> 
+         <li>Coin Change II</li> 
         </ol> 
-        <p><a href="https://www.youtube.com/watch?v=fJbIuhs24zQ&amp;list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go" target="_blank" rel="noopener nofollow">https://www.youtube.com/watch?v=fJbIuhs24zQ&amp;list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go</a></p>   
+        <h3 id="1-rod-cutting-problem">1. <a href="https://www.youtube.com/watch?v=SZqAQLjDsag&amp;list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&amp;index=14" target="_blank" rel="noopener nofollow">Rod Cutting Problem</a></h3> 
+        <p>Given a rod of length n inches and an array of prices that includes prices of all pieces of size smaller than n. Determine the maximum value obtainable by cutting up the rod and selling the pieces. For example, if the length of the rod is 8 and the values of different pieces are given as the following, then the maximum obtainable value is 22 (by cutting in two pieces of lengths 2 and 6)</p> 
+        <h3 id="2-coin-change">2. <a href="https://www.youtube.com/watch?v=I4UR2T6Ro3w&amp;list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&amp;index=15" target="_blank" rel="noopener nofollow">Coin Change</a></h3> 
+        <p><a href="https://www.youtube.com/watch?v=DJ4a7cmjZY0" target="_blank" rel="noopener nofollow">https://www.youtube.com/watch?v=DJ4a7cmjZY0</a></p> 
+        <p>Given a value N, if we want to make change for N cents, and we have infinite supply of each of S = { S1, S2, .. , Sm} valued coins, how many ways can we make the change? The order of coins doesn’t matter.</p> 
+        <p><a href="https://leetcode.com/problems/coin-change-2/" target="_blank" rel="noopener nofollow">https://leetcode.com/problems/coin-change-2/</a></p> 
+        <p>Three cases - 1. Adding current element and sticking to the same element</p> 
+        <ol start="2"> 
+         <li>Skipping current element and moving to the next element</li> 
+         <li>Adding current element and moving to the next element</li> 
+        </ol> 
+        <p>Since the 3rd case is the combination of 1st and 2nd case therefore we will skip case 3.</p> 
+        <table> 
+         <thead> 
+          <tr> 
+           <th></th> 
+           <th>W = 0</th> 
+           <th>W = 1</th> 
+           <th>W = 2</th> 
+           <th>W = 3</th> 
+           <th>W = 4</th> 
+           <th>W = 5</th> 
+           <th>W = 6</th> 
+           <th>W = 7</th> 
+           <th>W = 8</th> 
+           <th>W = 9</th> 
+           <th>W = 10</th> 
+          </tr> 
+         </thead> 
+         <tbody> 
+          <tr> 
+           <td><em><strong>0</strong></em></td> 
+           <td>1</td> 
+           <td>0</td> 
+           <td>0</td> 
+           <td>0</td> 
+           <td>0</td> 
+           <td>0</td> 
+           <td>0</td> 
+           <td>0</td> 
+           <td>0</td> 
+           <td>0</td> 
+           <td>0</td> 
+          </tr> 
+          <tr> 
+           <td><strong>1</strong></td> 
+           <td>1</td> 
+           <td>1</td> 
+           <td>1</td> 
+           <td>1</td> 
+           <td>1</td> 
+           <td>1</td> 
+           <td>1</td> 
+           <td>1</td> 
+           <td>1</td> 
+           <td>1</td> 
+           <td>1</td> 
+          </tr> 
+          <tr> 
+           <td><strong>2</strong></td> 
+           <td>1</td> 
+           <td>1</td> 
+           <td>2</td> 
+           <td>2</td> 
+           <td>3</td> 
+           <td>3</td> 
+           <td>4</td> 
+           <td>4</td> 
+           <td>5</td> 
+           <td>5</td> 
+           <td>6</td> 
+          </tr> 
+          <tr> 
+           <td><strong>5</strong></td> 
+           <td>1</td> 
+           <td>1</td> 
+           <td>2</td> 
+           <td>2</td> 
+           <td>3</td> 
+           <td>4</td> 
+           <td>5</td> 
+           <td>6</td> 
+           <td>7</td> 
+           <td>8</td> 
+           <td>10</td> 
+          </tr> 
+         </tbody> 
+        </table> 
+        <h3 id="3-coin-change-ii">3. <a href="https://www.youtube.com/watch?v=I-l6PBeERuc&amp;list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&amp;index=16" target="_blank" rel="noopener nofollow">Coin Change II</a></h3> 
+        <p><a href="https://www.youtube.com/watch?v=jgiZlGzXMBw" target="_blank" rel="noopener nofollow">https://www.youtube.com/watch?v=jgiZlGzXMBw</a></p> 
+        <p>Return the fewest number of coins that you need to make up that amount.</p> 
+        <p>https://leetcode.com/problems/coin-change/</p>   
         <div style="margin-top:10px;margin-bottom:20px"> 
          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
          <!-- Display Ad --> 

@@ -281,12 +281,12 @@
         <p>In previous approach ( Approach 1), in sorted sets we were storing key and value both as timestamp, but in this approach the key will be floor of timestamp and value will be the count (requests processed in that minute).</p> 
         <ol> 
          <li>Add a TTL (expiry time) to the set to autoclean memory.</li> 
-         <li>Execute the steps 3 and 4 atomically.</li> 
-         <li>Fetch the sorted set related to user.</li> 
-         <li>Increment the value of floor(timestamp) in sorted set (Redis will autocreate the key)</li> 
-         <li>In the sorted set that we received, first remove all keys (timestamps) which are older than 1 hour from both redis and the fetched set.</li> 
-         <li>Now sum up all the values (counters) in the set. During sum check if the counter value is more than the max limit per hour (500 in this case), if yes then add 500 instead of that number.</li> 
-         <li>Check if the total sum of counters is less than 500, if yes then allow the request to proceed further otherwise drop the request.</li> 
+         <li>Execute steps 3, 4 and 5 atomically.</li> 
+         <li>Remove all keys (timestamps) which are older than 1 hour from the sorted set in redis.</li> 
+         <li>Increment the value of floor(timestamp) in sorted set (Redis will autocreate the key).</li> 
+         <li>Fetch the sorted set.</li> 
+         <li>Now sum up all the values (counters) in the set. During sum check if the counter value is more than the max limit per hour (500 in this case), if yes then decrease the current timestamp value counter by 1 and rewrite the counter value in redis.</li> 
+         <li>Iif the total sum of counters is less than 500, then allow the request to proceed further otherwise drop the request.</li> 
         </ol> 
         <h3 id="problem-2--max-10-requests-per-minute-and-there-should-be-a-gap-of-2-second-between-each-request">Problem 2 : Max 10 requests per minute and there should be a gap of 2 second between each request.</h3> 
         <p><strong>Approach 1</strong></p> 
@@ -308,7 +308,7 @@
         <p>Drawbacks of this approach -</p> 
         <ol> 
          <li>We have to store timestamps of all the requests (memory consuming).</li> 
-         <li>Dropped requests are also counted in this approach and it will affect the user for the next 1 hour.</li> 
+         <li>Dropped requests are also counted in this approach and it will affect the user for the next 1 minute.</li> 
         </ol> 
         <p><strong>Approach 2</strong></p> 
         <ol> 
@@ -317,8 +317,8 @@
          <li>When a request arrives, drop all elements of the set which occured before 2 seconds ago.</li> 
          <li>Get the total size of set.</li> 
          <li>Add the current timestamp to the set.</li> 
-         <li>If the set is empty then go to step 8. If set is not empty then drop request.</li> 
-         <li>Execute below steps atomically (9 and 10).</li> 
+         <li>If the set is empty then go to step 7. If set is not empty then drop request.</li> 
+         <li>Execute below steps atomically (8 and 9).</li> 
          <li>In redis get value of key floorFuncMinutes(current request timestamp) ( eg. 11:03:46:123 to 11:03:00:000).</li> 
          <li>Increment the value of key floorFuncMinutes(current request timestamp) and set TTL of 1 minute.</li> 
          <li>If the value is less than max limit ( in this case 10 requests per minute ie. 10) then allow the request to proceed further otherwise drop the request.</li> 

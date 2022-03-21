@@ -1,5 +1,5 @@
 html {
-	font-family: sans-serif;
+	font-family: Ubuntu;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%
  }
@@ -65,7 +65,7 @@ html {
 
  code,
  pre {
-	font-family: monospace, monospace;
+	font-family: "Ubuntu Mono";
 	font-size: 1em
  }
 
@@ -4018,7 +4018,7 @@ html {
  h6,
  input[type=button],
  input[type=submit] {
-	font-family: Merriweather, serif;
+	font-family: Ubuntu;
 	font-weight: 700
  }
 
@@ -4857,7 +4857,7 @@ html {
 	margin: 0;
 	text-align: center;
 	font-size: 13px;
-	font-family: Ubuntu Mono;
+	font-family: "Ubuntu Mono";
 	font-weight: 600;
 	height: 40px;
 	text-transform: uppercase

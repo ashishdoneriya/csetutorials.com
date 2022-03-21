@@ -117,12 +117,12 @@ Eg. Lets say the request arrives at 11:03:46:123 PM where 11 is the hour, 3 is t
 In previous approach ( Approach 1), in sorted sets we were storing key and value both as timestamp, but in this approach the key will be floor of timestamp and value will be the count (requests processed in that minute).
 
 1. Add a TTL (expiry time) to the set to autoclean memory.
-2. Execute the steps 3 and 4 atomically.
-3. Fetch the sorted set related to user.
-4. Increment the value of floor(timestamp) in sorted set (Redis will autocreate the key)
-5. In the sorted set that we received, first remove all keys (timestamps) which are older than 1 hour from both redis and the fetched set.
-6. Now sum up all the values (counters) in the set. During sum check if the counter value is more than the max limit per hour (500 in this case), if yes then add 500 instead of that number.
-7. Check if the total sum of counters is less than 500, if yes then allow the request to proceed further otherwise drop the request.
+2. Execute steps 3, 4 and 5 atomically.
+3. Remove all keys (timestamps) which are older than 1 hour from the sorted set in redis.
+4. Increment the value of floor(timestamp) in sorted set (Redis will autocreate the key).
+5. Fetch the sorted set.
+6. Now sum up all the values (counters) in the set. During sum check if the counter value is more than the max limit per hour (500 in this case), if yes then decrease the current timestamp value counter by 1 and rewrite the counter value in redis.
+7. Iif the total sum of counters is less than 500, then allow the request to proceed further otherwise drop the request.
 
 ### Problem 2 : Max 10 requests per minute and there should be a gap of 2 second between each request.
 
@@ -144,7 +144,7 @@ Advantages of this approach -
 
 Drawbacks of this approach -
 1. We have to store timestamps of all the requests (memory consuming).
-2. Dropped requests are also counted in this approach and it will affect the user for the next 1 hour.
+2. Dropped requests are also counted in this approach and it will affect the user for the next 1 minute.
 
 **Approach 2**
 
@@ -153,11 +153,11 @@ Drawbacks of this approach -
 3. When a request arrives, drop all elements of the set which occured before 2 seconds ago.
 4. Get the total size of set.
 5. Add the current timestamp to the set.
-7. If the set is empty then go to step 8. If set is not empty then drop request.
-8. Execute below steps atomically (9 and 10).
-9. In redis get value of key floorFuncMinutes(current request timestamp) ( eg. 11:03:46:123 to 11:03:00:000).
-10. Increment the value of key floorFuncMinutes(current request timestamp) and set TTL of 1 minute.
-11. If the value is less than max limit ( in this case 10 requests per minute ie. 10) then allow the request to proceed further otherwise drop the request.
+6. If the set is empty then go to step 7. If set is not empty then drop request.
+7. Execute below steps atomically (8 and 9).
+8. In redis get value of key floorFuncMinutes(current request timestamp) ( eg. 11:03:46:123 to 11:03:00:000).
+9. Increment the value of key floorFuncMinutes(current request timestamp) and set TTL of 1 minute.
+10. If the value is less than max limit ( in this case 10 requests per minute ie. 10) then allow the request to proceed further otherwise drop the request.
 
 ### Problem 3 : Max 10 requests per minute.
 

@@ -21,13 +21,13 @@ Hive - 2.1.1
 Tez - 0.9.2
 
 ## Preriquisites :
-1. **Java 8 must be installed and set JAVA_HOME path.**
+1. **Java 8 must be installed and set `JAVA_HOME` path.**
 
 If you are using ubuntu then you can install java by using the below command
 ```bash
 sudo apt install openjdk-8-jdk
 ```
-After that you can set JAVA_HOME path by adding the below line in `.bashrc` file.
+After that you can set `JAVA_HOME` path by adding the below line in `.bashrc` file.
 ```bash
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 ```
@@ -161,7 +161,7 @@ sudo apt install mysql-server
 </configuration>
 ```
 
-4. Along with these xml files there is a file hadoop-env.sh in packages/hadoop/etc/hadoop/ directory. Open that file and find the line that starts with export JAVA_HOME=. Replace that line with the following
+4. Along with these xml files there is a file hadoop-env.sh in `packages/hadoop/etc/hadoop/` directory. Open that file and find the line that starts with export JAVA_HOME=. Replace that line with the following
 ```bash
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 ```
@@ -214,7 +214,7 @@ hdfs dfs -ls /
 ## Setup Hive
 
 1. Download [Hive binary](https://archive.apache.org/dist/hive/hive-2.1.1/apache-hive-2.1.1-bin.tar.gz) and extract to packages/hive  
-2. Now to setup hive for mysql, create file hive-site.xml in packages/hive/conf directory and put the below content. Don't forget to change the values according to your requirements (hostname, mysql username, mysql password and mysql database).
+2. Now to setup hive for mysql, create file `hive-site.xml` in `packages/hive/conf` directory and put the below content. Don't forget to change the values according to your requirements (hostname, mysql username, mysql password and mysql database).
 
 If you do not know how to create mysql user or database, then for ubuntu execute the below commands (don't forget to change your name here) -
 

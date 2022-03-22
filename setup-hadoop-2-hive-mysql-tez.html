@@ -206,7 +206,7 @@
         <ol start="2"> 
          <li><strong>Passwordless ssh must be set</strong></li> 
         </ol> 
-        <p>To set up password ssh you can follow my previous article to <a href="/passwordless-ssh-ubuntu-linux.html">setup ssh</a>.</p> 
+        <p>To set up passwordless ssh you can follow my previous article to <a href="/passwordless-ssh-ubuntu-linux.html">setup ssh</a>.</p> 
         <ol start="3"> 
          <li><strong>Mysql server must be installed</strong></li> 
         </ol> 
@@ -217,7 +217,7 @@
         <ol> 
          <li>Create a directory called packages in your home directory</li> 
          <li>Download <a href="https://archive.apache.org/dist/hadoop/core/hadoop-2.7.2/hadoop-2.7.2.tar.gz" target="_blank" rel="noopener nofollow">Hadoop binary</a> and extract to packages/hadoop</li> 
-         <li>In packages/hadoop/etc/hadoop directory replace <code>core-site.xml</code>, <code>hdfs-site.xml</code>, <code>mapred-site.xml</code> and <code>yarn-site.xml</code> with the following content. Don't forget to change your hostname and username</li> 
+         <li>In packages/hadoop/etc/hadoop directory replace <code>core-site.xml</code>, <code>hdfs-site.xml</code>, <code>mapred-site.xml</code> and <code>yarn-site.xml</code> with the following content. <strong>Don't forget</strong> to change your hostname and username</li> 
         </ol> 
         <p><strong>core-site.xml</strong></p> 
         <pre><code class="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -362,39 +362,59 @@ hdfs dfs -ls /
         <h2 id="setup-hive">Setup Hive</h2> 
         <ol> 
          <li>Download <a href="https://archive.apache.org/dist/hive/hive-2.1.1/apache-hive-2.1.1-bin.tar.gz" target="_blank" rel="noopener nofollow">Hive binary</a> and extract to packages/hive</li> 
-         <li>In packages/hive/conf directory create file hive-site.xml and put the below content</li> 
+         <li>Now to setup hive for mysql, create file hive-site.xml in packages/hive/conf directory and put the below content. Don't forget to change the values according to your requirements (hostname, mysql username, mysql password and mysql database).</li> 
         </ol> 
+        <p>If you do not know how to create mysql user or database, then for ubuntu execute the below commands (don't forget to change your name here) -</p> 
+        <pre><code class="language-bash">sudo mysql
+
+CREATE USER 'ashish'@'%' identified by 'thisismypassword';
+CREATE USER 'ashish'@'localhost' identified by 'thisismypassword';
+CREATE DATABASE hive;
+GRANT ALL PRIVILEGES ON hive.* TO 'ashish'@'%';
+GRANT ALL PRIVILEGES ON hive.* TO 'ashish'@'localhost';
+</code></pre> 
         <p><strong>hive-site.xml</strong></p> 
         <pre><code class="language-xml">&lt;configuration&gt;
-  &lt;property&gt;
-    &lt;name&gt;javax.jdo.option.ConnectionURL&lt;/name&gt;
-    &lt;value&gt;jdbc:mysql://hostname/hive?createDatabaseIfNotExist=true&amp;useSSL=false&lt;/value&gt;
-    &lt;description&gt;metadata is stored in a MySQL server&lt;/description&gt;
-  &lt;/property&gt;
-  &lt;property&gt;
-    &lt;name&gt;javax.jdo.option.ConnectionDriverName&lt;/name&gt;
-    &lt;value&gt;com.mysql.jdbc.Driver&lt;/value&gt;
-    &lt;description&gt;MySQL JDBC driver class&lt;/description&gt;
-  &lt;/property&gt;
-  &lt;property&gt;
-    &lt;name&gt;javax.jdo.option.ConnectionUserName&lt;/name&gt;
-    &lt;value&gt;root&lt;/value&gt;
-    &lt;description&gt;user name for connecting to mysql server&lt;/description&gt;
-  &lt;/property&gt;
-  &lt;property&gt;
-    &lt;name&gt;javax.jdo.option.ConnectionPassword&lt;/name&gt;
-    &lt;value&gt;root&lt;/value&gt;
-    &lt;description&gt;password for connecting to mysql server&lt;/description&gt;
-  &lt;/property&gt;
-  &lt;property&gt;
-    &lt;name&gt;hive.server2.enable.doAs&lt;/name&gt;
-    &lt;value&gt;false&lt;/value&gt;
-  &lt;/property&gt;
+	&lt;property&gt;
+		&lt;name&gt;javax.jdo.option.ConnectionURL&lt;/name&gt;
+		&lt;value&gt;jdbc:mysql://hostname/hive2&lt;/value&gt;
+		&lt;description&gt;metadata is stored in a MySQL server&lt;/description&gt;
+	&lt;/property&gt;
+	&lt;property&gt;
+		&lt;name&gt;javax.jdo.option.ConnectionDriverName&lt;/name&gt;
+		&lt;value&gt;com.mysql.cj.jdbc.Driver&lt;/value&gt;
+		&lt;description&gt;MySQL JDBC driver class&lt;/description&gt;
+	&lt;/property&gt;
+	&lt;property&gt;
+		&lt;name&gt;javax.jdo.option.ConnectionUserName&lt;/name&gt;
+		&lt;value&gt;ashish&lt;/value&gt;
+		&lt;description&gt;user name for connecting to mysql server&lt;/description&gt;
+	&lt;/property&gt;
+	&lt;property&gt;
+		&lt;name&gt;javax.jdo.option.ConnectionPassword&lt;/name&gt;
+		&lt;value&gt;thisismypassword&lt;/value&gt;
+		&lt;description&gt;password for connecting to mysql server&lt;/description&gt;
+	&lt;/property&gt;
+	&lt;property&gt;
+		&lt;name&gt;hive.server2.enable.doAs&lt;/name&gt;
+		&lt;value&gt;false&lt;/value&gt;
+	&lt;/property&gt;
+	&lt;property&gt;
+		&lt;name&gt;hive.exec.pre.hooks&lt;/name&gt;
+		&lt;value&gt;org.apache.hadoop.hive.ql.hooks.ATSHook&lt;/value&gt;
+	&lt;/property&gt;
+	&lt;property&gt;
+		&lt;name&gt;hive.exec.post.hooks&lt;/name&gt;
+		&lt;value&gt;org.apache.hadoop.hive.ql.hooks.ATSHook&lt;/value&gt;
+	&lt;/property&gt;
+	&lt;property&gt;
+		&lt;name&gt;hive.exec.failure.hooks&lt;/name&gt;
+		&lt;value&gt;org.apache.hadoop.hive.ql.hooks.ATSHook&lt;/value&gt;
+	&lt;/property&gt;
 &lt;/configuration&gt;
 </code></pre> 
-        <p>In the above file We have setup hive for mysql. Change the values according to your requirements</p> 
         <ol start="3"> 
-         <li>Open mysql and execute the below commands</li> 
+         <li>Open mysql (<code>mysql -uashish -pthisismypassword</code>) and execute the below commands</li> 
         </ol> 
         <pre><code class="language-sql">use hive
 source /home/username/packages/hive/scripts/metastore/upgrade/mysql/hive-schema-2.1.0.mysql.sql
@@ -420,8 +440,8 @@ export PATH=$PATH:$HIVE_HOME/bin
         <ol start="6"> 
          <li>Add mysql driver</li> 
         </ol> 
-        <pre><code class="language-bash">sudo apt-get install libmysql-java  
-ln -s /usr/share/java/mysql-connector-java.jar $HIVE_HOME/lib/mysql-connector-java.jar
+        <pre><code class="language-bash">cd $HOME/packages/hive/lib
+wget https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.27/mysql-connector-java-8.0.27.jar
 </code></pre> 
         <ol start="7"> 
          <li>To start hive, run hive server</li> 

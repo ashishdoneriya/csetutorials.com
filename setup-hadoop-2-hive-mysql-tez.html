@@ -194,8 +194,9 @@
         <p>Hadoop - 2.7.2<br> Hive - 2.1.1<br> Tez - 0.9.2</p> 
         <h2 id="preriquisites-">Preriquisites :</h2> 
         <ol> 
-         <li><strong>Java 8 must be installed and set JAVA_HOME path.</strong> If you are using ubuntu then you can install java by using the below command</li> 
+         <li><strong>Java 8 must be installed and set JAVA_HOME path.</strong></li> 
         </ol> 
+        <p>If you are using ubuntu then you can install java by using the below command</p> 
         <pre><code class="language-bash">sudo apt install openjdk-8-jdk
 </code></pre> 
         <p>After that you can set JAVA_HOME path by adding the below line in <code>.bashrc</code> file.</p> 
@@ -203,9 +204,13 @@
 </code></pre> 
         <p>The <code>.bashrc</code> file is located in your home directory. It is a hidden file. In ubuntu you can view hidden files by using <code>Ctrl</code> <code>+</code> <code>H</code> shortcut.</p> 
         <ol start="2"> 
-         <li> <p><strong>Passwordless ssh must be set</strong> To set up password ssh you can follow my previous article to <a href="/passwordless-ssh-ubuntu-linux.html">setup ssh</a>.</p> </li> 
-         <li> <p><strong>Mysql</strong> MySql is necessary for hive setup. If you just want to setup hadoop and not hive then you can skip this step. In ubuntu mysql can be setup using the below command</p> </li> 
+         <li><strong>Passwordless ssh must be set</strong></li> 
         </ol> 
+        <p>To set up password ssh you can follow my previous article to <a href="/passwordless-ssh-ubuntu-linux.html">setup ssh</a>.</p> 
+        <ol start="3"> 
+         <li><strong>Mysql server must be installed</strong></li> 
+        </ol> 
+        <p>MySql is necessary for hive setup. If you just want to setup hadoop and not hive then you can skip this step. In ubuntu mysql can be setup using the below command</p> 
         <pre><code class="language-bash">sudo apt install mysql-server
 </code></pre> 
         <h2 id="setup-hadoop">Setup Hadoop</h2> 

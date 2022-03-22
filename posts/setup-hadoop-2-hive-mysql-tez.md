@@ -4,7 +4,7 @@ created: 2020-04-28T01:19:28+05:30
 author: ashishdoneriya
 description: Steps to setup Hadoop 2, Hive 2.1.1, Hive with Mysql, Tez and Tez UI on Single Node
 permalink: /setup-hadoop-2-hive-mysql-tez.html
-updated: 2020-10-06T17:50:00+05:30
+updated: 2022-03-22T17:50:00+05:30
 categories:
   - big-data
 tags:
@@ -20,9 +20,26 @@ Hadoop - 2.7.2
 Hive - 2.1.1  
 Tez - 0.9.2
 
-Preriquisites :  
-java and JAVA_HOME  
-Mysql
+## Preriquisites :
+1. **Java 8 must be installed and set JAVA_HOME path.**
+	If you are using ubuntu then you can install java by using the below command
+```bash
+sudo apt install openjdk-8-jdk
+```
+After that you can set JAVA_HOME path by adding the below line in `.bashrc` file.
+```bash
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+```
+The `.bashrc` file is located in your home directory. It is a hidden file. In ubuntu you can view hidden files by using `Ctrl` `+` `H` shortcut.
+
+2. **Passwordless ssh must be set**
+To set up password ssh you can follow my previous article to [setup ssh](/passwordless-ssh-ubuntu-linux.html).
+
+3. **Mysql**
+MySql is necessary for hive setup. If you just want to setup hadoop and not hive then you can skip this step. In ubuntu mysql can be setup using the below command
+```bash
+sudo apt install mysql-server
+```
 
 ## Setup Hadoop
 
@@ -141,8 +158,12 @@ Mysql
 </configuration>
 ```
 
+4. Along with these xml files there is a file hadoop-env.sh in packages/hadoop/etc/hadoop/ directory. Open that file and find the line that starts with export JAVA_HOME=. Replace that line with the following
+```bash
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+```
 
-Add the below content to .bashrc file
+5. Add the below content to .bashrc file
 
 ```bash
 export PACKAGES=$HOME/packages
@@ -161,15 +182,14 @@ export HADOOP_INSTALL=$HADOOP_HOME
 export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
 ```
 
-
-Now execute below command to format namenode
+6. Now execute below command to format namenode
 
 ```bash
 hadoop namenode -format
 ```
 
 
-Your hadoop has been set up. To start hadoop services
+7. Your hadoop has been set up. To start hadoop services
 
 ```bash
 start-dfs.sh
@@ -180,7 +200,7 @@ yarn-daemon.sh start historyserver
 ```
 
 
-To test whether it has been setup, you can execute the below commands
+8. To test whether it has been setup, you can execute the below commands
 
 ```bash
 hdfs dfs -mkdir /testdir
@@ -191,7 +211,7 @@ hdfs dfs -ls /
 ## Setup Hive
 
 1. Download [Hive binary](https://archive.apache.org/dist/hive/hive-2.1.1/apache-hive-2.1.1-bin.tar.gz) and extract to packages/hive  
-3. In packages/hive/conf directory create file hive-site.xml and put the below content
+2. In packages/hive/conf directory create file hive-site.xml and put the below content
 
 **hive-site.xml**
 
@@ -227,7 +247,7 @@ hdfs dfs -ls /
 
 In the above file We have setup hive for mysql. Change the values according to your requirements
 
-Open mysql and execute the below commands
+3. Open mysql and execute the below commands
 
 ```sql
 use hive
@@ -237,7 +257,7 @@ source /home/username/packages/hive/scripts/metastore/upgrade/mysql/hive-txn-sch
 ```
 
 
-Execute the below commands for creating hive related directories in hadoop hdfs
+4. Execute the below commands for creating hive related directories in hadoop hdfs
 
 ```bash
 hdfs dfs -mkdir /user/
@@ -249,7 +269,7 @@ hdfs dfs -chmod g+w /user/hive/warehouse
 ```
 
 
-Add below content to .bashrc
+5. Add below content to .bashrc
 
 ```bash
 export HIVE_HOME=$PACKAGES/hive
@@ -257,12 +277,12 @@ export PATH=$PATH:$HIVE_HOME/bin
 ```
 
 
-Add mysql driver
+6. Add mysql driver
 ```bash
 sudo apt-get install libmysql-java  
 ln -s /usr/share/java/mysql-connector-java.jar $HIVE_HOME/lib/mysql-connector-java.jar
 ```
-To start hive, run hive server
+7. To start hive, run hive server
 
 ```bash
 hive --service hiveserver2 --hiveconf hive.server2.thrift.port=10000 --hiveconf hive.server2.thrift.http.port=10001 --hiveconf hive.root.logger=INFO,console

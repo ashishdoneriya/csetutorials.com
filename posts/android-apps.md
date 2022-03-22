@@ -36,14 +36,8 @@ Office Lens trims, enhances, and makes pictures of white boards and documents (a
 ### [Pulsar Music Player](https://play.google.com/store/apps/details?id=com.rhmsoft.pulsar)
 Pulsar is an adfree music player. It can display songs by folders also.
 
-### [Torrent Search Engine](https://play.google.com/store/apps/details?id=com.paolod.torrentsearch2)
-Torrent Search Engine is the best tool to search and download torrents every time you want, directly from your device! Tons of torrent results by multiple search providers, combining top search sources.
-
 ### [Via Browser](https://play.google.com/store/apps/details?id=mark.via.gp)
 It is the fastest, the lightest and the most beautiful browser. Chrome and Firefox are nothing compared to this browser in terms of speed. 
-
-### [Clean Master](https://play.google.com/store/apps/details?id=com.cleanmaster.mguard)
-It cleans your phone, removes junk files, cache files. Uninstall this app after use because I think this app has privacy issues.
 
 ### [Vlc](https://play.google.com/store/apps/details?id=org.videolan.vlc&hl=en)
 One of the best video players in android. It is ad free, can play any type of videos and can download subtitles also. The only disadvantage of this app compared to mx player is that it displays all directories even empty directories.

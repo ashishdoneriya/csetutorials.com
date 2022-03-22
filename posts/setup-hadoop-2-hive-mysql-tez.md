@@ -22,7 +22,8 @@ Tez - 0.9.2
 
 ## Preriquisites :
 1. **Java 8 must be installed and set JAVA_HOME path.**
-	If you are using ubuntu then you can install java by using the below command
+
+If you are using ubuntu then you can install java by using the below command
 ```bash
 sudo apt install openjdk-8-jdk
 ```
@@ -33,9 +34,11 @@ export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 The `.bashrc` file is located in your home directory. It is a hidden file. In ubuntu you can view hidden files by using `Ctrl` `+` `H` shortcut.
 
 2. **Passwordless ssh must be set**
+
 To set up password ssh you can follow my previous article to [setup ssh](/passwordless-ssh-ubuntu-linux.html).
 
-3. **Mysql**
+3. **Mysql server must be installed**
+
 MySql is necessary for hive setup. If you just want to setup hadoop and not hive then you can skip this step. In ubuntu mysql can be setup using the below command
 ```bash
 sudo apt install mysql-server

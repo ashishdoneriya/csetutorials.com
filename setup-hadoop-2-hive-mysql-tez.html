@@ -194,12 +194,12 @@
         <p>Hadoop - 2.7.2<br> Hive - 2.1.1<br> Tez - 0.9.2</p> 
         <h2 id="preriquisites-">Preriquisites :</h2> 
         <ol> 
-         <li><strong>Java 8 must be installed and set JAVA_HOME path.</strong></li> 
+         <li><strong>Java 8 must be installed and set <code>JAVA_HOME</code> path.</strong></li> 
         </ol> 
         <p>If you are using ubuntu then you can install java by using the below command</p> 
         <pre><code class="language-bash">sudo apt install openjdk-8-jdk
 </code></pre> 
-        <p>After that you can set JAVA_HOME path by adding the below line in <code>.bashrc</code> file.</p> 
+        <p>After that you can set <code>JAVA_HOME</code> path by adding the below line in <code>.bashrc</code> file.</p> 
         <pre><code class="language-bash">export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 </code></pre> 
         <p>The <code>.bashrc</code> file is located in your home directory. It is a hidden file. In ubuntu you can view hidden files by using <code>Ctrl</code> <code>+</code> <code>H</code> shortcut.</p> 
@@ -317,7 +317,7 @@
 &lt;/configuration&gt;
 </code></pre> 
         <ol start="4"> 
-         <li>Along with these xml files there is a file hadoop-env.sh in packages/hadoop/etc/hadoop/ directory. Open that file and find the line that starts with export JAVA_HOME=. Replace that line with the following</li> 
+         <li>Along with these xml files there is a file hadoop-env.sh in <code>packages/hadoop/etc/hadoop/</code> directory. Open that file and find the line that starts with export JAVA_HOME=. Replace that line with the following</li> 
         </ol> 
         <pre><code class="language-bash">export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 </code></pre> 
@@ -362,7 +362,7 @@ hdfs dfs -ls /
         <h2 id="setup-hive">Setup Hive</h2> 
         <ol> 
          <li>Download <a href="https://archive.apache.org/dist/hive/hive-2.1.1/apache-hive-2.1.1-bin.tar.gz" target="_blank" rel="noopener nofollow">Hive binary</a> and extract to packages/hive</li> 
-         <li>Now to setup hive for mysql, create file hive-site.xml in packages/hive/conf directory and put the below content. Don't forget to change the values according to your requirements (hostname, mysql username, mysql password and mysql database).</li> 
+         <li>Now to setup hive for mysql, create file <code>hive-site.xml</code> in <code>packages/hive/conf</code> directory and put the below content. Don't forget to change the values according to your requirements (hostname, mysql username, mysql password and mysql database).</li> 
         </ol> 
         <p>If you do not know how to create mysql user or database, then for ubuntu execute the below commands (don't forget to change your name here) -</p> 
         <pre><code class="language-bash">sudo mysql

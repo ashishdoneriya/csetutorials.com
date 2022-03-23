@@ -48,7 +48,7 @@ sudo apt install mysql-server
 
 1. Create a directory called packages in your home directory  
 2. Download [Hadoop binary](https://archive.apache.org/dist/hadoop/core/hadoop-2.7.2/hadoop-2.7.2.tar.gz) and extract to packages/hadoop  
-3. In packages/hadoop/etc/hadoop directory replace `core-site.xml`, `hdfs-site.xml`, `mapred-site.xml` and `yarn-site.xml` with the following content. **Don't forget** to change your hostname and username
+3. In `packages/hadoop/etc/hadoop` directory replace `core-site.xml`, `hdfs-site.xml`, `mapred-site.xml` and `yarn-site.xml` with the following content. **Don't forget** to change your hostname and username
 
 **core-site.xml**
 
@@ -209,6 +209,8 @@ yarn-daemon.sh start historyserver
 hdfs dfs -mkdir /testdir
 hdfs dfs -ls /
 ```
+
+9. You can view hdfs ui by opening the url `http://localhost:50070` and can view resource manager ui using `http://localhost:8088`
 
 
 ## Setup Hive

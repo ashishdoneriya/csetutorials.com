@@ -217,7 +217,7 @@
         <ol> 
          <li>Create a directory called packages in your home directory</li> 
          <li>Download <a href="https://archive.apache.org/dist/hadoop/core/hadoop-2.7.2/hadoop-2.7.2.tar.gz" target="_blank" rel="noopener nofollow">Hadoop binary</a> and extract to packages/hadoop</li> 
-         <li>In packages/hadoop/etc/hadoop directory replace <code>core-site.xml</code>, <code>hdfs-site.xml</code>, <code>mapred-site.xml</code> and <code>yarn-site.xml</code> with the following content. <strong>Don't forget</strong> to change your hostname and username</li> 
+         <li>In <code>packages/hadoop/etc/hadoop</code> directory replace <code>core-site.xml</code>, <code>hdfs-site.xml</code>, <code>mapred-site.xml</code> and <code>yarn-site.xml</code> with the following content. <strong>Don't forget</strong> to change your hostname and username</li> 
         </ol> 
         <p><strong>core-site.xml</strong></p> 
         <pre><code class="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -359,6 +359,9 @@ yarn-daemon.sh start historyserver
         <pre><code class="language-bash">hdfs dfs -mkdir /testdir
 hdfs dfs -ls /
 </code></pre> 
+        <ol start="9"> 
+         <li>You can view hdfs ui by opening the url <code>http://localhost:50070</code> and can view resource manager ui using <code>http://localhost:8088</code></li> 
+        </ol> 
         <h2 id="setup-hive">Setup Hive</h2> 
         <ol> 
          <li>Download <a href="https://archive.apache.org/dist/hive/hive-2.1.1/apache-hive-2.1.1-bin.tar.gz" target="_blank" rel="noopener nofollow">Hive binary</a> and extract to packages/hive</li> 

@@ -1,7 +1,7 @@
 ---
 title: My Ubuntu Notes
 created: 2017-05-03T00:56:57+05:30
-updated: 2020-02-28T18:53:00+05:30
+updated: 2022-04-10T18:53:00+05:30
 author: ashishdoneriya
 permalink: /my-ubuntu-notes
 ---

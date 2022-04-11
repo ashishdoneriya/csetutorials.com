@@ -52,3 +52,5 @@ command </dev/null &>/dev/null &
 9. For setting the paths, the file is `/etc/environment`
 
 10. [Reset Mysql Password](https://devanswers.co/how-to-reset-mysql-root-password-ubuntu/)
+
+11. [Auto mount ntfs partitions](https://linuxconfig.org/how-to-mount-partition-with-ntfs-file-system-and-read-write-access)

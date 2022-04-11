@@ -4,7 +4,7 @@ created: 2016-08-11T01:49:27+05:30
 author: ashishdoneriya
 description: Steps to Auto Mount windows NTFS Partitions at startup on Ubuntu Linux
 permalink: /auto-mount-ntfs-partitions-startup-ubuntu-linux.html
-updated: 2020-12-18T01:21:00+05:30
+updated: 2022-04-10T01:21:00+05:30
 categories:
   - ubuntu
 tags:
@@ -12,7 +12,7 @@ tags:
   - Ubuntu
 ---
 
-**NOTE :** Doesn't work on Ubuntu 20.10.
+**NOTE :** Doesn't work on Ubuntu 20.10 and above version. You can follow better approach for those versions [https://linuxconfig.org/how-to-mount-partition-with-ntfs-file-system-and-read-write-access](https://linuxconfig.org/how-to-mount-partition-with-ntfs-file-system-and-read-write-access)
 
 Auto Mount NTFS Partitions at startup on Ubuntu Linux.
 

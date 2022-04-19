@@ -12,20 +12,20 @@ tags:
 ---
 
 <style>
-.flex-container {
-  display: flex;
-  flex-wrap: nowrap;
-  background-color: DodgerBlue;
+@media (min-width:600px) {
+	.flex-container {
+		display: flex;
+		flex-wrap: nowrap;
+	}
 }
 
-.flex-container > div {
-  background-color: #f1f1f1;
-  width: 100px;
-  margin: 10px;
-  text-align: center;
-  line-height: 75px;
-  font-size: 30px;
+@media (max-width:600px) {
+	.flex-container {
+		display: flex;
+		flex-wrap: wrap;
+	}
 }
+
 </style>
 
 

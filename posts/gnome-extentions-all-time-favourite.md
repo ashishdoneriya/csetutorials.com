@@ -32,10 +32,10 @@ tags:
 ### [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)
 In case of Ubuntu, disable the Built-in extention Ubuntu Dock as it doesn't provide much customization.
 <div class="flex-container">
-	<div>[<img loading="lazy" src="/gnome-extentions/dash-to-dock/dash-to-dock-1.png" alt="Dash to Dock Gnome Extention" />](/gnome-extentions/dash-to-dock/dash-to-dock-1.png)</div>
-	<div>[<img loading="lazy" src="/gnome-extentions/dash-to-dock/dash-to-dock-2.png" alt="Dash to Dock Gnome Extention" />](/gnome-extentions/dash-to-dock/dash-to-dock-2.png)</div>
-	<div>[<img loading="lazy" src="/gnome-extentions/dash-to-dock/dash-to-dock-3.png" alt="Dash to Dock Gnome Extention" />](/gnome-extentions/dash-to-dock/dash-to-dock-3.png)</div>
-	<div>[<img loading="lazy" src="/gnome-extentions/dash-to-dock/dash-to-dock-4.png" alt="Dash to Dock Gnome Extention" />](/gnome-extentions/dash-to-dock/dash-to-dock-4.png)</div>
+	<div><a href="/gnome-extentions/dash-to-dock/dash-to-dock-1.png"><img loading="lazy" src="/gnome-extentions/dash-to-dock/dash-to-dock-1.png" alt="Dash to Dock Gnome Extention" /></a></div>
+	<div><a href="/gnome-extentions/dash-to-dock/dash-to-dock-2.png"><img loading="lazy" src="/gnome-extentions/dash-to-dock/dash-to-dock-2.png" alt="Dash to Dock Gnome Extention" /></a></div>
+	<div><a href="/gnome-extentions/dash-to-dock/dash-to-dock-3.png"><img loading="lazy" src="/gnome-extentions/dash-to-dock/dash-to-dock-3.png" alt="Dash to Dock Gnome Extention" /></a></div>
+	<div><a href="/gnome-extentions/dash-to-dock/dash-to-dock-4.png"><img loading="lazy" src="/gnome-extentions/dash-to-dock/dash-to-dock-4.png" alt="Dash to Dock Gnome Extention" /></a></div>
 </div>
 
 ### [Internet Speed Meter](https://extensions.gnome.org/extension/2980/internet-speed-meter/)

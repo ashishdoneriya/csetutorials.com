@@ -43,6 +43,15 @@ Display internet speed in top bar in gnome shell
 
 ### [Refresh Wifi Connections](https://extensions.gnome.org/extension/905/refresh-wifi-connections/)
 This extension adds a refresh button to the Wi-Fi connection selection dialog to manually request for a network scan.
+<a href="https://extensions.gnome.org//extension-data/screenshots/screenshot_905.png"><img src="https://extensions.gnome.org//extension-data/screenshots/screenshot_905.png"></a>
 
 ### [Window Is Ready - Notification Remover](https://extensions.gnome.org/extension/1007/window-is-ready-notification-remover/)
 Removes window is ready Notification
+
+### [Dash to Panel](https://extensions.gnome.org/extension/1160/dash-to-panel/)
+This extension moves the dash into the gnome main panel so that the application launchers and system tray are combined into a single panel, similar to Windows. You don't need to install Dash to Dock extention if you install Dash to Panel extention.
+<a href="/images/gnome-extentions/dash-to-panel.png"><img loading="lazy" src="/images/gnome-extentions/dash-to-panel.png" alt="Dash to Panel Gnome Extention" /></a>
+
+### [Remove Audio Device Selection Dialog](https://extensions.gnome.org/extension/1482/remove-audio-device-selection-dialog/)
+Removes the anoying audio device selection dialog that pops up all the freaking time.
+<a href="https://extensions.gnome.org//extension-data/screenshots/screenshot_1482.png"><img src="https://extensions.gnome.org//extension-data/screenshots/screenshot_1482.png"></a>

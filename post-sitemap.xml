@@ -27,6 +27,18 @@
 			<image:loc>https://csetutorials.com/images/gnome-extentions/dash-to-dock/dash-to-dock-4.png</image:loc>
 			<image:caption><![CDATA[Dash to Dock Gnome Extention]]></image:caption>
 		</image:image>
+		<image:image>
+			<image:loc>https://extensions.gnome.org//extension-data/screenshots/screenshot_905.png</image:loc>
+			<image:caption><![CDATA[screenshot_905]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://csetutorials.com/images/gnome-extentions/dash-to-panel.png</image:loc>
+			<image:caption><![CDATA[Dash to Panel Gnome Extention]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://extensions.gnome.org//extension-data/screenshots/screenshot_1482.png</image:loc>
+			<image:caption><![CDATA[screenshot_1482]]></image:caption>
+		</image:image>
 	</url>
 	<url>
 		<loc>https://csetutorials.com/dynamic-programming-longest-common-subsequence.html</loc>

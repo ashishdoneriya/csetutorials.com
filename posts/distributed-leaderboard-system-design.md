@@ -40,3 +40,6 @@ The user's request to update score would go to the webservers. The webserver sen
 There is another alternative to this. We can use redis sorted set. For that the steps from **1** to **6** are same. The rest steps are -
 7. From queue2, a set of worker machines fetches records individually and saves them in redis sorted set.
 8. At every fixed interval, a process will remove all record other than top X from redis sorted set, fetch the top X and update to the cache and db. So that the leaderboard could be fetched directly from cache.
+
+**Source**
+[How we built a Distributed Leaderboard System in a Week](https://engg.glance.com/how-we-built-a-distributed-leaderboard-system-in-a-week-c8b1a63083ed)

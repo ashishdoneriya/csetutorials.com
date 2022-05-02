@@ -214,7 +214,8 @@
          <li>From queue2, a set of worker machines fetches records, create batch of records and send to another queue3. Then another worker machines fetch those batches in batches process them, calcuate top 10 or 100 and pass to another queue. This process will go on untill it reaches the last queue (at around level 10).</li> 
          <li>From the last queue the batch will be fetched and saved in the cache and db.</li> 
         </ol> 
-        <p>There is another alternative to this. We can use redis sorted set. For that the steps from <strong>1</strong> to <strong>6</strong> are same. The rest steps are - 7. From queue2, a set of worker machines fetches records individually and saves them in redis sorted set. 8. At every fixed interval, a process will remove all record other than top X from redis sorted set, fetch the top X and update to the cache and db. So that the leaderboard could be fetched directly from cache.</p>   
+        <p>There is another alternative to this. We can use redis sorted set. For that the steps from <strong>1</strong> to <strong>6</strong> are same. The rest steps are - 7. From queue2, a set of worker machines fetches records individually and saves them in redis sorted set. 8. At every fixed interval, a process will remove all record other than top X from redis sorted set, fetch the top X and update to the cache and db. So that the leaderboard could be fetched directly from cache.</p> 
+        <p><strong>Source</strong> <a href="https://engg.glance.com/how-we-built-a-distributed-leaderboard-system-in-a-week-c8b1a63083ed" target="_blank" rel="noopener nofollow">How we built a Distributed Leaderboard System in a Week</a></p>   
         <div style="margin-top:10px;margin-bottom:20px"> 
          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
          <!-- Display Ad --> 

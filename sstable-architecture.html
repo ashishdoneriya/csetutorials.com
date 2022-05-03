@@ -14,10 +14,10 @@
   <meta property="og:url" content="https://csetutorials.com/sstable-architecture.html"> 
   <meta property="og:locale" content="en_US"> 
   <meta property="og:site_name" content="Cse Tutorials"> 
-  <meta property="og:updated_time" content="2021-03-09T18:38:31Z"> 
+  <meta property="og:updated_time" content="2022-05-03T03:52:32Z"> 
   <meta property="article:author" content="https://www.facebook.com/ashishdoneriya"> 
-  <meta property="article:modified_time" content="2021-03-09T18:38:31Z"> 
-  <meta property="article:published_time" content="2021-03-09T18:38:31Z"> 
+  <meta property="article:modified_time" content="2022-05-03T03:52:32Z"> 
+  <meta property="article:published_time" content="2022-05-03T03:52:32Z"> 
   <meta property="article:publisher" content="https://www.facebook.com/ashishdoneriya"> 
   <meta property="article:section" content="System Design"> 
   <meta property="article:tag" content="Sstable"> 
@@ -60,8 +60,8 @@
       "isPartOf": {
         "@id": "https://csetutorials.com/#website"
       },
-      "datePublished": "2021-03-09T18:38:31Z",
-      "dateModified": "2021-03-09T18:38:31Z",
+      "datePublished": "2022-05-03T03:52:32Z",
+      "dateModified": "2022-05-03T03:52:32Z",
       "description": "Overview of Sorted String Table Architecture",
       "inLanguage": "en-US",
       "potentialAction": [
@@ -83,8 +83,8 @@
         "@id": "https://csetutorials.com/#/schema/person/ashishdoneriya"
       },
       "headline": "SSTable Architecture Summary",
-      "datePublished": "2021-03-09T18:38:31Z",
-      "dateModified": "2021-03-09T18:38:31Z",
+      "datePublished": "2022-05-03T03:52:32Z",
+      "dateModified": "2022-05-03T03:52:32Z",
       "mainEntityOfPage": {
         "@id": "https://csetutorials.com/sstable-architecture.html#webpage"
       },
@@ -172,7 +172,7 @@
          <div class="meta-item meta-author" style="vertical-align: middle">
            By <span class="vcard author"><span class="fn"> <a href="/author/ashishdoneriya">Ashish Doneriya</a> </span></span> 
          </div> 
-         <div class="meta-item meta-date" style="vertical-align: middle"> <span class="updated">Last Updated on Mar 09, 2021 </span> 
+         <div class="meta-item meta-date" style="vertical-align: middle"> <span class="updated">Last Updated on May 03, 2022 </span> 
          </div> 
         </div> 
         <div class="post-letter">
@@ -208,6 +208,7 @@
         <p>To counter this problem what we would do is that we would not store all the keys in index. Lets say there are 10 keys from 1 to 10. In RAM index we will save 1, 5. So if the user requests to fetch value for key 8, then in index we check a key which is just less than 8 that is 5. Now from key 5 to the next key that is 10, we search our key (8).</p> 
         <p><strong>Sources :</strong></p> 
         <ul> 
+         <li><a href="https://medium.com/swlh/log-structured-merge-trees-9c8e2bea89e8" target="_blank" rel="noopener nofollow">https://medium.com/swlh/log-structured-merge-trees-9c8e2bea89e8</a></li> 
          <li><a href="https://www.igvita.com/2012/02/06/sstable-and-log-structured-storage-leveldb/" target="_blank" rel="noopener nofollow">https://www.igvita.com/2012/02/06/sstable-and-log-structured-storage-leveldb/</a></li> 
          <li><a href="https://dev.to/codingblocks/designing-data-intensive-applications-sstables-and-lsm-trees" target="_blank" rel="noopener nofollow">https://dev.to/codingblocks/designing-data-intensive-applications-sstables-and-lsm-trees</a></li> 
         </ul> 

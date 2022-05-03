@@ -4,7 +4,7 @@ created: 2021-03-10T00:08:31+05:30
 author: ashishdoneriya
 description: Overview of Sorted String Table Architecture
 permalink: /sstable-architecture.html
-updated: 2021-03-10T00:08:31+05:30
+updated: 2022-05-03T09:22:32+05:30
 categories:
   - system-design
 tags:
@@ -36,6 +36,7 @@ To counter this problem what we would do is that we would not store all the keys
 
 
 **Sources :** 
+* [https://medium.com/swlh/log-structured-merge-trees-9c8e2bea89e8](https://medium.com/swlh/log-structured-merge-trees-9c8e2bea89e8)
 * [https://www.igvita.com/2012/02/06/sstable-and-log-structured-storage-leveldb/](https://www.igvita.com/2012/02/06/sstable-and-log-structured-storage-leveldb/)
 * [https://dev.to/codingblocks/designing-data-intensive-applications-sstables-and-lsm-trees](https://dev.to/codingblocks/designing-data-intensive-applications-sstables-and-lsm-trees)
 

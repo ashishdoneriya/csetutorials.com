@@ -1,7 +1,7 @@
 ---
 title: My Ubuntu Notes
 created: 2017-05-03T00:56:57+05:30
-updated: 2022-04-10T18:53:00+05:30
+updated: 2022-05-11T18:53:00+05:30
 author: ashishdoneriya
 permalink: /my-ubuntu-notes
 ---
@@ -54,3 +54,5 @@ command </dev/null &>/dev/null &
 10. [Reset Mysql Password](https://devanswers.co/how-to-reset-mysql-root-password-ubuntu/)
 
 11. [Auto mount ntfs partitions](https://linuxconfig.org/how-to-mount-partition-with-ntfs-file-system-and-read-write-access)
+
+12. [Change Nautilus Shortcut](https://www.reddit.com/r/Fedora/comments/gjnzkj/change_the_nautilus_shortcuts/)

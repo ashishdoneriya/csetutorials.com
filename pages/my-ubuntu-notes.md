@@ -1,7 +1,7 @@
 ---
 title: My Ubuntu Notes
 created: 2017-05-03T00:56:57+05:30
-updated: 2022-05-11T18:53:00+05:30
+updated: 2022-05-17T18:53:00+05:30
 author: ashishdoneriya
 permalink: /my-ubuntu-notes
 ---
@@ -56,3 +56,5 @@ command </dev/null &>/dev/null &
 11. [Auto mount ntfs partitions](https://linuxconfig.org/how-to-mount-partition-with-ntfs-file-system-and-read-write-access)
 
 12. [Change Nautilus Shortcut](https://www.reddit.com/r/Fedora/comments/gjnzkj/change_the_nautilus_shortcuts/)
+
+13. [Fix Duplicate icons for manually created GNOME launcher items](https://askubuntu.com/questions/403766/duplicate-icons-for-manually-created-gnome-launcher-items) 

@@ -14,3 +14,18 @@ permalink: /my-java-notes
 ```
 
 2. Add `?useSSL=false` to mysql 5 jdbc jar.
+
+3. To install Oracle JDK (and not open-jdk) on Ubuntu, first download and install the .deb file and then execute the below command to add java in System - 
+```bash
+sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/jvm/jdk-19/bin/javac" 1
+sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk-19/bin/java" 1
+```
+Change the jdk path according to your version.
+After then set the java 19's javac and java binaries version using the below command. Select the java 19 option. 
+```bash
+sudo update-alternatives --config javac
+```
+```bash
+sudo update-alternatives --config java
+```
+

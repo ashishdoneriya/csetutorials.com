@@ -4,8 +4,6 @@
   "description": "Tutorials about WebApps, Web Designing, Java \u0026 Ubuntu",
   "url": "https://csetutorials.com",
   "favicon": "",
-  "pageUglyUrlEnabled": false,
-  "postUglyUrlEnabled": true,
   "paginationEnabled": false,
   "maxPosts": 0,
   "seoSettings": {

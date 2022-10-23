@@ -2,21 +2,21 @@
 <html lang="en-GB">
  <head> 
   <!-- Title --> 
-  <title>Contact us</title> 
-  <link rel="canonical" href="https://csetutorials.com/contact"> 
+  <title>Privacy Policy</title> 
+  <link rel="canonical" href="https://csetutorials.com/privacy-policy"> 
   <meta name="author" content="Ashish Doneriya"> 
   <meta name="robots" content="index, follow"> 
   <meta property="og:type" content="article"> 
-  <meta property="og:title" content="Contact us"> 
-  <meta property="og:url" content="https://csetutorials.com/contact"> 
+  <meta property="og:title" content="Privacy Policy"> 
+  <meta property="og:url" content="https://csetutorials.com/privacy-policy"> 
   <meta property="og:locale" content="en_US"> 
   <meta property="og:site_name" content="Cse Tutorials"> 
-  <meta property="og:updated_time" content="2021-02-26T21:12:00Z"> 
+  <meta property="og:updated_time" content="2016-07-12T12:54:06Z"> 
   <meta property="article:author" content="https://www.facebook.com/ashishdoneriya"> 
-  <meta property="article:modified_time" content="2021-02-26T21:12:00Z"> 
-  <meta property="article:published_time" content="2021-02-26T21:12:00Z"> 
+  <meta property="article:modified_time" content="2016-07-12T12:54:06Z"> 
+  <meta property="article:published_time" content="2016-07-12T12:54:06Z"> 
   <meta property="article:publisher" content="https://www.facebook.com/ashishdoneriya"> 
-  <meta name="twitter:title" content="Contact us"> 
+  <meta name="twitter:title" content="Privacy Policy"> 
   <meta name="twitter:card" content="summary"> 
   <meta name="twitter:creator" content="@ashishdoneriya"> 
   <meta name="twitter:site" content="@ashishdoneriya"> 
@@ -49,37 +49,37 @@
     },
     {
       "@type": "WebPage",
-      "@id": "https://csetutorials.com/contact#webpage",
-      "url": "https://csetutorials.com/contact",
+      "@id": "https://csetutorials.com/privacy-policy#webpage",
+      "url": "https://csetutorials.com/privacy-policy",
       "isPartOf": {
         "@id": "https://csetutorials.com/#website"
       },
-      "datePublished": "2021-02-26T21:12:00Z",
-      "dateModified": "2021-02-26T21:12:00Z",
+      "datePublished": "2016-07-12T12:54:06Z",
+      "dateModified": "2016-07-12T12:54:06Z",
       "inLanguage": "en-US",
       "potentialAction": [
         {
           "@type": "ReadAction",
           "target": [
-            "https://csetutorials.com/contact"
+            "https://csetutorials.com/privacy-policy"
           ]
         }
       ]
     },
     {
       "@type": "Article",
-      "@id": "https://csetutorials.com/contact#article",
+      "@id": "https://csetutorials.com/privacy-policy#article",
       "isPartOf": {
-        "@id": "https://csetutorials.com/contact#webpage"
+        "@id": "https://csetutorials.com/privacy-policy#webpage"
       },
       "author": {
         "@id": "https://csetutorials.com/#/schema/person/ashishdoneriya"
       },
-      "headline": "Contact us",
-      "datePublished": "2021-02-26T21:12:00Z",
-      "dateModified": "2021-02-26T21:12:00Z",
+      "headline": "Privacy Policy",
+      "datePublished": "2016-07-12T12:54:06Z",
+      "dateModified": "2016-07-12T12:54:06Z",
       "mainEntityOfPage": {
-        "@id": "https://csetutorials.com/contact#webpage"
+        "@id": "https://csetutorials.com/privacy-policy#webpage"
       },
       "publisher": {
         "@id": "https://csetutorials.com/#/schema/person/ashishdoneriya"
@@ -114,6 +114,7 @@
       <ul class="typology-nav typology-main-navigation"> 
        <li class="xcurrent-menu-item"> <a href="/">Home</a> </li> 
        <li class="xcurrent-menu-item"> <a href="/my-ubuntu-notes">My Ubuntu Notes</a> </li> 
+       <li class="xcurrent-menu-item"> <a href="/my-java-notes">My Java Notes</a> </li> 
        <li> <a href="/">Topics
          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 320 512" style="vertical-align: middle; margin-left: 5px" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"> <path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"> 
           </path> 
@@ -158,23 +159,30 @@
      <div class="section-content"> 
       <article class="typology-post typology-single-post"> 
        <header class="entry-header clearfix"> 
-        <h1 class="entry-title entry-title-cover-empty h2">Contact us</h1> 
+        <h1 class="entry-title entry-title-cover-empty h2">Privacy Policy</h1> 
         <div class="post-letter">
-          C 
+          P 
         </div> 
        </header> 
-       <div class="entry-content clearfix">    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSei0rz9JBzkN8HKusoWbbypJUul54zDt1vxJTRto3mqAx6jvA/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> 
-        <!--
-<script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
-<link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
-<form action="https://send.pageclip.co/v08dTRXd2vUOHm8i19BJxAPAy70O1TRG" class="pageclip-form" method="post">
-  <input type="text" name="name" placeholder="Your Name" value="" />
-  <input type="email" name="email" placeholder="Your Email" value="" />
-  <input type="text" name="message" placeholder="Your Message" value="" />
-  <button type="submit" class="pageclip-form__submit">
-    <span>Send</span>
-  </button>
-</form>-->   
+       <div class="entry-content clearfix">    
+        <p>CseTutorials ("<strong>CseTutorials</strong>") operates csetutorials.com and may operate other websites. It is CseTutorials's policy to respect your privacy regarding any information we may collect while operating our websites.</p> 
+        <h3 id="website-visitors">Website Visitors</h3> 
+        <p>Like most website operators, CseTutorials collects non-personally-identifying information of the sort that web browsers and servers typically make available, such as the browser type, language preference, referring site, and the date and time of each visitor request. CseTutorials's purpose in collecting non-personally identifying information is to better understand how CseTutorials's visitors use its website. From time to time, CseTutorials may release non-personally-identifying information in the aggregate, e.g., by publishing a report on trends in the usage of its website.</p> 
+        <p>CseTutorials also collects potentially personally-identifying information like Internet Protocol (IP) addresses for logged in users and for users leaving comments on csetutorials.com blogs/sites. CseTutorials only discloses logged in user and commenter IP addresses under the same circumstances that it uses and discloses personally-identifying information as described below, except that commenter IP addresses and email addresses are visible and disclosed to the administrators of the blog/site where the comment was left.</p> 
+        <h3 id="gathering-of-personally-identifying-information">Gathering of Personally-Identifying Information</h3> 
+        <p>Certain visitors to CseTutorials's websites choose to interact with CseTutorials in ways that require CseTutorials to gather personally-identifying information. The amount and type of information that CseTutorials gathers depends on the nature of the interaction. For example, we ask visitors who sign up at <a href="https://csetutorials.com" target="_blank" rel="noopener nofollow">csetutorials.com</a> to provide a username and email address. Those who engage in transactions with CseTutorials are asked to provide additional information, including as necessary the personal and financial information required to process those transactions. In each case, CseTutorials collects such information only insofar as is necessary or appropriate to fulfill the purpose of the visitor's interaction with CseTutorials. CseTutorials does not disclose personally-identifying information other than as described below. And visitors can always refuse to supply personally-identifying information, with the caveat that it may prevent them from engaging in certain website-related activities.</p> 
+        <h3 id="aggregated-statistics">Aggregated Statistics</h3> 
+        <p>CseTutorials may collect statistics about the behavior of visitors to its websites. CseTutorials may display this information publicly or provide it to others. However, CseTutorials does not disclose personally-identifying information other than as described below.</p> 
+        <h3 id="protection-of-certain-personally-identifying-information">Protection of Certain Personally-Identifying Information</h3> 
+        <p>CseTutorials discloses potentially personally-identifying and personally-identifying information only to those of its employees, contractors and affiliated organizations that (i) need to know that information in order to process it on CseTutorials's behalf or to provide services available at CseTutorials's websites, and (ii) that have agreed not to disclose it to others. Some of those employees, contractors and affiliated organizations may be located outside of your home country; by using CseTutorials's websites, you consent to the transfer of such information to them. CseTutorials will not rent or sell potentially personally-identifying and personally-identifying information to anyone. Other than to its employees, contractors and affiliated organizations, as described above, CseTutorials discloses potentially personally-identifying and personally-identifying information only in response to a subpoena, court order or other governmental request, or when CseTutorials believes in good faith that disclosure is reasonably necessary to protect the property or rights of CseTutorials, third parties or the public at large. If you are a registered user of an CseTutorials website and have supplied your email address, CseTutorials may occasionally send you an email to tell you about new features, solicit your feedback, or just keep you up to date with what's going on with CseTutorials and our products. If you send us a request (for example via email or via one of our feedback mechanisms), we reserve the right to publish it in order to help us clarify or respond to your request or to help us support other users. CseTutorials takes all measures reasonably necessary to protect against the unauthorized access, use, alteration or destruction of potentially personally-identifying and personally-identifying information.</p> 
+        <h3 id="cookies">Cookies</h3> 
+        <p>A cookie is a string of information that a website stores on a visitor's computer, and that the visitor's browser provides to the website each time the visitor returns. CseTutorials uses cookies to help CseTutorials identify and track visitors, their usage of CseTutorials website, and their website access preferences. CseTutorials visitors who do not wish to have cookies placed on their computers should set their browsers to refuse cookies before using CseTutorials's websites, with the drawback that certain features of CseTutorials's websites may not function properly without the aid of cookies.</p> 
+        <h3 id="business-transfers">Business Transfers</h3> 
+        <p>If CseTutorials, or substantially all of its assets, were acquired, or in the unlikely event that CseTutorials goes out of business or enters bankruptcy, user information would be one of the assets that is transferred or acquired by a third party. You acknowledge that such transfers may occur, and that any acquirer of CseTutorials may continue to use your personal information as set forth in this policy.</p> 
+        <h3 id="ads">Ads</h3> 
+        <p>Ads appearing on any of our websites may be delivered to users by advertising partners, who may set cookies. These cookies allow the ad server to recognize your computer each time they send you an online advertisement to compile information about you or others who use your computer. This information allows ad networks to, among other things, deliver targeted advertisements that they believe will be of most interest to you. This Privacy Policy covers the use of cookies by CseTutorials and does not cover the use of cookies by any advertisers.</p> 
+        <h3 id="privacy-policy-changes">Privacy Policy Changes</h3> 
+        <p>Although most changes are likely to be minor, CseTutorials may change its Privacy Policy from time to time, and in CseTutorials's sole discretion. CseTutorials encourages visitors to frequently check this page for any changes to its Privacy Policy. If you have a csetutorials.com account, you might also receive an alert informing you of these changes. Your continued use of this site after any change in this Privacy Policy will constitute your acceptance of such change.</p>   
        </div> 
       </article> 
      </div> 

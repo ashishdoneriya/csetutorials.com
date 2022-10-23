@@ -2,21 +2,21 @@
 <html lang="en-GB">
  <head> 
   <!-- Title --> 
-  <title>Privacy Policy</title> 
-  <link rel="canonical" href="https://csetutorials.com/privacy-policy"> 
+  <title>My Ubuntu Notes</title> 
+  <link rel="canonical" href="https://csetutorials.com/my-ubuntu-notes"> 
   <meta name="author" content="Ashish Doneriya"> 
   <meta name="robots" content="index, follow"> 
   <meta property="og:type" content="article"> 
-  <meta property="og:title" content="Privacy Policy"> 
-  <meta property="og:url" content="https://csetutorials.com/privacy-policy"> 
+  <meta property="og:title" content="My Ubuntu Notes"> 
+  <meta property="og:url" content="https://csetutorials.com/my-ubuntu-notes"> 
   <meta property="og:locale" content="en_US"> 
   <meta property="og:site_name" content="Cse Tutorials"> 
-  <meta property="og:updated_time" content="2016-07-12T12:54:06Z"> 
+  <meta property="og:updated_time" content="2022-05-17T13:23:00Z"> 
   <meta property="article:author" content="https://www.facebook.com/ashishdoneriya"> 
-  <meta property="article:modified_time" content="2016-07-12T12:54:06Z"> 
-  <meta property="article:published_time" content="2016-07-12T12:54:06Z"> 
+  <meta property="article:modified_time" content="2022-05-17T13:23:00Z"> 
+  <meta property="article:published_time" content="2022-05-17T13:23:00Z"> 
   <meta property="article:publisher" content="https://www.facebook.com/ashishdoneriya"> 
-  <meta name="twitter:title" content="Privacy Policy"> 
+  <meta name="twitter:title" content="My Ubuntu Notes"> 
   <meta name="twitter:card" content="summary"> 
   <meta name="twitter:creator" content="@ashishdoneriya"> 
   <meta name="twitter:site" content="@ashishdoneriya"> 
@@ -49,37 +49,37 @@
     },
     {
       "@type": "WebPage",
-      "@id": "https://csetutorials.com/privacy-policy#webpage",
-      "url": "https://csetutorials.com/privacy-policy",
+      "@id": "https://csetutorials.com/my-ubuntu-notes#webpage",
+      "url": "https://csetutorials.com/my-ubuntu-notes",
       "isPartOf": {
         "@id": "https://csetutorials.com/#website"
       },
-      "datePublished": "2016-07-12T12:54:06Z",
-      "dateModified": "2016-07-12T12:54:06Z",
+      "datePublished": "2022-05-17T13:23:00Z",
+      "dateModified": "2022-05-17T13:23:00Z",
       "inLanguage": "en-US",
       "potentialAction": [
         {
           "@type": "ReadAction",
           "target": [
-            "https://csetutorials.com/privacy-policy"
+            "https://csetutorials.com/my-ubuntu-notes"
           ]
         }
       ]
     },
     {
       "@type": "Article",
-      "@id": "https://csetutorials.com/privacy-policy#article",
+      "@id": "https://csetutorials.com/my-ubuntu-notes#article",
       "isPartOf": {
-        "@id": "https://csetutorials.com/privacy-policy#webpage"
+        "@id": "https://csetutorials.com/my-ubuntu-notes#webpage"
       },
       "author": {
         "@id": "https://csetutorials.com/#/schema/person/ashishdoneriya"
       },
-      "headline": "Privacy Policy",
-      "datePublished": "2016-07-12T12:54:06Z",
-      "dateModified": "2016-07-12T12:54:06Z",
+      "headline": "My Ubuntu Notes",
+      "datePublished": "2022-05-17T13:23:00Z",
+      "dateModified": "2022-05-17T13:23:00Z",
       "mainEntityOfPage": {
-        "@id": "https://csetutorials.com/privacy-policy#webpage"
+        "@id": "https://csetutorials.com/my-ubuntu-notes#webpage"
       },
       "publisher": {
         "@id": "https://csetutorials.com/#/schema/person/ashishdoneriya"
@@ -114,6 +114,7 @@
       <ul class="typology-nav typology-main-navigation"> 
        <li class="xcurrent-menu-item"> <a href="/">Home</a> </li> 
        <li class="xcurrent-menu-item"> <a href="/my-ubuntu-notes">My Ubuntu Notes</a> </li> 
+       <li class="xcurrent-menu-item"> <a href="/my-java-notes">My Java Notes</a> </li> 
        <li> <a href="/">Topics
          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 320 512" style="vertical-align: middle; margin-left: 5px" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"> <path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"> 
           </path> 
@@ -158,30 +159,48 @@
      <div class="section-content"> 
       <article class="typology-post typology-single-post"> 
        <header class="entry-header clearfix"> 
-        <h1 class="entry-title entry-title-cover-empty h2">Privacy Policy</h1> 
+        <h1 class="entry-title entry-title-cover-empty h2">My Ubuntu Notes</h1> 
         <div class="post-letter">
-          P 
+          M 
         </div> 
        </header> 
        <div class="entry-content clearfix">    
-        <p>CseTutorials ("<strong>CseTutorials</strong>") operates csetutorials.com and may operate other websites. It is CseTutorials's policy to respect your privacy regarding any information we may collect while operating our websites.</p> 
-        <h3 id="website-visitors">Website Visitors</h3> 
-        <p>Like most website operators, CseTutorials collects non-personally-identifying information of the sort that web browsers and servers typically make available, such as the browser type, language preference, referring site, and the date and time of each visitor request. CseTutorials's purpose in collecting non-personally identifying information is to better understand how CseTutorials's visitors use its website. From time to time, CseTutorials may release non-personally-identifying information in the aggregate, e.g., by publishing a report on trends in the usage of its website.</p> 
-        <p>CseTutorials also collects potentially personally-identifying information like Internet Protocol (IP) addresses for logged in users and for users leaving comments on csetutorials.com blogs/sites. CseTutorials only discloses logged in user and commenter IP addresses under the same circumstances that it uses and discloses personally-identifying information as described below, except that commenter IP addresses and email addresses are visible and disclosed to the administrators of the blog/site where the comment was left.</p> 
-        <h3 id="gathering-of-personally-identifying-information">Gathering of Personally-Identifying Information</h3> 
-        <p>Certain visitors to CseTutorials's websites choose to interact with CseTutorials in ways that require CseTutorials to gather personally-identifying information. The amount and type of information that CseTutorials gathers depends on the nature of the interaction. For example, we ask visitors who sign up at <a href="https://csetutorials.com" target="_blank" rel="noopener nofollow">csetutorials.com</a> to provide a username and email address. Those who engage in transactions with CseTutorials are asked to provide additional information, including as necessary the personal and financial information required to process those transactions. In each case, CseTutorials collects such information only insofar as is necessary or appropriate to fulfill the purpose of the visitor's interaction with CseTutorials. CseTutorials does not disclose personally-identifying information other than as described below. And visitors can always refuse to supply personally-identifying information, with the caveat that it may prevent them from engaging in certain website-related activities.</p> 
-        <h3 id="aggregated-statistics">Aggregated Statistics</h3> 
-        <p>CseTutorials may collect statistics about the behavior of visitors to its websites. CseTutorials may display this information publicly or provide it to others. However, CseTutorials does not disclose personally-identifying information other than as described below.</p> 
-        <h3 id="protection-of-certain-personally-identifying-information">Protection of Certain Personally-Identifying Information</h3> 
-        <p>CseTutorials discloses potentially personally-identifying and personally-identifying information only to those of its employees, contractors and affiliated organizations that (i) need to know that information in order to process it on CseTutorials's behalf or to provide services available at CseTutorials's websites, and (ii) that have agreed not to disclose it to others. Some of those employees, contractors and affiliated organizations may be located outside of your home country; by using CseTutorials's websites, you consent to the transfer of such information to them. CseTutorials will not rent or sell potentially personally-identifying and personally-identifying information to anyone. Other than to its employees, contractors and affiliated organizations, as described above, CseTutorials discloses potentially personally-identifying and personally-identifying information only in response to a subpoena, court order or other governmental request, or when CseTutorials believes in good faith that disclosure is reasonably necessary to protect the property or rights of CseTutorials, third parties or the public at large. If you are a registered user of an CseTutorials website and have supplied your email address, CseTutorials may occasionally send you an email to tell you about new features, solicit your feedback, or just keep you up to date with what's going on with CseTutorials and our products. If you send us a request (for example via email or via one of our feedback mechanisms), we reserve the right to publish it in order to help us clarify or respond to your request or to help us support other users. CseTutorials takes all measures reasonably necessary to protect against the unauthorized access, use, alteration or destruction of potentially personally-identifying and personally-identifying information.</p> 
-        <h3 id="cookies">Cookies</h3> 
-        <p>A cookie is a string of information that a website stores on a visitor's computer, and that the visitor's browser provides to the website each time the visitor returns. CseTutorials uses cookies to help CseTutorials identify and track visitors, their usage of CseTutorials website, and their website access preferences. CseTutorials visitors who do not wish to have cookies placed on their computers should set their browsers to refuse cookies before using CseTutorials's websites, with the drawback that certain features of CseTutorials's websites may not function properly without the aid of cookies.</p> 
-        <h3 id="business-transfers">Business Transfers</h3> 
-        <p>If CseTutorials, or substantially all of its assets, were acquired, or in the unlikely event that CseTutorials goes out of business or enters bankruptcy, user information would be one of the assets that is transferred or acquired by a third party. You acknowledge that such transfers may occur, and that any acquirer of CseTutorials may continue to use your personal information as set forth in this policy.</p> 
-        <h3 id="ads">Ads</h3> 
-        <p>Ads appearing on any of our websites may be delivered to users by advertising partners, who may set cookies. These cookies allow the ad server to recognize your computer each time they send you an online advertisement to compile information about you or others who use your computer. This information allows ad networks to, among other things, deliver targeted advertisements that they believe will be of most interest to you. This Privacy Policy covers the use of cookies by CseTutorials and does not cover the use of cookies by any advertisers.</p> 
-        <h3 id="privacy-policy-changes">Privacy Policy Changes</h3> 
-        <p>Although most changes are likely to be minor, CseTutorials may change its Privacy Policy from time to time, and in CseTutorials's sole discretion. CseTutorials encourages visitors to frequently check this page for any changes to its Privacy Policy. If you have a csetutorials.com account, you might also receive an alert informing you of these changes. Your continued use of this site after any change in this Privacy Policy will constitute your acceptance of such change.</p>   
+        <ol> 
+         <li> <p>During Installation, always create swap space and a separate partition for the Home directory. Always select that partition for other Linux distributions also but <strong>do not format it</strong>. And create separate users for different-different distributions like /home/ubuntu for Ubuntu, /home/arch for arch Linux and so on.</p> </li> 
+         <li> <p>If your system has SSD then donot create swap space from SSD.</p> </li> 
+         <li> <p>Use <a href="https://repogen.simplylinux.ch/" target="_blank" rel="noopener nofollow">Ubuntu Source List generator</a>.</p> </li> 
+         <li> <p><strong>Run sudo command without password</strong><br> If you don't want to type sudo password again and again then run command <code>sudo visudo</code> and append the below line at the end.</p> </li> 
+        </ol> 
+        <pre><code class="language-bash">your_username ALL=(ALL) NOPASSWD: ALL
+</code></pre> 
+        <p>Save using <code>Ctrl + X</code> and <code>Shift + y</code> and press Enter. That’s it.</p> 
+        <ol start="5"> 
+         <li><strong>Create user from Command line</strong></li> 
+        </ol> 
+        <pre><code class="language-bash">useradd --create-home --system --shell /bin/bash --user-group your_username
+</code></pre> 
+        <ol start="6"> 
+         <li> <p>XUbuntu is the best Linux distribution (in terms of performance). It has the power to give a new fresh life to slow and dying old pcs.</p> </li> 
+         <li> <p>To Generate subtitles of audio and video<br> Install</p> </li> 
+        </ol> 
+        <pre><code class="language-bash">sudo apt-get install ffmpeg &amp;&amp; sudo pip install autosub
+</code></pre> 
+        <p>To generate subtitle :</p> 
+        <pre><code class="language-bash">autosub -o subtitlefile.srt "/path/to/file.mp4 or .mp3"
+</code></pre> 
+        <p>If you are using Vlc to play the .mp3 file, then you have to select a visualization (Menu &gt; Audio &gt; Visualization &gt; Select any) because Vlc cannot display subtitles without it.</p> 
+        <ol start="8"> 
+         <li>Detach a Linux Processes From Controlling Terminal</li> 
+        </ol> 
+        <pre><code class="language-bash">command &lt;/dev/null &amp;&gt;/dev/null &amp;
+</code></pre> 
+        <ol start="9"> 
+         <li> <p>For setting the paths, the file is <code>/etc/environment</code></p> </li> 
+         <li> <p><a href="https://devanswers.co/how-to-reset-mysql-root-password-ubuntu/" target="_blank" rel="noopener nofollow">Reset Mysql Password</a></p> </li> 
+         <li> <p><a href="https://linuxconfig.org/how-to-mount-partition-with-ntfs-file-system-and-read-write-access" target="_blank" rel="noopener nofollow">Auto mount ntfs partitions</a></p> </li> 
+         <li> <p><a href="https://www.reddit.com/r/Fedora/comments/gjnzkj/change_the_nautilus_shortcuts/" target="_blank" rel="noopener nofollow">Change Nautilus Shortcut</a></p> </li> 
+         <li> <p><a href="https://askubuntu.com/questions/403766/duplicate-icons-for-manually-created-gnome-launcher-items" target="_blank" rel="noopener nofollow">Fix Duplicate icons for manually created GNOME launcher items</a></p> </li> 
+        </ol>   
        </div> 
       </article> 
      </div> 

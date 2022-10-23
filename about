@@ -2,21 +2,21 @@
 <html lang="en-GB">
  <head> 
   <!-- Title --> 
-  <title>My Ubuntu Notes</title> 
-  <link rel="canonical" href="https://csetutorials.com/my-ubuntu-notes"> 
+  <title>About us</title> 
+  <link rel="canonical" href="https://csetutorials.com/about"> 
   <meta name="author" content="Ashish Doneriya"> 
   <meta name="robots" content="index, follow"> 
   <meta property="og:type" content="article"> 
-  <meta property="og:title" content="My Ubuntu Notes"> 
-  <meta property="og:url" content="https://csetutorials.com/my-ubuntu-notes"> 
+  <meta property="og:title" content="About us"> 
+  <meta property="og:url" content="https://csetutorials.com/about"> 
   <meta property="og:locale" content="en_US"> 
   <meta property="og:site_name" content="Cse Tutorials"> 
-  <meta property="og:updated_time" content="2022-05-17T13:23:00Z"> 
+  <meta property="og:updated_time" content="2016-07-12T12:44:21Z"> 
   <meta property="article:author" content="https://www.facebook.com/ashishdoneriya"> 
-  <meta property="article:modified_time" content="2022-05-17T13:23:00Z"> 
-  <meta property="article:published_time" content="2022-05-17T13:23:00Z"> 
+  <meta property="article:modified_time" content="2016-07-12T12:44:21Z"> 
+  <meta property="article:published_time" content="2016-07-12T12:44:21Z"> 
   <meta property="article:publisher" content="https://www.facebook.com/ashishdoneriya"> 
-  <meta name="twitter:title" content="My Ubuntu Notes"> 
+  <meta name="twitter:title" content="About us"> 
   <meta name="twitter:card" content="summary"> 
   <meta name="twitter:creator" content="@ashishdoneriya"> 
   <meta name="twitter:site" content="@ashishdoneriya"> 
@@ -49,37 +49,37 @@
     },
     {
       "@type": "WebPage",
-      "@id": "https://csetutorials.com/my-ubuntu-notes#webpage",
-      "url": "https://csetutorials.com/my-ubuntu-notes",
+      "@id": "https://csetutorials.com/about#webpage",
+      "url": "https://csetutorials.com/about",
       "isPartOf": {
         "@id": "https://csetutorials.com/#website"
       },
-      "datePublished": "2022-05-17T13:23:00Z",
-      "dateModified": "2022-05-17T13:23:00Z",
+      "datePublished": "2016-07-12T12:44:21Z",
+      "dateModified": "2016-07-12T12:44:21Z",
       "inLanguage": "en-US",
       "potentialAction": [
         {
           "@type": "ReadAction",
           "target": [
-            "https://csetutorials.com/my-ubuntu-notes"
+            "https://csetutorials.com/about"
           ]
         }
       ]
     },
     {
       "@type": "Article",
-      "@id": "https://csetutorials.com/my-ubuntu-notes#article",
+      "@id": "https://csetutorials.com/about#article",
       "isPartOf": {
-        "@id": "https://csetutorials.com/my-ubuntu-notes#webpage"
+        "@id": "https://csetutorials.com/about#webpage"
       },
       "author": {
         "@id": "https://csetutorials.com/#/schema/person/ashishdoneriya"
       },
-      "headline": "My Ubuntu Notes",
-      "datePublished": "2022-05-17T13:23:00Z",
-      "dateModified": "2022-05-17T13:23:00Z",
+      "headline": "About us",
+      "datePublished": "2016-07-12T12:44:21Z",
+      "dateModified": "2016-07-12T12:44:21Z",
       "mainEntityOfPage": {
-        "@id": "https://csetutorials.com/my-ubuntu-notes#webpage"
+        "@id": "https://csetutorials.com/about#webpage"
       },
       "publisher": {
         "@id": "https://csetutorials.com/#/schema/person/ashishdoneriya"
@@ -114,6 +114,7 @@
       <ul class="typology-nav typology-main-navigation"> 
        <li class="xcurrent-menu-item"> <a href="/">Home</a> </li> 
        <li class="xcurrent-menu-item"> <a href="/my-ubuntu-notes">My Ubuntu Notes</a> </li> 
+       <li class="xcurrent-menu-item"> <a href="/my-java-notes">My Java Notes</a> </li> 
        <li> <a href="/">Topics
          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 320 512" style="vertical-align: middle; margin-left: 5px" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"> <path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"> 
           </path> 
@@ -158,48 +159,13 @@
      <div class="section-content"> 
       <article class="typology-post typology-single-post"> 
        <header class="entry-header clearfix"> 
-        <h1 class="entry-title entry-title-cover-empty h2">My Ubuntu Notes</h1> 
+        <h1 class="entry-title entry-title-cover-empty h2">About us</h1> 
         <div class="post-letter">
-          M 
+          A 
         </div> 
        </header> 
        <div class="entry-content clearfix">    
-        <ol> 
-         <li> <p>During Installation, always create swap space and a separate partition for the Home directory. Always select that partition for other Linux distributions also but <strong>do not format it</strong>. And create separate users for different-different distributions like /home/ubuntu for Ubuntu, /home/arch for arch Linux and so on.</p> </li> 
-         <li> <p>If your system has SSD then donot create swap space from SSD.</p> </li> 
-         <li> <p>Use <a href="https://repogen.simplylinux.ch/" target="_blank" rel="noopener nofollow">Ubuntu Source List generator</a>.</p> </li> 
-         <li> <p><strong>Run sudo command without password</strong><br> If you don't want to type sudo password again and again then run command <code>sudo visudo</code> and append the below line at the end.</p> </li> 
-        </ol> 
-        <pre><code class="language-bash">your_username ALL=(ALL) NOPASSWD: ALL
-</code></pre> 
-        <p>Save using <code>Ctrl + X</code> and <code>Shift + y</code> and press Enter. That’s it.</p> 
-        <ol start="5"> 
-         <li><strong>Create user from Command line</strong></li> 
-        </ol> 
-        <pre><code class="language-bash">useradd --create-home --system --shell /bin/bash --user-group your_username
-</code></pre> 
-        <ol start="6"> 
-         <li> <p>XUbuntu is the best Linux distribution (in terms of performance). It has the power to give a new fresh life to slow and dying old pcs.</p> </li> 
-         <li> <p>To Generate subtitles of audio and video<br> Install</p> </li> 
-        </ol> 
-        <pre><code class="language-bash">sudo apt-get install ffmpeg &amp;&amp; sudo pip install autosub
-</code></pre> 
-        <p>To generate subtitle :</p> 
-        <pre><code class="language-bash">autosub -o subtitlefile.srt "/path/to/file.mp4 or .mp3"
-</code></pre> 
-        <p>If you are using Vlc to play the .mp3 file, then you have to select a visualization (Menu &gt; Audio &gt; Visualization &gt; Select any) because Vlc cannot display subtitles without it.</p> 
-        <ol start="8"> 
-         <li>Detach a Linux Processes From Controlling Terminal</li> 
-        </ol> 
-        <pre><code class="language-bash">command &lt;/dev/null &amp;&gt;/dev/null &amp;
-</code></pre> 
-        <ol start="9"> 
-         <li> <p>For setting the paths, the file is <code>/etc/environment</code></p> </li> 
-         <li> <p><a href="https://devanswers.co/how-to-reset-mysql-root-password-ubuntu/" target="_blank" rel="noopener nofollow">Reset Mysql Password</a></p> </li> 
-         <li> <p><a href="https://linuxconfig.org/how-to-mount-partition-with-ntfs-file-system-and-read-write-access" target="_blank" rel="noopener nofollow">Auto mount ntfs partitions</a></p> </li> 
-         <li> <p><a href="https://www.reddit.com/r/Fedora/comments/gjnzkj/change_the_nautilus_shortcuts/" target="_blank" rel="noopener nofollow">Change Nautilus Shortcut</a></p> </li> 
-         <li> <p><a href="https://askubuntu.com/questions/403766/duplicate-icons-for-manually-created-gnome-launcher-items" target="_blank" rel="noopener nofollow">Fix Duplicate icons for manually created GNOME launcher items</a></p> </li> 
-        </ol>   
+        <p>My name is Ashish Doneriya. I am a Software Engineer. I graduated from Maulana Azad National Institute of Technology. I live in Indore, India. In csetutorials.com I post article about the tools and technologies that I have used before and wanted to share my information about that. I started blogging for the purpose of learning and sharing information.</p>   
        </div> 
       </article> 
      </div> 

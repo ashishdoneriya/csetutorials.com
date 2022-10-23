@@ -2,21 +2,21 @@
 <html lang="en-GB">
  <head> 
   <!-- Title --> 
-  <title>My Java Notes</title> 
-  <link rel="canonical" href="https://csetutorials.com/my-java-notes"> 
+  <title>Contact us</title> 
+  <link rel="canonical" href="https://csetutorials.com/contact"> 
   <meta name="author" content="Ashish Doneriya"> 
   <meta name="robots" content="index, follow"> 
   <meta property="og:type" content="article"> 
-  <meta property="og:title" content="My Java Notes"> 
-  <meta property="og:url" content="https://csetutorials.com/my-java-notes"> 
+  <meta property="og:title" content="Contact us"> 
+  <meta property="og:url" content="https://csetutorials.com/contact"> 
   <meta property="og:locale" content="en_US"> 
   <meta property="og:site_name" content="Cse Tutorials"> 
-  <meta property="og:updated_time" content="2022-10-02T08:30:00Z"> 
+  <meta property="og:updated_time" content="2021-02-26T21:12:00Z"> 
   <meta property="article:author" content="https://www.facebook.com/ashishdoneriya"> 
-  <meta property="article:modified_time" content="2022-10-02T08:30:00Z"> 
-  <meta property="article:published_time" content="2022-10-02T08:30:00Z"> 
+  <meta property="article:modified_time" content="2021-02-26T21:12:00Z"> 
+  <meta property="article:published_time" content="2021-02-26T21:12:00Z"> 
   <meta property="article:publisher" content="https://www.facebook.com/ashishdoneriya"> 
-  <meta name="twitter:title" content="My Java Notes"> 
+  <meta name="twitter:title" content="Contact us"> 
   <meta name="twitter:card" content="summary"> 
   <meta name="twitter:creator" content="@ashishdoneriya"> 
   <meta name="twitter:site" content="@ashishdoneriya"> 
@@ -49,37 +49,37 @@
     },
     {
       "@type": "WebPage",
-      "@id": "https://csetutorials.com/my-java-notes#webpage",
-      "url": "https://csetutorials.com/my-java-notes",
+      "@id": "https://csetutorials.com/contact#webpage",
+      "url": "https://csetutorials.com/contact",
       "isPartOf": {
         "@id": "https://csetutorials.com/#website"
       },
-      "datePublished": "2022-10-02T08:30:00Z",
-      "dateModified": "2022-10-02T08:30:00Z",
+      "datePublished": "2021-02-26T21:12:00Z",
+      "dateModified": "2021-02-26T21:12:00Z",
       "inLanguage": "en-US",
       "potentialAction": [
         {
           "@type": "ReadAction",
           "target": [
-            "https://csetutorials.com/my-java-notes"
+            "https://csetutorials.com/contact"
           ]
         }
       ]
     },
     {
       "@type": "Article",
-      "@id": "https://csetutorials.com/my-java-notes#article",
+      "@id": "https://csetutorials.com/contact#article",
       "isPartOf": {
-        "@id": "https://csetutorials.com/my-java-notes#webpage"
+        "@id": "https://csetutorials.com/contact#webpage"
       },
       "author": {
         "@id": "https://csetutorials.com/#/schema/person/ashishdoneriya"
       },
-      "headline": "My Java Notes",
-      "datePublished": "2022-10-02T08:30:00Z",
-      "dateModified": "2022-10-02T08:30:00Z",
+      "headline": "Contact us",
+      "datePublished": "2021-02-26T21:12:00Z",
+      "dateModified": "2021-02-26T21:12:00Z",
       "mainEntityOfPage": {
-        "@id": "https://csetutorials.com/my-java-notes#webpage"
+        "@id": "https://csetutorials.com/contact#webpage"
       },
       "publisher": {
         "@id": "https://csetutorials.com/#/schema/person/ashishdoneriya"
@@ -114,6 +114,7 @@
       <ul class="typology-nav typology-main-navigation"> 
        <li class="xcurrent-menu-item"> <a href="/">Home</a> </li> 
        <li class="xcurrent-menu-item"> <a href="/my-ubuntu-notes">My Ubuntu Notes</a> </li> 
+       <li class="xcurrent-menu-item"> <a href="/my-java-notes">My Java Notes</a> </li> 
        <li> <a href="/">Topics
          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 320 512" style="vertical-align: middle; margin-left: 5px" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"> <path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"> 
           </path> 
@@ -158,21 +159,23 @@
      <div class="section-content"> 
       <article class="typology-post typology-single-post"> 
        <header class="entry-header clearfix"> 
-        <h1 class="entry-title entry-title-cover-empty h2">My Java Notes</h1> 
+        <h1 class="entry-title entry-title-cover-empty h2">Contact us</h1> 
         <div class="post-letter">
-          M 
+          C 
         </div> 
        </header> 
-       <div class="entry-content clearfix">    
-        <h2 id="java-17">Java 17</h2> 
-        <ol> 
-         <li>To execute Java 8 jar via Java 17, add these parameters -</li> 
-        </ol> 
-        <pre><code class="language-bash">/path/to/java17home/bin/java -Dsun.misc.URLClassPath.disableJarChecking=true  --add-opens jdk.naming.rmi/com.sun.jndi.rmi.registry=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED  --add-opens java.base/sun.security.action=ALL-UNNAMED --add-opens java.base/sun.net=ALL-UNNAMED
-</code></pre> 
-        <ol start="2"> 
-         <li>Add <code>?useSSL=false</code> to mysql 5 jdbc jar.</li> 
-        </ol>   
+       <div class="entry-content clearfix">    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSei0rz9JBzkN8HKusoWbbypJUul54zDt1vxJTRto3mqAx6jvA/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> 
+        <!--
+<script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+<link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
+<form action="https://send.pageclip.co/v08dTRXd2vUOHm8i19BJxAPAy70O1TRG" class="pageclip-form" method="post">
+  <input type="text" name="name" placeholder="Your Name" value="" />
+  <input type="email" name="email" placeholder="Your Email" value="" />
+  <input type="text" name="message" placeholder="Your Message" value="" />
+  <button type="submit" class="pageclip-form__submit">
+    <span>Send</span>
+  </button>
+</form>-->   
        </div> 
       </article> 
      </div> 

@@ -1,7 +1,7 @@
 ---
 title: Unique ID generator in distributed systems
 created: 2021-03-25T02:30:00+05:30
-updated: 2021-03-25T02:30:00+05:30
+updated: 2022-12-09T02:30:00+05:30
 author: ashishdoneriya
 description: Unique ID geneator system design key points to remember
 permalink: /unique-id-generator-system-design.html
@@ -54,6 +54,16 @@ Twitter snowflake IDs are 64-bit. In this approach the ID is divided into multip
 * 12 bits - **sequence number**. For every request the number gets increased. After every millisecond the number resets to 0.
 
 This id generator would work for around 70 years (if we include that starting 1 bit also). We will put a **load balancer** in this architecture to divide the traffic equally among all servers using round robin. If we want to divide the traffic based on the machine capacity then we could add [virtual nodes](/consistent-hashing-design-techniques.html) also.
+
+### Sonyflake
+A Sonyflake ID is composed of - 
+* 39 bits for time in units of 10 msec
+* 8 bits for a sequence number
+* 16 bits for a machine id
+As a result, Sonyflake has the following advantages and disadvantages:  
+* The lifetime (174 years) is longer than that of Snowflake (69 years)
+* It can work in more distributed machines (2^16) than Snowflake (2^10)
+* It can generate 2^8 IDs per 10 msec at most in a single machine/thread (slower than Snowflake)
 
 ### My Approach
 

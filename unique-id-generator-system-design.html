@@ -236,7 +236,10 @@
         <ul> 
          <li>39 bits for time in units of 10 msec</li> 
          <li>8 bits for a sequence number</li> 
-         <li>16 bits for a machine id As a result, Sonyflake has the following advantages and disadvantages:</li> 
+         <li>16 bits for a machine id</li> 
+        </ul> 
+        <p>As a result, Sonyflake has the following advantages and disadvantages -</p> 
+        <ul> 
          <li>The lifetime (174 years) is longer than that of Snowflake (69 years)</li> 
          <li>It can work in more distributed machines (2^16) than Snowflake (2^10)</li> 
          <li>It can generate 2^8 IDs per 10 msec at most in a single machine/thread (slower than Snowflake)</li> 

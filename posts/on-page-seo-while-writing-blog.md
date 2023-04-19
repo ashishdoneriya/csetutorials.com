@@ -10,7 +10,7 @@ tags:
 updated: 2023-04-20T00:00:00+05:30
 ---
 
-﻿## Keyword
+## Keyword
 * Use in **Starting and Ending Para** of Content
 * Place your main keyword within the first 100 words.
 * Use in **Image Name, Alt Tag** and **Title Tag**
@@ -80,7 +80,7 @@ updated: 2023-04-20T00:00:00+05:30
 * Use **iframe** tag for displaying images from another site. I this way the search engines recognize an iframe or a frame used to pull in another site’s content for what it is, and therefore ignore the content inside the iframe or frame as it is content published by another publisher.In other words, they don’t consider content pulled in from another site as part of the unique content of your web page.
 
 
-@@ High Quality Content
+## High Quality Content
 * Are you able to offer research that is relevant or can you provide practical advice?
 * Have you made any necessary corrections with regard to your facts, grammar and spelling?
 * Would a machine or a reader be interested in the topic?

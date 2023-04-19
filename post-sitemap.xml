@@ -9,6 +9,10 @@
  		<lastmod>2016-04-19T15:41:31Z</lastmod>
 	</url>
 	<url>
+		<loc>https://csetutorials.com/on-page-seo-while-writing-blog.html</loc>
+		<lastmod>2023-04-19T18:30:00Z</lastmod>
+	</url>
+	<url>
 		<loc>https://csetutorials.com/scala-3-notes.html</loc>
 		<lastmod>2022-09-13T04:42:21Z</lastmod>
 	</url>
@@ -45,11 +49,7 @@
 		</image:image>
 	</url>
 	<url>
-		<loc>https://csetutorials.com/sliding-window-problem-types.html</loc>
-		<lastmod>2021-08-01T06:51:21Z</lastmod>
-	</url>
-	<url>
-		<loc>https://csetutorials.com/dynamic-programming-unbounded-knapsack.html</loc>
+		<loc>https://csetutorials.com/dynamic-programming-on-trees.html</loc>
 		<lastmod>2021-08-01T06:51:21Z</lastmod>
 	</url>
 	<url>
@@ -61,7 +61,11 @@
 		<lastmod>2021-08-01T06:51:21Z</lastmod>
 	</url>
 	<url>
-		<loc>https://csetutorials.com/dynamic-programming-on-trees.html</loc>
+		<loc>https://csetutorials.com/dynamic-programming-problem-types.html</loc>
+		<lastmod>2021-08-01T06:51:21Z</lastmod>
+	</url>
+	<url>
+		<loc>https://csetutorials.com/sliding-window-problem-types.html</loc>
 		<lastmod>2021-08-01T06:51:21Z</lastmod>
 	</url>
 	<url>
@@ -69,7 +73,7 @@
 		<lastmod>2021-08-01T06:51:21Z</lastmod>
 	</url>
 	<url>
-		<loc>https://csetutorials.com/dynamic-programming-problem-types.html</loc>
+		<loc>https://csetutorials.com/dynamic-programming-unbounded-knapsack.html</loc>
 		<lastmod>2021-08-01T06:51:21Z</lastmod>
 	</url>
 	<url>

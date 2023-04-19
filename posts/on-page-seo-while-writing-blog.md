@@ -4,9 +4,9 @@ created: 2023-04-20T00:00:00+05:30
 author: ashishdoneriya
 permalink: /on-page-seo-while-writing-blog.html
 categories:
-  - seo
-tags:
   - web-development
+tags:
+  - seo
 updated: 2023-04-20T00:00:00+05:30
 ---
 

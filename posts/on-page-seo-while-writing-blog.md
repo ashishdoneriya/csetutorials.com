@@ -1,5 +1,5 @@
 ---
-title: Ubuntu Apps
+title: On Page SEO while writing a Blog
 created: 2023-04-20T00:00:00+05:30
 author: ashishdoneriya
 permalink: /on-page-seo-while-writing-blog.html

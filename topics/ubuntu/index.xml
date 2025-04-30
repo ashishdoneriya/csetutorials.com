@@ -1,24 +1,95 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ubuntu on Cse Tutorials</title><link>https://csetutorials.com/topics/ubuntu/</link><description>Recent content in Ubuntu on Cse Tutorials</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 27 Aug 2022 07:50:18 +0530</lastBuildDate><atom:link href="https://csetutorials.com/topics/ubuntu/index.xml" rel="self" type="application/rss+xml"/><item><title>My All Time Favourite Gnome Extentions</title><link>https://csetutorials.com/gnome-extentions-all-time-favourite/</link><pubDate>Sat, 27 Aug 2022 07:50:18 +0530</pubDate><guid>https://csetutorials.com/gnome-extentions-all-time-favourite/</guid><description>Dash to Panel This extension moves the dash into the gnome main panel so that the application launchers and system tray are combined into a single panel, similar to Windows. You don&amp;rsquo;t need to install Dash to Dock extention if you install Dash to Panel extention. Refresh Wifi Connections This extension adds a refresh button to the Wi-Fi connection selection dialog to manually request for a network scan.
-Window Is Ready - Notification Remover Removes window is ready Notification</description></item><item><title>Passwordless SSH on Ubuntu Linux</title><link>https://csetutorials.com/passwordless-ssh-ubuntu-linux/</link><pubDate>Fri, 15 May 2020 09:34:10 +0530</pubDate><guid>https://csetutorials.com/passwordless-ssh-ubuntu-linux/</guid><description>These steps are verified and tested several times and works flawlessly.
-Install openssh server
-sudo apt-get install openssh-server Remove previous .ssh directory (from home directory)
-rm -r ~/.ssh/ Now Execute the below command. Leave all the field empty when asked.
-ssh-keygen -t rsa Execute the following commands after that
-cat ~/.ssh/id_rsa.pub &amp;gt;&amp;gt; ~/.ssh/authorized_keys sudo chmod go-w ~/ chmod 700 ~/.ssh chmod 600 ~/.ssh/authorized_keys exec ssh-agent bash ssh-add That&amp;rsquo;s it.
-You can test on your machine.</description></item><item><title>How to resize images on Ubuntu Linux</title><link>https://csetutorials.com/how-to-resize-images-on-ubuntu-linux/</link><pubDate>Mon, 29 Oct 2018 09:23:01 +0530</pubDate><guid>https://csetutorials.com/how-to-resize-images-on-ubuntu-linux/</guid><description>Most of the times resizing images on Ubuntu is very difficult. I think some users use Gimp which is a very famous image editor on linux and its like photoshop of Ubuntu. But most of the times I found Gimp very hard to learn. Some people who don&amp;rsquo;t know Gimp like me use online image editors to resize their photos. So here I am going to tell you the alternative of Gimp app to resize your apps.</description></item><item><title>How to write C or C++ programs on Ubuntu Linux</title><link>https://csetutorials.com/compile-c-programs-on-ubuntu-linux/</link><pubDate>Mon, 01 Oct 2018 07:05:41 +0530</pubDate><guid>https://csetutorials.com/compile-c-programs-on-ubuntu-linux/</guid><description>If you are a newbie in the linux world you are the facing the question - how to compile c program in linux or how to compile c++ program in linux. So in this post I&amp;rsquo;m going to explain the steps using which you can run your c c++ programs on linux.
-There are two ways to write and run C and C++ programs on Ubuntu.
-Using command line Using IDE (app) Using command line To run a C or C++ program on linux, there are three phases write code, compile code and run it.</description></item><item><title>How to convert videos in Ubuntu using Vlc</title><link>https://csetutorials.com/convert-videos-ubuntu-using-vlc/</link><pubDate>Sun, 04 Mar 2018 07:11:21 +0530</pubDate><guid>https://csetutorials.com/convert-videos-ubuntu-using-vlc/</guid><description>In this post I&amp;rsquo;m going to tell you how to convert videos in Ubuntu using vlc. In my opinion vlc is the best free video converter software. So here are the steps.
-Install vlc
-sudo apt-get install vlc Install other required packages
-sudo apt-get install ffmpeg libav-tools gstreamer1.0-libav gstreamer1.0-plugins-bad ubuntu-restricted-extras libde265-dev Open Vlc
-Open Menu bar &amp;gt; Media &amp;gt; Convert/Save Now in File tab add the file and click on convert/save.</description></item><item><title>How to setup Kerberos on Ubuntu</title><link>https://csetutorials.com/setup-kerberos-ubuntu/</link><pubDate>Wed, 05 Jul 2017 08:40:58 +0530</pubDate><guid>https://csetutorials.com/setup-kerberos-ubuntu/</guid><description>In a network, there is one machine which acts as a server for Kerberos authentication and rest of the machines act as clients. On the server machine, we will install Kerberos administrative server and database for Kerberos. On client machines, we will install Kerberos client. So first we will setup Kerberos server.
-Setting Kerberos Server Execute the below command to install Kerberos admin server and KDE (key distribution center).
-sudo apt install krb5-kdc krb5-admin-server It will ask you the following three things one by one</description></item><item><title>Ubuntu Apps</title><link>https://csetutorials.com/ubuntu-apps/</link><pubDate>Thu, 15 Jun 2017 09:39:46 +0530</pubDate><guid>https://csetutorials.com/ubuntu-apps/</guid><description>Chromium One of the best open source web browser in the world.
-sudo apt-get install chromium-browser Unity Tweak Tool Unity Tweak Tool is a settings manager for the Unity desktop. It provides users with a fast, simple and easy-to-use interface with which to access many useful and little known features and settings of the desktop environment that one may want to configure.
-sudo apt-get install unity-tweak-tool GDebi Gdebi is a simple tool to install deb files, simple and much faster than ubuntu software center.</description></item><item><title>Things to do with Firefox after installation</title><link>https://csetutorials.com/things-to-do-firefox/</link><pubDate>Wed, 03 May 2017 09:16:43 +0530</pubDate><guid>https://csetutorials.com/things-to-do-firefox/</guid><description>NOTE : This post is not applicable for Firefox Quantum
-We know that Firefox is one of the most popular browsers in the world. But to make the most out of it, we have to configure it. So I have noted down some important tasks. Here is the TODO list :
-Delete blotted bookmarks Set default folder for saving bookmarks Disable firefox health report Disable auto update search engines Enable search suggestions Install Fast Dial addon Install Ghostry addon Install DownThemAll addon Install FlashGot addon Install Menu Wizard addon Delete blotted bookmarks Open Menu Bookmarks &amp;gt; Show All Bookmarks</description></item><item><title>My Ubuntu Notes</title><link>https://csetutorials.com/my-ubuntu-notes/</link><pubDate>Wed, 03 May 2017 00:00:00 +0530</pubDate><guid>https://csetutorials.com/my-ubuntu-notes/</guid><description>During Installation, always create swap space and a separate partition for the Home directory. Always select that partition for other Linux distributions also but do not format it. And create separate users for different-different distributions like /home/ubuntu for Ubuntu, /home/arch for arch Linux and so on.
-If your system has SSD then donot create swap space from SSD.
-Use Ubuntu Source List generator.
-Run sudo command without password
-If you don&amp;rsquo;t want to type sudo password again and again then run command sudo visudo and append the below line at the end.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ubuntu on Cse Tutorials</title><link>https://csetutorials.com/topics/ubuntu/</link><description>Recent content in Ubuntu on Cse Tutorials</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 27 Aug 2022 07:50:18 +0530</lastBuildDate><atom:link href="https://csetutorials.com/topics/ubuntu/index.xml" rel="self" type="application/rss+xml"/><item><title>My All Time Favourite Gnome Extentions</title><link>https://csetutorials.com/gnome-extentions-all-time-favourite.html</link><pubDate>Sat, 27 Aug 2022 07:50:18 +0530</pubDate><guid>https://csetutorials.com/gnome-extentions-all-time-favourite.html</guid><description>&lt;h2 id="dash-to-panel">&lt;a href="https://extensions.gnome.org/extension/1160/dash-to-panel/">Dash to Panel&lt;/a>&lt;/h2>
+&lt;p>This extension moves the dash into the gnome main panel so that the application launchers and system tray are combined into a single panel, similar to Windows. You don&amp;rsquo;t need to install Dash to Dock extention if you install Dash to Panel extention.
+&lt;img src="https://csetutorials.com/wp-content/uploads/2022/08/dash-to-panel.png" alt="Dash to Panel Gnome Extention">&lt;/p>
+&lt;h2 id="refresh-wifi-connections">&lt;a href="https://extensions.gnome.org/extension/905/refresh-wifi-connections/">Refresh Wifi Connections&lt;/a>&lt;/h2>
+&lt;p>This extension adds a refresh button to the Wi-Fi connection selection dialog to manually request for a network scan.&lt;/p></description></item><item><title>Passwordless SSH on Ubuntu Linux</title><link>https://csetutorials.com/passwordless-ssh-ubuntu-linux.html</link><pubDate>Fri, 15 May 2020 09:34:10 +0530</pubDate><guid>https://csetutorials.com/passwordless-ssh-ubuntu-linux.html</guid><description>&lt;p>These steps are verified and tested several times and works flawlessly.&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>Install openssh server&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install openssh-server
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>Remove previous .ssh directory (from home directory)&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>rm -r ~/.ssh/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>Now Execute the below command. Leave all the field empty when asked.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>ssh-keygen -t rsa
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>Execute the following commands after that&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cat ~/.ssh/id_rsa.pub &amp;gt;&amp;gt; ~/.ssh/authorized_keys
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo chmod go-w ~/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>chmod &lt;span style="color:#ae81ff">700&lt;/span> ~/.ssh
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>chmod &lt;span style="color:#ae81ff">600&lt;/span> ~/.ssh/authorized_keys
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>exec ssh-agent bash
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ssh-add
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;/ol>
+&lt;p>That&amp;rsquo;s it.&lt;/p></description></item><item><title>How to resize images on Ubuntu Linux</title><link>https://csetutorials.com/how-to-resize-images-on-ubuntu-linux.html</link><pubDate>Mon, 29 Oct 2018 09:23:01 +0530</pubDate><guid>https://csetutorials.com/how-to-resize-images-on-ubuntu-linux.html</guid><description>&lt;p>Most of the times resizing images on Ubuntu is very difficult. I think some users use Gimp which is a very famous image editor on linux and its like photoshop of Ubuntu. But most of the times I found Gimp very hard to learn. Some people who don&amp;rsquo;t know Gimp like me use online image editors to resize their photos. So here I am going to tell you the alternative of Gimp app to resize your apps.&lt;/p></description></item><item><title>How to write C or C++ programs on Ubuntu Linux</title><link>https://csetutorials.com/compile-c-programs-on-ubuntu-linux.html</link><pubDate>Mon, 01 Oct 2018 07:05:41 +0530</pubDate><guid>https://csetutorials.com/compile-c-programs-on-ubuntu-linux.html</guid><description>&lt;p>If you are a newbie in the linux world you are the facing the question - how to compile c program in linux or how to compile c++ program in linux. So in this post I&amp;rsquo;m going to explain the steps using which you can run your c c++ programs on linux.&lt;/p>
+&lt;p>There are two ways to write and run C and C++ programs on Ubuntu.&lt;/p>
+&lt;ol>
+&lt;li>Using command line&lt;/li>
+&lt;li>Using IDE (app)&lt;/li>
+&lt;/ol>
+&lt;h2 id="using-command-line">Using command line&lt;/h2>
+&lt;p>To run a C or C++ program on linux, there are three phases write code, compile code and run it. First you have to write your code using a text editor eg. gedit (it is just like Notepad++). Then after writing the code you have to manually compile the code using particular commands, the compiler creates an executable file ( just like .exe in windows) for our code and then we run that executable file&lt;/p></description></item><item><title>How to convert videos in Ubuntu using Vlc</title><link>https://csetutorials.com/convert-videos-ubuntu-using-vlc.html</link><pubDate>Sun, 04 Mar 2018 07:11:21 +0530</pubDate><guid>https://csetutorials.com/convert-videos-ubuntu-using-vlc.html</guid><description>&lt;p>In this post I&amp;rsquo;m going to tell you how to convert videos in Ubuntu using vlc. In my opinion vlc is the best free video converter software. So here are the steps.&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>Install vlc&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install vlc
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>Install other required packages&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install ffmpeg libav-tools gstreamer1.0-libav gstreamer1.0-plugins-bad ubuntu-restricted-extras libde265-dev
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>Open Vlc&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Open Menu bar &amp;gt; Media &amp;gt; Convert/Save
+&lt;img src="https://csetutorials.com/wp-content/uploads/2018/03/vlc-video-convert.png" alt="vlc convert videos">&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Now in File tab add the file and click on convert/save.
+&lt;img src="https://csetutorials.com/wp-content/uploads/2018/03/vlc-video-convert-select-format.png" alt="vlc convert videos">&lt;/p></description></item><item><title>How to setup Kerberos on Ubuntu</title><link>https://csetutorials.com/setup-kerberos-ubuntu.html</link><pubDate>Wed, 05 Jul 2017 08:40:58 +0530</pubDate><guid>https://csetutorials.com/setup-kerberos-ubuntu.html</guid><description>&lt;p>In a network, there is one machine which acts as a server for Kerberos authentication and rest of the machines act as clients. On the server machine, we will install Kerberos administrative server and database for Kerberos. On client machines, we will install Kerberos client. So first we will setup Kerberos server.&lt;/p>
+&lt;h2 id="setting-kerberos-server">Setting Kerberos Server&lt;/h2>
+&lt;p>Execute the below command to install Kerberos admin server and KDE (key distribution center).&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt install krb5-kdc krb5-admin-server
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>It will ask you the following three things one by one&lt;/p></description></item><item><title>Ubuntu Apps</title><link>https://csetutorials.com/ubuntu-apps.html</link><pubDate>Thu, 15 Jun 2017 09:39:46 +0530</pubDate><guid>https://csetutorials.com/ubuntu-apps.html</guid><description>&lt;h3 id="chromium">Chromium&lt;/h3>
+&lt;p>One of the best open source web browser in the world.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install chromium-browser
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="unity-tweak-tool">Unity Tweak Tool&lt;/h2>
+&lt;p>Unity Tweak Tool is a settings manager for the Unity desktop. It provides users with a fast, simple and easy-to-use interface with which to access many useful and little known features and settings of the desktop environment that one may want to configure.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install unity-tweak-tool
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="gdebi">GDebi&lt;/h2>
+&lt;p>Gdebi is a simple tool to install deb files, simple and much faster than ubuntu software center. It lets you install local deb packages resolving and installing&lt;br>
+its dependencies.&lt;/p></description></item><item><title>Things to do with Firefox after installation</title><link>https://csetutorials.com/things-to-do-firefox.html</link><pubDate>Wed, 03 May 2017 09:16:43 +0530</pubDate><guid>https://csetutorials.com/things-to-do-firefox.html</guid><description>&lt;p>&lt;strong>NOTE :&lt;/strong> This post is not applicable for Firefox Quantum&lt;/p>
+&lt;p>We know that Firefox is one of the most popular browsers in the world. But to make the most out of it, we have to configure it. So I have noted down some important tasks. Here is the TODO list :&lt;/p>
+&lt;ul>
+&lt;li>Delete blotted bookmarks&lt;/li>
+&lt;li>Set default folder for saving bookmarks&lt;/li>
+&lt;li>Disable firefox health report&lt;/li>
+&lt;li>Disable auto update search engines&lt;/li>
+&lt;li>Enable search suggestions&lt;/li>
+&lt;li>Install Fast Dial addon&lt;/li>
+&lt;li>Install Ghostry addon&lt;/li>
+&lt;li>Install DownThemAll addon&lt;/li>
+&lt;li>Install FlashGot addon&lt;/li>
+&lt;li>Install Menu Wizard addon&lt;/li>
+&lt;/ul>
+&lt;h2 id="delete-blotted-bookmarks">Delete blotted bookmarks&lt;/h2>
+&lt;p>Open Menu &lt;code>Bookmarks &amp;gt; Show All Bookmarks&lt;/code>&lt;br>
+&lt;img src="https://csetutorials.com/wp-content/uploads/2017/05/firefox-home-page.png" alt="firefox-home-page">&lt;/p></description></item><item><title>My Ubuntu Notes</title><link>https://csetutorials.com/my-ubuntu-notes.html</link><pubDate>Wed, 03 May 2017 00:00:00 +0530</pubDate><guid>https://csetutorials.com/my-ubuntu-notes.html</guid><description>&lt;ol>
+&lt;li>
+&lt;p>During Installation, always create swap space and a separate partition for the Home directory. Always select that partition for other Linux distributions also but &lt;strong>do not format it&lt;/strong>. And create separate users for different-different distributions like /home/ubuntu for Ubuntu, /home/arch for arch Linux and so on.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>If your system has SSD then donot create swap space from SSD.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Use &lt;a href="https://repogen.simplylinux.ch/">Ubuntu Source List generator&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Run sudo command without password&lt;/strong>&lt;br>
+If you don&amp;rsquo;t want to type sudo password again and again then run command &lt;code>sudo visudo&lt;/code> and append the below line at the end.&lt;/p></description></item></channel></rss>

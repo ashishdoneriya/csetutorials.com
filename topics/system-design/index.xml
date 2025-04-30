@@ -1,12 +1,121 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>System Design on Cse Tutorials</title><link>https://csetutorials.com/topics/system-design/</link><description>Recent content in System Design on Cse Tutorials</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 18 Dec 2024 20:10:04 +0530</lastBuildDate><atom:link href="https://csetutorials.com/topics/system-design/index.xml" rel="self" type="application/rss+xml"/><item><title>How WhatsApp Manages Real-Time Messaging at Scale: A Detailed Guide</title><link>https://csetutorials.com/whatsapp-real-time-messaging-scalability/</link><pubDate>Wed, 18 Dec 2024 20:10:04 +0530</pubDate><guid>https://csetutorials.com/whatsapp-real-time-messaging-scalability/</guid><description>WhatsApp, with billions of active users, manages an enormous volume of real-time messages daily while maintaining seamless performance, scalability, and end-to-end encryption. This article provides a comprehensive look into WhatsApp’s message delivery system, focusing on its architecture, handling of one-to-one and group chats, offline message storage, notification mechanisms, optimized database operations, and efficient user-to-server mapping.
-WhatsApp Messaging Architecture: An Overview WhatsApp’s infrastructure relies on multiple components to deliver real-time communication:</description></item><item><title>Understanding Push Notifications in WhatsApp: Architecture, Flow, and Behavior</title><link>https://csetutorials.com/push-notifications-whatsapp-architecture-flow/</link><pubDate>Wed, 18 Dec 2024 18:35:38 +0530</pubDate><guid>https://csetutorials.com/push-notifications-whatsapp-architecture-flow/</guid><description>Understanding Push Notifications: Architecture and Flow Push notifications are a core feature in modern apps, enabling real-time communication with users. Whether it’s a messaging app like WhatsApp or a social media platform, the process involves multiple components working together seamlessly. Let’s break it down step by step.
-Push Notification Architecture The architecture of push notifications is built around three key players:
-Mobile App: The app installed on the user’s device that wants to notify the user about certain events.</description></item><item><title>Distributed Leaderboard System Design</title><link>https://csetutorials.com/distributed-leaderboard-system-design/</link><pubDate>Mon, 02 May 2022 07:21:55 +0530</pubDate><guid>https://csetutorials.com/distributed-leaderboard-system-design/</guid><description>Requirements 100 million requests per second Leaderboard should be updated as soon as possible Components of the system Key-Value database Webservers Load Balancers Cache Service Queues Data Flow Summary The user&amp;rsquo;s request to update score would go to the webservers. The webserver send the request to the queue. From queue, a set of workers fetch the individual request, fetch the user&amp;rsquo;s current score from the key-value db and adding the increment, updating the new score to the db then send the updated score to the batch queue (combining multiple user&amp;rsquo;s scores).</description></item><item><title>Web Crawler Design Techniques</title><link>https://csetutorials.com/web-crawler-design-techniques/</link><pubDate>Sat, 03 Apr 2021 10:37:44 +0530</pubDate><guid>https://csetutorials.com/web-crawler-design-techniques/</guid><description>A web crawler can be used in various services such as
-Search Engines Archive Storage Piracy Detector Web Mining Lets talk about the data flow first. Lets say we have a set of url as a starting point. So first we fetch the content of those urls. After that we parse the content, check if it is duplicate or not. Then we extract urls and after filtering the urls we add those urls to the queue to again crawling.</description></item><item><title>URL Shortener System Design</title><link>https://csetutorials.com/url-shortener-system-design/</link><pubDate>Mon, 29 Mar 2021 10:36:23 +0530</pubDate><guid>https://csetutorials.com/url-shortener-system-design/</guid><description>Requirements 100 million writes per day ie. 100 million urls would be shortened per day. Only alphanumeric characters are allowed in the shortened URL. The system should be highly available, scalable and fault tolerance. Estimations Write operations : 100 million. It means 100000000/(24 * 3600) = 1158 writes per second. Read operations : Lets say the read operations are 10 times of write operations that is 11580 reads per second. Lets suppose the service would run for 10 years.</description></item><item><title>Unique ID generator in distributed systems</title><link>https://csetutorials.com/unique-id-generator-system-design/</link><pubDate>Thu, 25 Mar 2021 02:30:00 +0530</pubDate><guid>https://csetutorials.com/unique-id-generator-system-design/</guid><description>Key Points MySQL auto increment is not sufficient for distributed systems because it is not large enough &amp;amp; would be very challenging generating unique ids across multiple databases with minimal delay;
-Our requirement is the ids should be unique, sortable, max 64 bit (8 bytes ie. could fit in long data type in Java).
-Three ways using which we can generate UUID UUID is 128 bit. It has very low probability of collusion.</description></item><item><title>How to Design a Key Value Database</title><link>https://csetutorials.com/key-value-storage-design-architecture/</link><pubDate>Wed, 24 Mar 2021 09:29:42 +0530</pubDate><guid>https://csetutorials.com/key-value-storage-design-architecture/</guid><description>It is a non-relational database. The key must be unique, can be plain text or hashed values. The value can be directly fetched through the key.
-Requirements The size of a key value pair is small ie. less than 10 KB. Big Data : It should be able to store very large amount of data. High Availability : The system should repond to queries even in case of failures. High Scalability : The system should be able to scale according to the data and the traffic.</description></item><item><title>Consistent Hashing Design and Techniques</title><link>https://csetutorials.com/consistent-hashing-design-techniques/</link><pubDate>Sun, 21 Mar 2021 07:09:36 +0530</pubDate><guid>https://csetutorials.com/consistent-hashing-design-techniques/</guid><description>Consistent Hashing is one of the very important concept in the field of system designing. Consistent hashing is used mainly in load balancers, key-value store etc.
-Lets suppose You have to create a Load Balancer for your WebApp. I presume you know what is a load balancer.
-One way is to distribute the load one by one on each server as the request comes. The problem in this approach is that if the server was storing some information in its cache or session then the cache or the session would become irrelevant if the same reqeust for that client goes to another server.</description></item><item><title>Rate Limiter Design Techniques with Scenarios and Solutions</title><link>https://csetutorials.com/rate-limiter-design-techniques/</link><pubDate>Wed, 17 Mar 2021 09:35:32 +0530</pubDate><guid>https://csetutorials.com/rate-limiter-design-techniques/</guid><description>Rate Limiting is a very vast topic. It depends on what type of rate limiter you want, what are your requirements. First lets assume there is a lot of traffic coming every second or minute. So we will do all the calculations according to the rate limiter.
-NOTE : There should be minimal impact of rate limiter on apis latency.
-How to limit the traffic? To put a control on traffic or a user who is sending a lot of requests, we have to put a middleware (rate limiter) between the internet traffic (ie.</description></item><item><title>SSTable Architecture Summary</title><link>https://csetutorials.com/sstable-architecture/</link><pubDate>Wed, 10 Mar 2021 10:38:50 +0530</pubDate><guid>https://csetutorials.com/sstable-architecture/</guid><description>Key Points SSTable or Sorted String Table is used to store key values. In SSTables, key-value pairs are written in sorted order in disk. For faster access to value of a key, indexes are maintained for SSTable. Lets call it SSIndex. We keep copy of SSIndex in RAM for faster access. There is a special property of SSTable that is they are immutable. It means we cannot append or delete data to SSTable so as to maintain sorting order and read speed.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>System Design on Cse Tutorials</title><link>https://csetutorials.com/topics/system-design/</link><description>Recent content in System Design on Cse Tutorials</description><generator>Hugo</generator><language>en</language><lastBuildDate>Wed, 18 Dec 2024 20:10:04 +0530</lastBuildDate><atom:link href="https://csetutorials.com/topics/system-design/index.xml" rel="self" type="application/rss+xml"/><item><title>How WhatsApp Manages Real-Time Messaging at Scale: A Detailed Guide</title><link>https://csetutorials.com/whatsapp-real-time-messaging-scalability.html</link><pubDate>Wed, 18 Dec 2024 20:10:04 +0530</pubDate><guid>https://csetutorials.com/whatsapp-real-time-messaging-scalability.html</guid><description>&lt;p>WhatsApp, with billions of active users, manages an enormous volume of real-time messages daily while maintaining seamless performance, scalability, and end-to-end encryption. This article provides a comprehensive look into WhatsApp’s message delivery system, focusing on its architecture, handling of one-to-one and group chats, offline message storage, notification mechanisms, optimized database operations, and efficient user-to-server mapping.&lt;/p>
+&lt;h2 id="whatsapp-messaging-architecture-an-overview">WhatsApp Messaging Architecture: An Overview&lt;/h2>
+&lt;p>WhatsApp’s infrastructure relies on multiple components to deliver real-time communication:&lt;/p></description></item><item><title>Understanding Push Notifications in WhatsApp: Architecture, Flow, and Behavior</title><link>https://csetutorials.com/push-notifications-whatsapp-architecture-flow.html</link><pubDate>Wed, 18 Dec 2024 18:35:38 +0530</pubDate><guid>https://csetutorials.com/push-notifications-whatsapp-architecture-flow.html</guid><description>&lt;h2 id="understanding-push-notifications-architecture-and-flow">Understanding Push Notifications: Architecture and Flow&lt;/h2>
+&lt;p>Push notifications are a core feature in modern apps, enabling real-time communication with users. Whether it’s a messaging app like WhatsApp or a social media platform, the process involves multiple components working together seamlessly. Let’s break it down step by step.&lt;/p>
+&lt;h2 id="push-notification-architecture">Push Notification Architecture&lt;/h2>
+&lt;p>The architecture of push notifications is built around three key players:&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>Mobile App&lt;/strong>: The app installed on the user’s device that wants to notify the user about certain events.&lt;/p></description></item><item><title>Distributed Leaderboard System Design</title><link>https://csetutorials.com/distributed-leaderboard-system-design.html</link><pubDate>Mon, 02 May 2022 07:21:55 +0530</pubDate><guid>https://csetutorials.com/distributed-leaderboard-system-design.html</guid><description>&lt;h3 id="requirements">Requirements&lt;/h3>
+&lt;ul>
+&lt;li>100 million requests per second&lt;/li>
+&lt;li>Leaderboard should be updated as soon as possible&lt;/li>
+&lt;/ul>
+&lt;h3 id="components-of-the-system">Components of the system&lt;/h3>
+&lt;ul>
+&lt;li>Key-Value database&lt;/li>
+&lt;li>Webservers&lt;/li>
+&lt;li>Load Balancers&lt;/li>
+&lt;li>Cache Service&lt;/li>
+&lt;li>Queues&lt;/li>
+&lt;/ul>
+&lt;h3 id="data-flow">Data Flow&lt;/h3>
+&lt;h3 id="summary">Summary&lt;/h3>
+&lt;p>The user&amp;rsquo;s request to update score would go to the webservers. The webserver send the request to the queue. From queue, a set of workers fetch the individual request, fetch the user&amp;rsquo;s current score from the key-value db and adding the increment, updating the new score to the db then send the updated score to the batch queue (combining multiple user&amp;rsquo;s scores). From the batch queue workers would fetch data in batches and send to another queues for batches and the process goes on untill there is just single record. At the end the top 10 record is updated to the cache and db for the webservers to fetch and show it to the ui.&lt;/p></description></item><item><title>Web Crawler Design Techniques</title><link>https://csetutorials.com/web-crawler-design-techniques.html</link><pubDate>Sat, 03 Apr 2021 10:37:44 +0530</pubDate><guid>https://csetutorials.com/web-crawler-design-techniques.html</guid><description>&lt;p>A web crawler can be used in various services such as&lt;/p>
+&lt;ul>
+&lt;li>Search Engines&lt;/li>
+&lt;li>Archive Storage&lt;/li>
+&lt;li>Piracy Detector&lt;/li>
+&lt;li>Web Mining&lt;/li>
+&lt;/ul>
+&lt;p>Lets talk about the data flow first. Lets say we have a set of url as a starting point. So first we fetch the content of those urls. After that we parse the content, check if it is duplicate or not. Then we extract urls and after filtering the urls we add those urls to the queue to again crawling. This is the three line summary.&lt;/p></description></item><item><title>URL Shortener System Design</title><link>https://csetutorials.com/url-shortener-system-design.html</link><pubDate>Mon, 29 Mar 2021 10:36:23 +0530</pubDate><guid>https://csetutorials.com/url-shortener-system-design.html</guid><description>&lt;h3 id="requirements">Requirements&lt;/h3>
+&lt;ul>
+&lt;li>100 million writes per day ie. 100 million urls would be shortened per day.&lt;/li>
+&lt;li>Only alphanumeric characters are allowed in the shortened URL.&lt;/li>
+&lt;li>The system should be highly available, scalable and fault tolerance.&lt;/li>
+&lt;/ul>
+&lt;h3 id="estimations">Estimations&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Write operations :&lt;/strong> 100 million. It means 100000000/(24 * 3600) = 1158 writes per second.&lt;/li>
+&lt;li>&lt;strong>Read operations :&lt;/strong> Lets say the read operations are 10 times of write operations that is 11580 reads per second.&lt;/li>
+&lt;li>Lets suppose the service would run for 10 years. It means we would need around 40 TB of storage.&lt;/li>
+&lt;/ul>
+&lt;h3 id="components-of-the-system">Components of the system&lt;/h3>
+&lt;ul>
+&lt;li>Key-Value database&lt;/li>
+&lt;li>Webservers&lt;/li>
+&lt;li>Load Balancers&lt;/li>
+&lt;li>Cache Service&lt;/li>
+&lt;/ul>
+&lt;h3 id="data-flow">Data Flow&lt;/h3>
+&lt;h3 id="summary">Summary&lt;/h3>
+&lt;p>First the user goes to the shortener website and send post request to the website&amp;rsquo;s server. The webserver creates a short code for that url and in the key value database it save the short code as key and the complete url as a val. If we want the complete url for a short url, then in this case, the user fires a get request to the webserver, the webserver fetches the shortcode value from the key-value db. After getting the complete url, the server would redirect the user to the actual url (301 or 302 depends on the scenario.).&lt;/p></description></item><item><title>Unique ID generator in distributed systems</title><link>https://csetutorials.com/unique-id-generator-system-design.html</link><pubDate>Thu, 25 Mar 2021 02:30:00 +0530</pubDate><guid>https://csetutorials.com/unique-id-generator-system-design.html</guid><description>&lt;h2 id="key-points">Key Points&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>MySQL auto increment is not sufficient for distributed systems because it is not large enough &amp;amp; would be very challenging generating unique ids across multiple databases with minimal delay;&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Our requirement is the ids should be unique, sortable, max 64 bit (8 bytes ie. could fit in long data type in Java).&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="three-ways-using-which-we-can-generate">&lt;strong>Three ways using which we can generate&lt;/strong>&lt;/h2>
+&lt;h3 id="uuid">UUID&lt;/h3>
+&lt;ul>
+&lt;li>UUID is 128 bit.&lt;/li>
+&lt;li>It has very low probability of collusion.&lt;/li>
+&lt;li>It could be generated without coordinated servers.&lt;/li>
+&lt;li>It has drawback that is the ids could be non numeric.&lt;/li>
+&lt;li>Since our requirement is 64 bits, therefore UUIDs won&amp;rsquo;t be able to satisfy our requirements&lt;/li>
+&lt;/ul>
+&lt;h3 id="ticket-server">Ticket Server&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://code.flickr.net/2010/02/08/ticket-servers-distributed-unique-primary-keys-on-the-cheap/">Flickr&lt;/a> developed this technique.&lt;/li>
+&lt;li>There is a dedicated mysql server database which is used to generate keys.&lt;/li>
+&lt;li>All the other servers hit mysql to get the unique keys.&lt;/li>
+&lt;li>This approach has drawback. It has single point of failure. In case of that single mysql server machine goes down, the entire system would fail.&lt;/li>
+&lt;li>The webservers would hit the below sql command to get the unique key.
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sql" data-lang="sql">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">REPLACE&lt;/span> &lt;span style="color:#66d9ef">INTO&lt;/span> Tickets64 (stub) &lt;span style="color:#66d9ef">VALUES&lt;/span> (&lt;span style="color:#e6db74">&amp;#39;a&amp;#39;&lt;/span>);&lt;span style="color:#66d9ef">SELECT&lt;/span> id &lt;span style="color:#66d9ef">from&lt;/span> Tickets64;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>The table creating syntax is -
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sql" data-lang="sql">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">CREATE&lt;/span> &lt;span style="color:#66d9ef">TABLE&lt;/span> &lt;span style="color:#f92672">`&lt;/span>Tickets64&lt;span style="color:#f92672">`&lt;/span> (
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">`&lt;/span>id&lt;span style="color:#f92672">`&lt;/span> bigint(&lt;span style="color:#ae81ff">20&lt;/span>) unsigned &lt;span style="color:#66d9ef">NOT&lt;/span> &lt;span style="color:#66d9ef">NULL&lt;/span> AUTO_INCREMENT,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">`&lt;/span>stub&lt;span style="color:#f92672">`&lt;/span> char(&lt;span style="color:#ae81ff">1&lt;/span>) &lt;span style="color:#66d9ef">NOT&lt;/span> &lt;span style="color:#66d9ef">NULL&lt;/span> &lt;span style="color:#66d9ef">DEFAULT&lt;/span> &lt;span style="color:#e6db74">&amp;#39;&amp;#39;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">PRIMARY&lt;/span> &lt;span style="color:#66d9ef">KEY&lt;/span> (&lt;span style="color:#f92672">`&lt;/span>id&lt;span style="color:#f92672">`&lt;/span>),
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">UNIQUE&lt;/span> &lt;span style="color:#66d9ef">KEY&lt;/span> &lt;span style="color:#f92672">`&lt;/span>stub&lt;span style="color:#f92672">`&lt;/span> (&lt;span style="color:#f92672">`&lt;/span>stub&lt;span style="color:#f92672">`&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>) ENGINE&lt;span style="color:#f92672">=&lt;/span>InnoDB
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;/ul>
+&lt;h3 id="twitter-snowflake">Twitter Snowflake&lt;/h3>
+&lt;p>Twitter snowflake IDs are 64-bit. In this approach the ID is divided into multiple parts -&lt;/p></description></item><item><title>How to Design a Key Value Database</title><link>https://csetutorials.com/key-value-storage-design-architecture.html</link><pubDate>Wed, 24 Mar 2021 09:29:42 +0530</pubDate><guid>https://csetutorials.com/key-value-storage-design-architecture.html</guid><description>&lt;p>It is a non-relational database. The key must be unique, can be plain text or hashed values. The value can be directly fetched through the key.&lt;/p>
+&lt;h2 id="requirements">Requirements&lt;/h2>
+&lt;ul>
+&lt;li>The size of a key value pair is small ie. less than 10 KB.&lt;/li>
+&lt;li>&lt;strong>Big Data :&lt;/strong> It should be able to store very large amount of data.&lt;/li>
+&lt;li>&lt;strong>High Availability :&lt;/strong> The system should repond to queries even in case of failures.&lt;/li>
+&lt;li>&lt;strong>High Scalability :&lt;/strong> The system should be able to scale according to the data and the traffic.&lt;/li>
+&lt;li>Latency should be very low.&lt;/li>
+&lt;/ul>
+&lt;h2 id="architecture">Architecture&lt;/h2>
+&lt;p>Since Big Data cannot be stored in a single machine, therefore we&amp;rsquo;ll need multiple machines (nodes).&lt;/p></description></item><item><title>Consistent Hashing Design and Techniques</title><link>https://csetutorials.com/consistent-hashing-design-techniques.html</link><pubDate>Sun, 21 Mar 2021 07:09:36 +0530</pubDate><guid>https://csetutorials.com/consistent-hashing-design-techniques.html</guid><description>&lt;p>Consistent Hashing is one of the very important concept in the field of system designing. Consistent hashing is used mainly in load balancers, key-value store etc.&lt;/p>
+&lt;p>Lets suppose You have to create a Load Balancer for your WebApp. I presume you know what is a load balancer.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>One way is to distribute the load one by one on each server as the request comes. The problem in this approach is that if the server was storing some information in its cache or session then the cache or the session would become irrelevant if the same reqeust for that client goes to another server.&lt;/p></description></item><item><title>Rate Limiter Design Techniques with Scenarios and Solutions</title><link>https://csetutorials.com/rate-limiter-design-techniques.html</link><pubDate>Wed, 17 Mar 2021 09:35:32 +0530</pubDate><guid>https://csetutorials.com/rate-limiter-design-techniques.html</guid><description>&lt;p>Rate Limiting is a very vast topic. It depends on what type of rate limiter you want, what are your requirements. First lets assume there is a lot of traffic coming every second or minute. So we will do all the calculations according to the rate limiter.&lt;/p>
+&lt;p>&lt;strong>NOTE :&lt;/strong> There should be minimal impact of rate limiter on apis latency.&lt;/p>
+&lt;h2 id="how-to-limit-the-traffic">How to limit the traffic?&lt;/h2>
+&lt;p>To put a control on traffic or a user who is sending a lot of requests, we have to put a middleware (rate limiter) between the internet traffic (ie. client) and the api servers. This rate limiter will decide whether a request should be allowed to hit the api servers or not based on client&amp;rsquo; ip address or client&amp;rsquo;s details.&lt;/p></description></item><item><title>SSTable Architecture Summary</title><link>https://csetutorials.com/sstable-architecture.html</link><pubDate>Wed, 10 Mar 2021 10:38:50 +0530</pubDate><guid>https://csetutorials.com/sstable-architecture.html</guid><description>&lt;h2 id="key-points">Key Points&lt;/h2>
+&lt;ol>
+&lt;li>SSTable or Sorted String Table is used to store key values.&lt;/li>
+&lt;li>In SSTables, key-value pairs are written in sorted order in disk.&lt;/li>
+&lt;li>For faster access to value of a key, indexes are maintained for SSTable. Lets call it SSIndex.&lt;/li>
+&lt;li>We keep copy of SSIndex in RAM for faster access.&lt;/li>
+&lt;li>There is a special property of SSTable that is they are immutable. It means we cannot append or delete data to SSTable so as to maintain sorting order and read speed.&lt;/li>
+&lt;li>If we cannot modify the sstable then we have to overwrite the sstable if we want to modify the data. But if we do that then the data write speed would be very-very slow.&lt;/li>
+&lt;li>To counter this problem we maitain a table known as MemTable in RAM (as we know that writing data in RAM is very fast).&lt;/li>
+&lt;li>If we have to write data then we would write data in MemTable.&lt;/li>
+&lt;li>If we have to read data then first we would check memtable for that record. If record is not available then we would search into sstable.&lt;/li>
+&lt;li>If we have to delete data then we mark the record as deleted using a flag or something like that in memtable. This is because lets say if you completely delete the record from memtable and if a search query comes up for that record then in this case it would check both memtable and sstable. But if we mark that record as deleted in memtable then the user won&amp;rsquo;t have to search sstable also.&lt;/li>
+&lt;li>Periodically we flush the memtable to disk.&lt;/li>
+&lt;li>There is drawback in this approach. In case of unexpected system crash or shutdown the data in memtable will be lost. Therefore for recovery purpose we write every data write or delete request in a log file.&lt;/li>
+&lt;/ol>
+&lt;h2 id="why-we-maintain-sorting-order-in-sstable-">Why we maintain sorting order in SSTable ?&lt;/h2>
+&lt;p>As I told in the above points that we keep the index of sstable in ram. What if there are billions of record. In this case RAM won&amp;rsquo;t be able to hold all the keys.&lt;/p></description></item></channel></rss>

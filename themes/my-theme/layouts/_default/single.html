@@ -1,0 +1,25 @@
+{{ define "main" }}
+
+<article class="page-wrapper">
+	<h1 class="mb-4 text-center">{{ .Title }}</h1>
+
+	<div
+		class="d-flex justify-content-center align-items-center mb-4 text-muted small"
+	>
+		<time datetime="{{ .Date }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+		<span class="mx-2">|</span>
+		<span>{{ site.Params.author.name }}</span>
+		{{ with .Params.categories }} {{ $cat := index . 0 }}
+		<span class="mx-2">|</span>
+		<a
+			class="text-decoration-none"
+			href="/topics/{{ $cat | urlize }}"
+			rel="category"
+			>{{ $cat }}</a
+		>
+		{{ end }}
+	</div>
+
+	<div class="post-content">{{ .Content | replaceRE `<a href="(https?://[^"]+)"` `<a href="$1" target="_blank" rel="noopener nofollow noreferrer"` | safeHTML }}</div>
+</article>
+{{ end }}

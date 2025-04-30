@@ -1,0 +1,40 @@
+{{ define "main" }}
+
+<article class="page-wrapper">
+	<h1 class="mb-4 text-center">{{ .Title }}</h1>
+	<div class="post-content">{{ .Content | replaceRE `<a href="(https?://[^"]+)"` `<a href="$1" target="_blank" rel="noopener nofollow"` | safeHTML }}</div>
+</article>
+{{ end }}
+
+
+{{ define "seo" }}
+<title>{{ if .Params.seoTitle }}{{ .Params.seoTitle }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+
+<meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+<meta name="keywords" content="{{ with .Params.tags }}{{ delimit . ", " }}{{ end }}" />
+
+<link rel="canonical" href="{{ .Permalink }}" />
+
+<!-- Open Graph (Facebook, LinkedIn) -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{{ if .Params.seoTitle }}{{ .Params.seoTitle }}{{ else }}{{ .Title }}{{ end }}" />
+<meta property="og:description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:site_name" content="{{ .Site.Title }}" />
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ if .Params.seoTitle }}{{ .Params.seoTitle }}{{ else }}{{ .Title }}{{ end }}" />
+<meta name="twitter:description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+
+<!-- Structured Data JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "{{ if .Params.seoTitle }}{{ .Params.seoTitle }}{{ else }}{{ .Title }}{{ end }}",
+  "url": "{{ .Permalink }}",
+  "description": "{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}"
+}
+</script>
+{{ end }}

@@ -1,0 +1,46 @@
+{{ define "main" }}
+<div class="page-wrapper">
+	<h1 class="mb-4 text-center">All Topics</h1>
+
+	{{ range .Data.Terms.Alphabetical }}
+	<p class="fs-5">
+		<a href="{{ .Page.RelPermalink }}" class="text-decoration-none">
+			{{ .Term | title }} ({{ .Count }})
+		</a>
+	</p>
+	<hr />
+	{{ end }}
+</div>
+{{ end }}
+
+
+{{ define "seo" }}
+<title>All Topics | {{ .Site.Title }}</title>
+
+<meta name="robots" content="noindex, follow" />
+<meta name="description" content="Explore all topics available at {{ .Site.Title }}." />
+<link rel="canonical" href="{{ .Permalink }}" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="All Topics | {{ .Site.Title }}" />
+<meta property="og:description" content="Explore all topics available at {{ .Site.Title }}." />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:site_name" content="{{ .Site.Title }}" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="All Topics | {{ .Site.Title }}" />
+<meta name="twitter:description" content="Explore all topics available at {{ .Site.Title }}" />
+
+<!-- Structured Data JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "All Topics",
+  "url": "{{ .Permalink }}",
+  "description": "Explore all topics available at {{ .Site.Title }}"
+}
+</script>
+{{ end }}

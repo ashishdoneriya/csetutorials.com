@@ -1,0 +1,38 @@
+{{ define "main" }}
+<div class="page-wrapper">
+	<h1 class="mb-4 text-center">The Latest</h1>
+	{{ $pages := where .Site.RegularPages "Section" "posts" }}
+	{{ range $index, $element := $pages }}
+	<p class="fs-5">
+		<a href="{{ $element.RelPermalink }}" class="text-decoration-none">
+			{{ $element.Title }}
+		</a>
+	</p>
+	{{ if lt (add $index 1) (len $pages) }}
+	<hr />
+	{{ end }} {{ end }}
+</div>
+{{ end }}
+
+{{ define "seo" }}
+<title>{{ .Site.Title }} - {{ .Site.Params.description }}</title>
+<meta name="description" content="{{ .Site.Params.description }}">
+<link rel="canonical" href="{{ .Permalink }}" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ .Site.Title }}",
+  "url": "{{ .Site.BaseURL }}",
+  "description": "{{ .Site.Params.description }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ .Site.Params.author.name }}"
+    {{ with .Site.Params.author.url }},
+    "url": "{{ . }}"
+    {{ end }}
+  }
+}
+</script>
+{{ end }}

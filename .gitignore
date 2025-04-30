@@ -1,0 +1,20 @@
+# Hugo specific
+/public/
+# Avoid committing the public folder generated during the build process
+
+# Hugo's cache
+/resources/
+# Avoid committing Hugo's internal cache for resources
+
+# Hugo's config file backup (this may be generated in some cases)
+config.toml.bak
+config.yaml.bak
+
+# IDE/editor specific files
+.vscode/
+.idea/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+.hugo_build.lock

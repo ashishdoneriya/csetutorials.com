@@ -1,0 +1,40 @@
+{
+	"baseURL": "https://csetutorials.com",
+	"title": "Cse Tutorials",
+	"theme": "my-theme",
+	"params": {
+		"description": "Tutorials about AWS, BigData, Java, Ubuntu and WebApps",
+		"author": {
+			"name": "Ashish Doneriya"
+		}
+	},
+	"taxonomies": {
+		"category": "categories"
+	},
+	"uglyURLs": {
+		"posts": true
+	},
+	"permalinks": {
+		"page": {
+			"posts": "/:slug",
+			"pages": "/:slug"
+		},
+		"taxonomy": {
+			"categories": "/topics/"
+		},
+		"term": {
+			"categories": "/topics/:slug"
+		}
+	},
+	"minify": {
+		"minifyOutput": true
+	},
+	"deployment": {
+      "targets": [
+         {
+            "name": "production",
+            "url": "s3://csetutorials.com?region=us-east-2"
+         }
+      ]
+   }
+}

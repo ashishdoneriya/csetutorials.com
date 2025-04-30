@@ -1,0 +1,12 @@
+{{ $pages := where .Site.RegularPages "Section" "posts" }}
+
+{{ range $index, $element := $pages }}
+  <p class="fs-5">
+    <a href="{{ $element.RelPermalink }}" class="text-decoration-none">
+      {{ $element.Title }}
+    </a>
+  </p>
+  {{ if lt (add $index 1) (len $pages) }}
+    <hr />
+  {{ end }}
+{{ end }}

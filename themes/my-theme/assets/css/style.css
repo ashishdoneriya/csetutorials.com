@@ -1,0 +1,103 @@
+* {
+    font-family: Roboto;
+}
+.post-category-labels {
+	text-transform: uppercase;
+}
+
+/* Basic layout for article content */
+body {
+	line-height: 1.7;
+	margin: 0;
+	padding: 0;
+	background: #f9f9f9;
+	color: #202122;
+  }
+  
+  main {
+	max-width: 800px;
+	margin: 3rem auto;
+	padding: 2rem;
+	background: white;
+	box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  }
+  
+  article h1 {
+	font-size: 2.2em;
+	margin-bottom: 0.75em;
+	text-align: center;
+  }
+  
+  article h2 {
+	font-size: 1.6em;
+	margin-top: 2em;
+	margin-bottom: 0.5em;
+  }
+  
+  article p {
+	margin-bottom: 1.25em;
+  }
+  
+  article ul {
+	padding-left: 1.5em;
+	list-style-type: disc;
+	margin-bottom: 1.25em;
+  }
+  
+  article li {
+	margin-bottom: 0.5em;
+  }
+  
+  article blockquote {
+	border-left: 4px solid #ccc;
+	padding-left: 1em;
+	margin: 1.5em 0;
+	color: #666;
+	font-style: italic;
+  }
+  
+  /* Site-specific styles: black navbar like the original site */
+  header {
+	background-color: #000;
+	padding: 1rem 0;
+  }
+  
+  .nav-container {
+	max-width: 800px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 2rem;
+  }
+  
+  .logo {
+	font-size: 1.3rem;
+	font-weight: bold;
+	text-decoration: none;
+	color: #fff;
+  }
+  
+  .menu a {
+	margin-left: 1.5rem;
+	text-decoration: none;
+	color: #fff;
+	font-weight: 500;
+  }
+  
+  .menu a:hover {
+	color: #4db2ec;
+  }
+  
+  article h4 {
+	font-size: 1.2rem;
+  }
+  article h3 {
+	font-size: 1.4rem;
+  }
+  article h2 {
+	font-size: 1.6rem;
+  }
+  article h1 {
+	font-size: 1.8rem;
+  }

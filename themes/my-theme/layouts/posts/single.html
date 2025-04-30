@@ -1,0 +1,117 @@
+{{ define "main" }}
+
+<article class="page-wrapper">
+	<h1 class="mb-4 text-center">{{ .Title }}</h1>
+
+	<div
+		class="d-flex justify-content-center align-items-center mb-4 text-muted small"
+	>
+		<time datetime="{{ .Date }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+		<span class="mx-2">|</span>
+		<span>{{ site.Params.author.name }}</span>
+		{{ with .Params.categories }} {{ $cat := index . 0 }}
+		<span class="mx-2">|</span>
+		<a
+			class="text-decoration-none"
+			href="/topics/{{ $cat | urlize }}"
+			rel="category"
+			>{{ $cat }}</a
+		>
+		{{ end }}
+	</div>
+
+	<div class="post-content">{{ .Content | replaceRE `<a href="(https?://[^"]+)"` `<a href="$1" target="_blank" rel="noopener nofollow"` | safeHTML }}</div>
+</article>
+{{ end }}
+
+
+{{ define "seo"}}
+{{- /* themes/my-theme/layouts/partials/seo.html */ -}}
+{{- $title := .Params.seoTitle | default .Title -}}
+{{- $description := .Params.seoDescription | default .Params.description | default .Summary | truncate 170 -}}{{- $canonical := .Permalink -}}
+{{- $author := site.Params.author.name | default "Unknown" -}}
+{{- $date := .Date.Format "2006-01-02T15:04:05Z07:00" -}}
+{{- $lastmod := .Lastmod.Format "2006-01-02T15:04:05Z07:00" | default $date -}}
+
+<title>{{ $title }}</title>
+
+<meta name="description" content="{{ $description }}">
+<meta name="author" content="{{ $author }}">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+<link rel="canonical" href="{{ $canonical }}">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $description }}">
+{{ with .Params.tags }}
+<meta name="keywords" content="{{ delimit . ", " }}">
+{{ end }}
+<meta property="og:url" content="{{ $canonical }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+{{- with site.Params.opengraph.image }}
+<meta property="og:image" content="{{ . }}">
+{{- end }}
+{{- if .IsPage }}
+<meta property="article:published_time" content="{{ $date }}">
+<meta property="article:modified_time" content="{{ $lastmod }}">
+<meta property="article:author" content="{{ $author }}">
+{{- end }}
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $description }}">
+{{- with site.Params.twitterSite }}
+<meta name="twitter:site" content="@{{ . }}">
+{{- end }}
+{{- with site.Params.twitterCreator }}
+<meta name="twitter:creator" content="@{{ . }}">
+{{- end }}
+{{- with site.Params.opengraph.image }}
+<meta name="twitter:image" content="{{ . }}">
+{{- end }}
+
+<!-- JSON-LD Structured Data -->
+{{- if .IsPage }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ $title }}",
+  "description": "{{ $description }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ $author }}"
+  },
+  "keywords": [
+    {{- with .Params.tags -}}
+      {{ delimit (apply . "printf" "\"%s\"") ", " }}
+    {{- end -}}
+  ],
+  "articleSection": [
+    {{- with .Params.categories -}}
+      {{ delimit (apply . "printf" "\"%s\"") ", " }}
+    {{- end -}}
+  ],
+  "datePublished": "{{ $date }}",
+  "dateModified": "{{ $lastmod }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ $canonical }}"
+  },
+  "url": "{{ $canonical }}"
+}
+</script>
+{{- else }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ site.Title }}",
+  "url": "{{ site.BaseURL }}"
+}
+</script>
+{{- end }}
+{{end}}

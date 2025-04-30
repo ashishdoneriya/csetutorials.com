@@ -1,0 +1,188 @@
+<!doctype html><html lang=hi><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap" rel=stylesheet><link rel=stylesheet href=https://csetutorials.com/scss/main.min.css><title>How to install influxdb without root access on Linux</title>
+<meta name=description content="Steps to setup influxdb time series database on any linux distribution without root access or sudo permissions whether it is aws influxdb or azure"><meta name=author content="Ashish Doneriya"><meta name=robots content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"><link rel=canonical href=https://csetutorials.com/install-influxdb-without-root-access-linux/><meta property="og:type" content="article"><meta property="og:title" content="How to install influxdb without root access on Linux"><meta property="og:description" content="Steps to setup influxdb time series database on any linux distribution without root access or sudo permissions whether it is aws influxdb or azure"><meta name=keywords content="InfluxDB,linux"><meta property="og:url" content="https://csetutorials.com/install-influxdb-without-root-access-linux/"><meta property="og:site_name" content="Cse Tutorials"><meta property="article:published_time" content="2018-10-22T09:28:01+05:30"><meta property="article:modified_time" content="2020-03-04T02:03:00+05:30"><meta property="article:author" content="Ashish Doneriya"><meta name=twitter:card content="summary_large_image"><meta name=twitter:title content="How to install influxdb without root access on Linux"><meta name=twitter:description content="Steps to setup influxdb time series database on any linux distribution without root access or sudo permissions whether it is aws influxdb or azure"><script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","headline":"How to install influxdb without root access on Linux","description":"Steps to setup influxdb time series database on any linux distribution without root access or sudo permissions whether it is aws influxdb or azure","author":{"@type":"Person","name":"Ashish Doneriya"},"keywords":["\"%!s(MISSING)\", \"%!s(MISSING)\""],"articleSection":["\"%!s(MISSING)\""],"datePublished":"2018-10-22T09:28:01\u002b05:30","dateModified":"2020-03-04T02:03:00\u002b05:30","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/csetutorials.com\/install-influxdb-without-root-access-linux\/"},"url":"https:\/\/csetutorials.com\/install-influxdb-without-root-access-linux\/"}</script></head><body style=background-color:#f9f9f9;font-family:roboto,sans-serif><nav class="navbar navbar-expand-lg navbar-dark bg-dark"><div class=container><a class=navbar-brand href=/>Cse Tutorials</a>
+<button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarNav aria-controls=navbarNav aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse justify-content-end" id=navbarNav><ul class=navbar-nav><li class=nav-item><a class=nav-link href=/about-us/>About us</a></li><li class=nav-item><a class=nav-link href=/contact-us/>Contact us</a></li><li class=nav-item><a class=nav-link href=/privacy-policy/>Privacy Policy</a></li><li class=nav-item><a class=nav-link href=/terms-of-service/>Terms of Service</a></li><li class=nav-item><a class=nav-link href>Topics</a></li></ul></div></div></nav><main><article class=page-wrapper><h1 class="mb-4 text-center">How to install influxdb without root access on Linux</h1><div class="d-flex justify-content-center align-items-center mb-4 text-muted small"><time datetime="2018-10-22 09:28:01 +0530 +0530">Oct 22, 2018</time>
+<span class=mx-2>|</span>
+<span>Ashish Doneriya</span>
+<span class=mx-2>|</span>
+<a class=text-decoration-none href=/topics/database rel=category>Database</a></div><div class=post-content><p>Influxdb time series database is one of the fastest timeseries database. It is current the best aws time series database. Its purely written in go language. It is opensource and is used for recording metrics, events and performing analytics. The steps to install influxdb on various linux distributions (aws influxdb or azure) are available on its <a href=https://portal.influxdata.com/downloads target=_blank rel="noopener nofollow">download page</a>. But there is one problem in install instructions and that is all requires root access. And also there are no instructions to setup influxdb on linux distributions other than Redhat, Debian, Ubuntu and CentOS.</p><p>In this post I am going to tell you how to setup influxdb on linux. As of now (Oct 2018) the latest version of influxdb is 1.6.3.</p><h2 id=steps-to-setup-influxdb>Steps to setup influxdb</h2><h3 id=download-targz-file>Download tar.gz file</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>wget https://dl.influxdata.com/influxdb/releases/influxdb-1.6.3-static_linux_amd64.tar.gz
+</span></span></code></pre></div><h3 id=extract-the-targz-file>Extract the tar.gz file</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>tar xvfz influxdb-1.6.3-static_linux_amd64.tar.gz
+</span></span></code></pre></div><h3 id=go-to-the-extracted-folder>Go to the extracted folder</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>cd influxdb-1.6.3-1/
+</span></span></code></pre></div><h3 id=remove-unnecessary-files>Remove Unnecessary files</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>rm -r usr/
+</span></span><span style=display:flex><span>rm influxdb.conf
+</span></span><span style=display:flex><span>rm influx_stress
+</span></span><span style=display:flex><span>rm influx_tsm
+</span></span></code></pre></div><p>If you are going to use <code>influx_inspect</code>, <code>influx_stress</code> or <code>influx_tsm</code> then do not delete these. But if you don&rsquo;t know what are these or don&rsquo;t want to use these then you can delete. In the above commands you can see we have removed influxb.conf file also. This is because we are going to create a new influxdb.conf file in the next step.</p><h3 id=generate-influxdbconf>Generate influxdb.conf</h3><p>Generate a new influxdb.conf file using below commands</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>chmod +x influxd
+</span></span><span style=display:flex><span>./influxd config &gt; influxdb.conf
+</span></span></code></pre></div><p>An influxdb.conf file will be generated in the current directory. This file contains current configuration (like bind ports, data and metadata storage path, enable logs or not etc.) that influxdb is going to use when we start it.</p><h3 id=change-influxdbconf>Change influxdb.conf</h3><p>Now Open influxdb.conf file with your favourite text editor because we are going to change it.</p><p><strong>(a) Disable anonymous reporting</strong> : Influxdb sends your os stats to its server once in every 24 hours. To disable it set reporting-disabled to false in the first line.</p><pre tabindex=0><code class=language-conf data-lang=conf>reporting-disabled = false
+</code></pre><p><strong>(b) Change meta port :</strong> By default influxdb uses 8088 port as meta port. Most of the time this port is occupied by other services (like hadoop). Therefore it is better to change to 9088 or some other free port (in the second line).</p><pre tabindex=0><code class=language-conf data-lang=conf>bind-address = &#34;127.0.0.1:9088&#34;
+</code></pre><p><strong>(c) Change http port :</strong> BY defualt influxdb user 8086 port as http port (to expose rest apis) which is also very high demanding port. So if your 8086 port is already used in other services then change this port under http section. Lets change it to 9086 (or any free port)</p><pre tabindex=0><code class=language-conf data-lang=conf>[http]
+  enabled = true
+  bind-address = &#34;:9086&#34;
+</code></pre><p><strong>(d) Disable monitor stats :</strong> Influxdb stores your os stats (like memory, vcores available) in database every 10 second. This is a wastage of space if you are not going to use those stats. To disable it set <code>store-enabled = false</code> in monitor section.</p><pre tabindex=0><code class=language-conf data-lang=conf>[monitor]
+  store-enabled = false
+</code></pre><p><strong>(e) Disable logs :</strong> Personally I don&rsquo;t like influxdb logs very much because they consume disk space. So usually I disable all types of logs. But logs are very useful for the first time because they tell you why influxdb is not able to start. Therefore disable only after when you become familier with influxdb.</p><p><strong>(f) Change data storage paths :</strong> If you want to change the storage path of influxdb for meta data and data then you can change the paths in data field under meta and data sections.</p><pre tabindex=0><code class=language-conf data-lang=conf>[meta]
+  dir = &#34;/home/ashish/.influxdb/meta&#34;
+  retention-autocreate = true
+  logging-enabled = true
+
+[data]
+  dir = &#34;/home/ashish/.influxdb/data&#34;
+</code></pre><p>Save all the changes.</p><p>In my case my influxdb.conf look like this</p><pre tabindex=0><code class=language-conf data-lang=conf>reporting-disabled = true
+bind-address = &#34;127.0.0.1:9088&#34;
+
+[meta]
+  dir = &#34;/home/ashish/.influxdb/meta&#34;
+  retention-autocreate = true
+  logging-enabled = true
+
+[data]
+  dir = &#34;/home/ashish/.influxdb/data&#34;
+  index-version = &#34;inmem&#34;
+  wal-dir = &#34;/home/ashish/.influxdb/wal&#34;
+  wal-fsync-delay = &#34;0s&#34;
+  query-log-enabled = true
+  cache-max-memory-size = 1073741824
+  cache-snapshot-memory-size = 26214400
+  cache-snapshot-write-cold-duration = &#34;10m0s&#34;
+  compact-full-write-cold-duration = &#34;4h0m0s&#34;
+  max-series-per-database = 1000000
+  max-values-per-tag = 100000
+  max-concurrent-compactions = 0
+  max-index-log-file-size = 1048576
+  trace-logging-enabled = false
+  tsm-use-madv-willneed = false
+
+[coordinator]
+  write-timeout = &#34;10s&#34;
+  max-concurrent-queries = 0
+  query-timeout = &#34;0s&#34;
+  log-queries-after = &#34;0s&#34;
+  max-select-point = 0
+  max-select-series = 0
+  max-select-buckets = 0
+
+[retention]
+  enabled = true
+  check-interval = &#34;30m0s&#34;
+
+[shard-precreation]
+  enabled = true
+  check-interval = &#34;10m0s&#34;
+  advance-period = &#34;30m0s&#34;
+
+[monitor]
+  store-enabled = false
+  store-database = &#34;_internal&#34;
+  store-interval = &#34;10s&#34;
+
+[subscriber]
+  enabled = true
+  http-timeout = &#34;30s&#34;
+  insecure-skip-verify = false
+  ca-certs = &#34;&#34;
+  write-concurrency = 40
+  write-buffer-size = 1000
+
+[http]
+  enabled = true
+  bind-address = &#34;:9086&#34;
+  auth-enabled = false
+  log-enabled = true
+  suppress-write-log = false
+  write-tracing = false
+  pprof-enabled = true
+  debug-pprof-enabled = false
+  https-enabled = false
+  https-certificate = &#34;/etc/ssl/influxdb.pem&#34;
+  https-private-key = &#34;&#34;
+  max-row-limit = 0
+  max-connection-limit = 0
+  shared-secret = &#34;&#34;
+  realm = &#34;InfluxDB&#34;
+  unix-socket-enabled = false
+  unix-socket-permissions = &#34;0777&#34;
+  bind-socket = &#34;/var/run/influxdb.sock&#34;
+  max-body-size = 25000000
+  access-log-path = &#34;&#34;
+  max-concurrent-write-limit = 0
+  max-enqueued-write-limit = 0
+  enqueued-write-timeout = 30000000000
+
+[logging]
+  format = &#34;auto&#34;
+  level = &#34;info&#34;
+  suppress-logo = false
+
+[ifql]
+  enabled = false
+  log-enabled = true
+  bind-address = &#34;:8082&#34;
+
+[[graphite]]
+  enabled = false
+  bind-address = &#34;:2003&#34;
+  database = &#34;graphite&#34;
+  retention-policy = &#34;&#34;
+  protocol = &#34;tcp&#34;
+  batch-size = 5000
+  batch-pending = 10
+  batch-timeout = &#34;1s&#34;
+  consistency-level = &#34;one&#34;
+  separator = &#34;.&#34;
+  udp-read-buffer = 0
+
+[[collectd]]
+  enabled = false
+  bind-address = &#34;:25826&#34;
+  database = &#34;collectd&#34;
+  retention-policy = &#34;&#34;
+  batch-size = 5000
+  batch-pending = 10
+  batch-timeout = &#34;10s&#34;
+  read-buffer = 0
+  typesdb = &#34;/usr/share/collectd/types.db&#34;
+  security-level = &#34;none&#34;
+  auth-file = &#34;/etc/collectd/auth_file&#34;
+  parse-multivalue-plugin = &#34;split&#34;
+
+[[opentsdb]]
+  enabled = false
+  bind-address = &#34;:4242&#34;
+  database = &#34;opentsdb&#34;
+  retention-policy = &#34;&#34;
+  consistency-level = &#34;one&#34;
+  tls-enabled = false
+  certificate = &#34;/etc/ssl/influxdb.pem&#34;
+  batch-size = 1000
+  batch-pending = 5
+  batch-timeout = &#34;1s&#34;
+  log-point-errors = true
+
+[[udp]]
+  enabled = false
+  bind-address = &#34;:8089&#34;
+  database = &#34;udp&#34;
+  retention-policy = &#34;&#34;
+  batch-size = 5000
+  batch-pending = 10
+  read-buffer = 0
+  batch-timeout = &#34;1s&#34;
+  precision = &#34;&#34;
+
+[continuous_queries]
+  log-enabled = true
+  enabled = true
+  query-stats-enabled = false
+  run-interval = &#34;1s&#34;
+
+[tls]
+  min-version = &#34;&#34;
+  max-version = &#34;&#34;
+</code></pre><p><strong>7. Start influxd service</strong><br>After configuring influxdb its time to start infludb service. start influxd service by using the command below</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>./influxd --config influxdb.conf
+</span></span></code></pre></div><p>If everything is right, then influxd service will start. In case of any error it will not start and display error.</p><p>You can also start influxd service in the background by using the below command</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>./influxd --config influxdb.conf /dev/null &amp;
+</span></span></code></pre></div><p><strong>8. Testing</strong><br>Its time to test the service whether it has been properly started or not.<br>Execute the command <code>./influx --port 9086</code>. Here 9086 is the http port that I have changed in influxdb.conf file before. If you didn&rsquo;t change the file then there is no need to specify port number and you can directly test using <code>./influx</code> command</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>chmod +x influx
+</span></span><span style=display:flex><span>./influx --port <span style=color:#ae81ff>9086</span>
+</span></span><span style=display:flex><span>Connected to http://localhost:9086 version 1.6.3
+</span></span><span style=display:flex><span>InfluxDB shell version: 1.6.3
+</span></span></code></pre></div><p>If you see the message &ldquo;connected to http&mldr;&rdquo; and a command prompt appears then it means influxdb has been successfully started on your machine. If connection failed message appears then it means either you have specified the wrong port or it means that influxd service has not started yet or some problem occurred while starting influxd service.</p></div></article></main><script src=https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js defer></script></body></html>

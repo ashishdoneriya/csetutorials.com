@@ -3,36 +3,30 @@ name: Website Build
 on:
   pull_request:
   push:
-    branches:
-      - main
+	branches:
+	  - main
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+	runs-on: ubuntu-latest
 
-    steps:
-      # Step 1: Checkout repository
-      - name: Checkout repository
-        uses: actions/checkout@v2
+	steps:
+	  # Step 1: Checkout repository
+	  - name: Checkout repository
+		uses: actions/checkout@v2
 
-      # Step 2: Install Hugo Extended Version (for SCSS support)
-      - name: Install Hugo Extended Version
-        run: |
-          wget https://github.com/gohugoio/hugo/releases/download/v0.147.0/hugo_extended_withdeploy_0.147.0_linux-amd64.deb
-          sudo dpkg -i hugo_extended_withdeploy_0.147.0_linux-amd64.deb
+	  # Step 2: Install Hugo Extended Version (for SCSS support)
+	  - name: Install Hugo Extended Version
+		run: |
+		  wget https://github.com/gohugoio/hugo/releases/download/v0.147.0/hugo_extended_withdeploy_0.147.0_linux-amd64.deb
+		  sudo dpkg -i hugo_extended_withdeploy_0.147.0_linux-amd64.deb
 
-      # Step 3: Build the site with Hugo
-      - name: Build the site with Hugo
-        run: hugo
+	  # Step 3: Build the site with Hugo
+	  - name: Build the site with Hugo
+		run: hugo
 
-      # Step 4: Configure aws credentials
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: 'us-east-2'  # Specify your AWS region
-		  
-      # Deploy to s3 bucket
-      - name: Deploy to s3
-        run: hugo deploy
+	  - name: Deploy
+		uses: peaceiris/actions-gh-pages@v4
+		with:
+			github_token: ${{ secrets.GITHUB_TOKEN }}
+			publish_dir: ./public

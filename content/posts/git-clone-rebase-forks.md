@@ -1,8 +1,7 @@
 ---
-title: "Git in Real Workflows: Cloning, Branching, Rebasing, Merging, and Fixing Everything"
-seoTitle: "Git in Real Workflows: Cloning, Branching, Rebasing, Merging"
-description: "Step-by-step explanation of Git operations in real workflows including clone, remotes, branching, pull, rebase, forks, tracking, cleanup and recovery."
-slug: git-clone-pull-rebase-fork-workflow
+title: "How Git Actually Works: From Clone to Rebase, Forks, History Fixes and Recovery"
+description: "Step-by-step explanation of Git commands and concepts including clone, remotes, branching, pull, rebase, forks, tracking, history cleanup and recovery."
+slug: git-clone-rebase-forks
 date: 2025-06-24T08:00:00+05:30
 categories:
   - technology

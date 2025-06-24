@@ -5,7 +5,7 @@ description: "Step-by-step explanation of Git operations in real workflows inclu
 slug: git-clone-pull-rebase-fork-workflow
 date: 2025-06-24T08:00:00+05:30
 categories:
-	- technology
+  - technology
 tags:
   - git
 ---

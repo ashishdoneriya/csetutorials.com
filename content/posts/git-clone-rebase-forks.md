@@ -538,7 +538,7 @@ Now:
    This updates upstream/main locally. It doesn't affect any of your branches.
 2. Switch to your feature branch
    ```bash
-   git checkout feature/foo
+   git checkout -b foo feature/foo
    ```
    Make sure you're on the branch you want to update.
 3. Rebase your feature branch onto upstream's latest main
@@ -562,15 +562,17 @@ You repeat this until the rebase completes.
 
 4. Push your updated feature branch to your fork
 ```bash
-git push origin feature/foo
+git push origin
 ```
-If the rebase changed commit hashes (it always does), Git will reject a normal push. Use force:
+If the rebase changed commit hashes (it always does), Git will reject a normal push. Use `--force-with-lease` or `--force`:
 ```bash
-git push --force origin feature/foo
+git push --force-with-lease origin feature/foo
 ```
 This updates the feature/foo branch in your fork to match your rebased local branch.
 
 Now, your feature branch is based on the latest upstream main. When you raise a pull request from feature/foo to upstream/main, your changes will cleanly sit on top of the latest upstream history.
+
+> Use `--force-with-lease` instead of `--force` to avoid accidentally overwriting someone else’s changes on the remote. It refuses to push if the remote branch has changed since you last fetched, making it safer in team environments.
 
 ##
 ## Step 15: How to rebase multiple topic branches safely when they depend on each other
@@ -595,19 +597,19 @@ Now rebase each branch one by one:
 ```bash
 git checkout feature-a
 git rebase upstream/main
-git push --force origin feature-a
+git push --force-with-lease origin feature-a
 ```
 Then:
 ```bash
 git checkout feature-b
 git rebase feature-a
-git push --force origin feature-b
+git push --force-with-lease origin feature-b
 ```
 Then:
 ```bash
 git checkout feature-c
 git rebase feature-b
-git push --force origin feature-c
+git push --force-with-lease origin feature-c
 ```
 This way, all three branches now sit on top of the latest upstream/main, and their dependency chain is preserved cleanly.
 

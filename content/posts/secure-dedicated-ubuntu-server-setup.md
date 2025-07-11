@@ -1,7 +1,7 @@
 ---
 title: 'Secure Dedicated Ubuntu Server Setup with SSH Keys, Firewall, DDoS Protection, and Network Optimization'
 seoTitle: Secure and Optimize Your Dedicated Ubuntu Server for Production"
-date: 2025-07-1T10:00:00+05:30
+date: 2025-07-11T10:00:00+05:30
 description: Dedicated Ubuntu server setup with SSH key login, firewall rules, DDoS protection, and network tuning for secure, high-performance deployments.
 slug: secure-dedicated-ubuntu-server-setup
 categories:

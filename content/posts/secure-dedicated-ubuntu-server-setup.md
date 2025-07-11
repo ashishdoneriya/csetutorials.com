@@ -102,7 +102,7 @@ sudo nano /etc/ssh/sshd_config
 
 Set the following:
 
-```conf
+```bash
 PermitRootLogin no
 PasswordAuthentication no
 PermitEmptyPasswords no
@@ -253,7 +253,7 @@ lsmod | grep bbr
 
 Expected output:
 
-```
+```bash
 net.ipv4.tcp_congestion_control = bbr
 bbr    20480  0
 ```
@@ -349,7 +349,7 @@ sudo apt update && sudo apt install haproxy -y
 
 A sample rule to automatically track high-rate request senders without hardcoding any path:
 
-```haproxy
+```bash
 frontend http-in
     bind *:80
     stick-table type ip size 1m expire 5s store http_req_rate(5s)

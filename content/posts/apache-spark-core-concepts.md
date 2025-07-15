@@ -4,7 +4,7 @@ date: 2025-07-15T10:00:00+05:30
 description: Learn Apache Spark's core concepts. Understand its architecture with Drivers & Executors, and execution flow with Jobs, Stages, and Tasks on Kubernetes.
 slug: spark-core-concepts-and-execution-flow.html
 categories:
-  - BigData
+  - Big Data
 tags:
   - spark
 ---

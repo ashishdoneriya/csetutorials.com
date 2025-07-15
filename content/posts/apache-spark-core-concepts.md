@@ -21,6 +21,7 @@ A partition is simply a collection of rows from the original dataset. When Spark
 A Task is the smallest unit of execution in Spark. It is a single command sent from the Spark Driver to an Executor. This command contains two key components:
 1. One specific Partition of data that the task is assigned to process.
 2. A sequence of computations (your code) that the task must apply to every record within that partition.
+
 This relationship is fundamental: to process the data in parallel, Spark creates one task for every partition.
 
 ## 2. Spark Application Architecture
@@ -61,6 +62,7 @@ This is the logical sequence of how Spark plans and runs a job.
 If you do not manually specify a fixed number of executors (`spark.executor.instances`), Spark uses Dynamic Allocation.
 * The Driver monitors the number of pending tasks.
 * If tasks are waiting, the Driver requests new Executor processes from the Cluster Manager (Kubernetes) to handle the load, up to a configured maximum.
+
 If an Executor is idle for a certain period, the Driver releases it, and its resources are returned to the cluster.
 
 ## 4. Execution in a CDE/Kubernetes Environment

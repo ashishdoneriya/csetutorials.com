@@ -1,8 +1,9 @@
 ---
-title: 'Apache Spark: Core Concepts and Execution Flow'
+title: 'Understanding the Apache Spark Execution Flow'
+seoTitle: 'Apache Spark Execution Flow'
 date: 2025-07-15T10:00:00+05:30
-description: Learn Apache Spark's core concepts. Understand its architecture with Drivers & Executors, and execution flow with Jobs, Stages, and Tasks on Kubernetes.
-slug: spark-core-concepts-and-execution-flow.html
+description: 'Follow a Spark job from submission to completion. Learn the roles of the Driver and Executors, and the flow of Jobs, Stages, and Tasks on a cluster.'
+slug: apache-spark-execution-flow
 categories:
   - Big Data
 tags:

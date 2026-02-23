@@ -902,24 +902,25 @@ This deletes all local commits and makes your branch identical to the remote.
 ##
 ## Git Commands Summary
 
-| Task                                 | Command                                           |
-|--------------------------------------|---------------------------------------------------|
-| Clone a repo                         | `git clone <url>`                                 |
-| View remotes                         | `git remote -v`                                   |
-| Add upstream remote                  | `git remote add upstream <url>`                   |
-| Fetch all remotes                    | `git fetch` / `git fetch upstream`                |
-| See local/remote branches            | `git branch` / `git branch -r`                    |
-| Set tracking branch                  | `git branch --set-upstream-to=origin/dev dev`     |
-| Pull with merge                      | `git pull`                                        |
-| Pull with rebase                     | `git pull --rebase`                               |
-| Merge remote into local              | `git merge origin/main`                           |
-| Rebase onto remote                   | `git rebase origin/main`                          |
-| Rebase feature branch on upstream    | `git rebase upstream/main`                        |
-| Push to origin                       | `git push origin branchname`                      |
-| Force push after rebase              | `git push --force origin branchname`              |
-| Cherry-pick specific commits         | `git cherry-pick <commit>`                        |
-| Interactive rebase (rewrite history) | `git rebase -i main`                              |
-| Delete local/remote branch           | `git branch -d name` / `git push origin --delete` |
-| Undo via reflog                      | `git reflog`, `git reset --hard HEAD@{n}`         |
-| Discard local changes                | `git restore <file>` / `git reset --hard`         |
-| Fix diverged push                    | `git pull --rebase` / `git push --force`          |
+| Task                                 | Command                                             |
+|--------------------------------------|-----------------------------------------------------|
+| Clone a repo                         | `git clone <url>`                                   |
+| View remotes                         | `git remote -v`                                     |
+| Add upstream remote                  | `git remote add upstream <url>`                     |
+| Fetch all remotes                    | `git fetch` / `git fetch upstream`                  |
+| See local/remote branches            | `git branch` / `git branch -r`                      |
+| Set tracking branch                  | `git branch --set-upstream-to=origin/dev dev`       |
+| Pull with merge                      | `git pull`                                          |
+| Pull with rebase                     | `git pull --rebase`                                 |
+| Merge remote into local              | `git merge origin/main`                             |
+| Rebase onto remote                   | `git rebase origin/main`                            |
+| Rebase feature branch on upstream    | `git rebase upstream/main`                          |
+| Push to origin                       | `git push origin branchname`                        |
+| Force push after rebase              | `git push --force origin branchname`                |
+| Cherry-pick specific commits         | `git cherry-pick <commit>`                          |
+| Interactive rebase (rewrite history) | `git rebase -i main`                                |
+| Delete local/remote branch           | `git branch -d name` / `git push origin --delete`   |
+| Undo via reflog                      | `git reflog`, `git reset --hard HEAD@{n}`           |
+| Discard local changes                | `git restore <file>` / `git reset --hard`           |
+| Fix diverged push                    | `git pull --rebase` / `git push --force`            |
+| Checkout of a remote-tracking branch | `git switch -c branchname --track origin/branchname`|

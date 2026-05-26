@@ -1,25 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Database on Cse Tutorials</title><link>https://csetutorials.com/topics/database/</link><description>Recent content in Database on Cse Tutorials</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 07 Nov 2024 21:06:26 +0530</lastBuildDate><atom:link href="https://csetutorials.com/topics/database/index.xml" rel="self" type="application/rss+xml"/><item><title>Setting Up Master-Master Replication in MariaDB on Ubuntu: A Comprehensive Guide</title><link>https://csetutorials.com/master-master-replication-mariadb-ubuntu-setup.html</link><pubDate>Thu, 07 Nov 2024 21:06:26 +0530</pubDate><guid>https://csetutorials.com/master-master-replication-mariadb-ubuntu-setup.html</guid><description>&lt;p>Master-Master replication in MariaDB enables &lt;strong>active-active replication&lt;/strong>, allowing both servers to handle reads and writes, and synchronize changes with each other. This setup improves &lt;strong>availability&lt;/strong> and &lt;strong>redundancy&lt;/strong> but requires careful configuration to avoid conflicts.&lt;/p>
-&lt;p>This guide will walk you through the full setup, covering &lt;strong>error logging&lt;/strong> configuration, &lt;strong>network access&lt;/strong>, and &lt;strong>conflict prevention&lt;/strong> settings.&lt;/p>
-&lt;h2 id="prerequisites">Prerequisites&lt;/h2>
-&lt;ul>
-&lt;li>&lt;strong>Two Ubuntu Servers&lt;/strong> with static IPs:&lt;/li>
-&lt;li>&lt;strong>Server A IP&lt;/strong>: 91.107.235.82&lt;/li>
-&lt;li>&lt;strong>Server B IP&lt;/strong>: 188.34.176.130&lt;/li>
-&lt;li>&lt;strong>Root or sudo access&lt;/strong> on both servers.&lt;/li>
-&lt;li>&lt;strong>MariaDB installed&lt;/strong> on both servers.&lt;/li>
-&lt;/ul>
-&lt;h2 id="steps">Steps&lt;/h2>
-&lt;h3 id="step-1-install-mariadb-if-not-already-installed">Step 1: Install MariaDB (if not already installed)&lt;/h3>
-&lt;p>First, install MariaDB on both servers.&lt;/p></description></item><item><title>How to install influxdb without root access on Linux</title><link>https://csetutorials.com/install-influxdb-without-root-access-linux.html</link><pubDate>Mon, 22 Oct 2018 09:28:01 +0530</pubDate><guid>https://csetutorials.com/install-influxdb-without-root-access-linux.html</guid><description>&lt;p>Influxdb time series database is one of the fastest timeseries database. It is current the best aws time series database. Its purely written in go language. It is opensource and is used for recording metrics, events and performing analytics. The steps to install influxdb on various linux distributions (aws influxdb or azure) are available on its &lt;a href="https://portal.influxdata.com/downloads">download page&lt;/a>. But there is one problem in install instructions and that is all requires root access. And also there are no instructions to setup influxdb on linux distributions other than Redhat, Debian, Ubuntu and CentOS.&lt;/p></description></item><item><title>Influxdb Tutorial</title><link>https://csetutorials.com/influxdb-tutorial.html</link><pubDate>Wed, 06 Jul 2016 07:55:18 +0530</pubDate><guid>https://csetutorials.com/influxdb-tutorial.html</guid><description>&lt;p>Influxdata is a platform for storing, collecting, visualizing and managing time-series data. Currently Influxdb is the most famous time series database. This article is for version 1.x only.&lt;/p>
-&lt;p>The following topics that I am going to cover in this article.&lt;/p>
-&lt;ol>
-&lt;li>Influxdb Installation&lt;/li>
-&lt;li>Databases&lt;/li>
-&lt;li>Inserting Data&lt;/li>
-&lt;li>Querying Data&lt;/li>
-&lt;li>Tags in influxdb&lt;/li>
-&lt;li>Group by time Query&lt;/li>
-&lt;li>Deleting measurement or data from measurement&lt;/li>
-&lt;li>Retention Policies&lt;/li>
-&lt;/ol>
-&lt;p>In influxdb the combination of timestamp and tags is composite keys. So lets start.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Database on Cse Tutorials</title><link>https://csetutorials.com/topics/database/</link><description>Recent content in Database on Cse Tutorials</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 07 Nov 2024 21:06:26 +0530</lastBuildDate><atom:link href="https://csetutorials.com/topics/database/index.xml" rel="self" type="application/rss+xml"/><item><title>Setting Up Master-Master Replication in MariaDB on Ubuntu: A Comprehensive Guide</title><link>https://csetutorials.com/master-master-replication-mariadb-ubuntu-setup.html</link><pubDate>Thu, 07 Nov 2024 21:06:26 +0530</pubDate><guid>https://csetutorials.com/master-master-replication-mariadb-ubuntu-setup.html</guid><description>&lt;p&gt;Master-Master replication in MariaDB enables &lt;strong&gt;active-active replication&lt;/strong&gt;, allowing both servers to handle reads and writes, and synchronize changes with each other. This setup improves &lt;strong&gt;availability&lt;/strong&gt; and &lt;strong&gt;redundancy&lt;/strong&gt; but requires careful configuration to avoid conflicts.&lt;/p&gt;
+&lt;p&gt;This guide will walk you through the full setup, covering &lt;strong&gt;error logging&lt;/strong&gt; configuration, &lt;strong&gt;network access&lt;/strong&gt;, and &lt;strong&gt;conflict prevention&lt;/strong&gt; settings.&lt;/p&gt;
+&lt;h2 id="prerequisites"&gt;Prerequisites&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Two Ubuntu Servers&lt;/strong&gt; with static IPs:&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Server A IP&lt;/strong&gt;: 91.107.235.82&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Server B IP&lt;/strong&gt;: 188.34.176.130&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Root or sudo access&lt;/strong&gt; on both servers.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MariaDB installed&lt;/strong&gt; on both servers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="steps"&gt;Steps&lt;/h2&gt;
+&lt;h3 id="step-1-install-mariadb-if-not-already-installed"&gt;Step 1: Install MariaDB (if not already installed)&lt;/h3&gt;
+&lt;p&gt;First, install MariaDB on both servers.&lt;/p&gt;</description></item><item><title>How to install influxdb without root access on Linux</title><link>https://csetutorials.com/install-influxdb-without-root-access-linux.html</link><pubDate>Mon, 22 Oct 2018 09:28:01 +0530</pubDate><guid>https://csetutorials.com/install-influxdb-without-root-access-linux.html</guid><description>&lt;p&gt;Influxdb time series database is one of the fastest timeseries database. It is current the best aws time series database. Its purely written in go language. It is opensource and is used for recording metrics, events and performing analytics. The steps to install influxdb on various linux distributions (aws influxdb or azure) are available on its &lt;a href="https://portal.influxdata.com/downloads"&gt;download page&lt;/a&gt;. But there is one problem in install instructions and that is all requires root access. And also there are no instructions to setup influxdb on linux distributions other than Redhat, Debian, Ubuntu and CentOS.&lt;/p&gt;</description></item><item><title>Influxdb Tutorial</title><link>https://csetutorials.com/influxdb-tutorial.html</link><pubDate>Wed, 06 Jul 2016 07:55:18 +0530</pubDate><guid>https://csetutorials.com/influxdb-tutorial.html</guid><description>&lt;p&gt;Influxdata is a platform for storing, collecting, visualizing and managing time-series data. Currently Influxdb is the most famous time series database. This article is for version 1.x only.&lt;/p&gt;
+&lt;p&gt;The following topics that I am going to cover in this article.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Influxdb Installation&lt;/li&gt;
+&lt;li&gt;Databases&lt;/li&gt;
+&lt;li&gt;Inserting Data&lt;/li&gt;
+&lt;li&gt;Querying Data&lt;/li&gt;
+&lt;li&gt;Tags in influxdb&lt;/li&gt;
+&lt;li&gt;Group by time Query&lt;/li&gt;
+&lt;li&gt;Deleting measurement or data from measurement&lt;/li&gt;
+&lt;li&gt;Retention Policies&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In influxdb the combination of timestamp and tags is composite keys. So lets start.&lt;/p&gt;</description></item></channel></rss>
